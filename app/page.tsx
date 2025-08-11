@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, BarChart3, Search, Users, Bot, ArrowRight, Check, Menu, X } from 'lucide-react';
 
