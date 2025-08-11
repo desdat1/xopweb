@@ -6,7 +6,7 @@ import { ChevronDown, BarChart3, Search, Users, Bot, ArrowRight, Check, Menu, X 
 const HomePage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  const [isVisible, setIsVisible] = useState({});
+  const [isVisible, setIsVisible] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
