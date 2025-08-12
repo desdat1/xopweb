@@ -45,12 +45,10 @@ export default function AboutPage() {
           {/* Matt's Photo and Intro */}
           <div className="flex flex-col md:flex-row gap-8 items-center mb-16 animate-fadeIn delay-200">
             <div className="w-full md:w-1/3">
-              <Image
+              <img
                 src="/matt.webp"
                 alt="Matt Ruck, CEO of xop.ai"
-                width={300}
-                height={300}
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg w-full max-w-[300px] mx-auto"
               />
             </div>
             <div className="w-full md:w-2/3">
