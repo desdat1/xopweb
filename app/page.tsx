@@ -53,7 +53,7 @@ export default function Home() {
     {
       icon: '💰',
       title: 'Generate Recurring Revenue',
-      description: 'New revenue stream at $11/endpoint',
+      description: 'Implement Knowledge Management chatbots, customized for your clients',
       details: 'Package our AI solutions as a premium service offering. Most MSPs achieve 50%+ margins while delivering tangible value that increases client retention.',
       colorClass: 'from-green-500 to-green-400',
       iconAnimation: 'animate-float',
