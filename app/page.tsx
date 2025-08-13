@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -201,33 +200,11 @@ export default function Home() {
           AI Solutions Designed by MSPs,<br />
           <span className="text-gradient">Built for MSPs</span>
         </h1>
-        
-        <p className="text-xl md:text-2xl mb-6 max-w-4xl mx-auto animate-fadeIn delay-200">
-          <span className="text-yellow-400 italic">30 years of MSP experience + cutting-edge Rezolve.ai technology =</span><br />
-          <span className="font-bold text-white">Real ROI for your business</span>
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fadeIn delay-400">
-          <Link
-            href="https://xop.im/partner"
-            className="cta-button bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 transition-all duration-300 relative overflow-hidden"
-          >
-            Request a Customized ROI Analysis
-          </Link>
-          <Link
-            href="/contact"
-            className="cta-button bg-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-gray-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300"
-          >
-            Book Demo
-          </Link>
-        </div>
       </section>
 
       {/* Services Section */}
       <section className="px-6 py-6" id="services">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 animate-fadeIn">Our Solutions</h2>
-          
           <div className="grid md:grid-cols-3 gap-6">
             {services.map((service, index) => {
               const isExpanded = expandedServices.includes(index)
@@ -277,6 +254,31 @@ export default function Home() {
                 </div>
               )
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section - Between Cards and Statistics */}
+      <section className="px-6 py-16 bg-gradient-to-r from-gray-900 to-black">
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="text-xl md:text-2xl mb-8 animate-fadeIn">
+            <span className="text-yellow-400 italic">30 years of MSP experience + cutting-edge Rezolve.ai technology =</span><br />
+            <span className="font-bold text-white text-2xl md:text-3xl">Solutions that deliver ROI to your business</span>
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeIn delay-200">
+            <Link
+              href="https://xop.im/partner"
+              className="cta-button bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 transition-all duration-300 relative overflow-hidden"
+            >
+              Request a Customized ROI Analysis
+            </Link>
+            <Link
+              href="/contact"
+              className="cta-button bg-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-gray-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+            >
+              Book Demo
+            </Link>
           </div>
         </div>
       </section>
