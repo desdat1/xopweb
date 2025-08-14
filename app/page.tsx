@@ -4,11 +4,13 @@ import Navigation from './components/Navigation'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ChevronRight } from 'lucide-react'
+import { ChevronRight, X } from 'lucide-react'
+import Footer from '@/app/components/Footer'
 
 export default function Home() {
   const [expandedServices, setExpandedServices] = useState<number[]>([])
   const [mounted, setMounted] = useState(false)
+  const [splashVisible, setSplashVisible] = useState(true)
 
   useEffect(() => {
     setMounted(true)
@@ -112,6 +114,64 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <Navigation />
+
+      {/* ConnectWise Evolve Splash Screen */}
+      {splashVisible && (
+        <section className="bg-gradient-to-r from-blue-900/30 via-purple-900/20 to-blue-900/30 border-b border-blue-500/30 relative">
+          {/* Close Button */}
+          <button
+            onClick={() => setSplashVisible(false)}
+            className="absolute top-4 right-4 z-10 p-2 rounded-full bg-gray-800/50 hover:bg-gray-700/70 text-gray-400 hover:text-white transition-all"
+            aria-label="Close splash screen"
+          >
+            <X className="w-5 h-5" />
+          </button>
+          
+          <div className="container mx-auto px-6 py-8">
+            <div className="max-w-5xl mx-auto">
+              <div className="flex flex-col lg:flex-row items-center gap-8">
+                {/* ConnectWise Logo */}
+                <div className="flex-shrink-0">
+                  <div className="flex items-center gap-4 mb-4 lg:mb-0">
+                    <img 
+                      src="https://www.connectwise.com/contentassets/46e6af166a92407eac66d8a7c79d3c8d/logo.svg" 
+                      alt="ConnectWise" 
+                      className="h-12 w-auto"
+                    />
+                    <div className="text-3xl font-bold text-blue-400">EVOLVE</div>
+                  </div>
+                  <div className="text-sm text-gray-400 text-center lg:text-left">Denver, CO</div>
+                </div>
+                
+                {/* Event Content */}
+                <div className="flex-1 text-center lg:text-left">
+                  <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-white">
+                    Attending ConnectWise Evolve in Denver, CO?
+                  </h2>
+                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                    Matt will be speaking to several peer groups and is participating in the 
+                    <span className="text-blue-400 font-semibold"> AI panel</span> occurring directly after the keynote presentation.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a
+                      href="https://calendly.com/mattruck"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-blue-500/50"
+                    >
+                      <span className="text-2xl">📅</span>
+                      Schedule Time with Matt
+                    </a>
+                    <div className="text-sm text-gray-400 self-center">
+                      Discuss AI automations for MSPs
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Hero Section */}
       <section className="relative overflow-hidden px-6 py-12 text-center">
@@ -224,19 +284,14 @@ export default function Home() {
               <div className="text-sm text-gray-400 mt-2">Engineer Productivity Gains</div>
             </div>
             <div className="animate-fadeIn delay-400">
-              <div className="text-3xl md:text-4xl font-bold text-green-400 animate-pulse-slow">20%</div>
+              <div className="text-3xl md:text-4xl font-bold text-green-400 animate-pulse-slow">20-30%</div>
               <div className="text-sm text-gray-400 mt-2">End User Ticket Deflection</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="px-6 py-12 border-t border-gray-800 mt-16">
-        <div className="max-w-7xl mx-auto text-center text-gray-400">
-          <p>&copy; 2025 xop.ai. All rights reserved. Powered by Rezolve.ai</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

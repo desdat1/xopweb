@@ -1,8 +1,8 @@
 'use client'
 
+import Navigation from '@/app/components/Navigation'
+import Footer from '@/app/components/Footer'
 import { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
 import { Phone, MapPin, Mail } from 'lucide-react'
 
 export default function ContactPage() {
@@ -13,14 +13,6 @@ export default function ContactPage() {
     email: '',
     message: ''
   })
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Resources', href: '/resources' },
-    { name: 'Contact', href: '/contact' }
-  ]
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -39,81 +31,7 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Navigation */}
-      <nav className="p-6 mb-8">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <Link href="/">
-              <Image 
-                src="/xop-logo.png" 
-                alt="XOP.ai" 
-                width={132} 
-                height={88} 
-                className="h-[88px] w-auto cursor-pointer"
-              />
-            </Link>
-            <Image 
-              src="/rezolve-logo.png" 
-              alt="Rezolve.ai" 
-              width={72} 
-              height={48} 
-              className="h-12 w-auto"
-            />
-          </div>
-          
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="hover:text-gray-300 transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
-            <Link
-              href="/contact"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-2 rounded-full hover:opacity-90 transition-opacity"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={mobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="md:hidden mt-4 space-y-4">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block py-2 hover:text-gray-300 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <Link
-              href="/contact"
-              className="block bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-2 rounded-full hover:opacity-90 transition-opacity text-center"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Get Started
-            </Link>
-          </div>
-        )}
-      </nav>
+      <Navigation />
 
       {/* Contact Section */}
       <section className="px-6 py-16">
@@ -272,12 +190,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="px-6 py-12 border-t border-gray-800 mt-16">
-        <div className="max-w-7xl mx-auto text-center text-gray-400">
-          <p>&copy; 2025 xop.ai. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

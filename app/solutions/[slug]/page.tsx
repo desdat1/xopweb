@@ -1,5 +1,7 @@
 'use client'
 
+import Navigation from '@/app/components/Navigation'
+import Footer from '@/app/components/Footer'
 import { useState } from 'react'
 import { useParams } from 'next/navigation'
 import Image from 'next/image'
@@ -211,12 +213,7 @@ export default function SolutionPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="px-6 py-12 border-t border-gray-800 mt-16">
-        <div className="max-w-7xl mx-auto text-center text-gray-400">
-          <p>&copy; 2025 xop.ai. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

@@ -1,4 +1,7 @@
 'use client'
+
+import Navigation from '@/app/components/Navigation'
+import Footer from '@/app/components/Footer'
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -8,24 +11,7 @@ export default function AuraInsightsPage() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Navigation */}
-      <nav className="border-b border-gray-800">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-4">
-              <img src="/xop-logo.png" alt="xop.ai" className="h-[88px]" />
-              <img src="/rezolve-logo.png" alt="Rezolve.ai" className="h-12" />
-            </Link>
-            
-            <div className="hidden md:flex items-center gap-8">
-              <Link href="/" className="hover:text-green-400 transition-colors">Home</Link>
-              <Link href="/about" className="hover:text-green-400 transition-colors">About Us</Link>
-              <Link href="/resources" className="hover:text-green-400 transition-colors">Resources</Link>
-              <Link href="/contact" className="hover:text-green-400 transition-colors">Contact</Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -541,49 +527,7 @@ export default function AuraInsightsPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-gray-800 py-12">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <img src="/xop-logo.png" alt="xop.ai" className="h-12 mb-4" />
-              <p className="text-gray-400">AI Solutions Designed by MSPs, For MSPs</p>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4">Solutions</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><Link href="/solutions/engineer-efficiency" className="hover:text-white">Engineer Efficiency</Link></li>
-                <li><Link href="/solutions/service-desk-management" className="hover:text-white">Service Desk Management</Link></li>
-                <li><Link href="/solutions/executive-insights" className="hover:text-white">Executive Insights</Link></li>
-                <li><Link href="/solutions/recurring-revenue" className="hover:text-white">Generate Revenue</Link></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><Link href="/about" className="hover:text-white">About Us</Link></li>
-                <li><Link href="/resources" className="hover:text-white">Resources</Link></li>
-                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4">Connect</h4>
-              <p className="text-gray-400">
-                PO Box 261<br />
-                Brookeville, MD 20833<br />
-                202-525-8159
-              </p>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 xop.ai. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

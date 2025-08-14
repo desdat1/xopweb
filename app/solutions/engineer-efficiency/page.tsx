@@ -1,9 +1,10 @@
 'use client'
 
+import Navigation from '@/app/components/Navigation'
+import Footer from '@/app/components/Footer'
 import { useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
-import { ChevronRight, Zap, Brain, Clock, TrendingUp, Users, BarChart } from 'lucide-react'
+import { ChevronRight, Zap, Brain, Clock, TrendingUp, Users, BarChart, CheckCircle } from 'lucide-react'
 
 export default function EngineerEfficiencyPage() {
   const [activeTab, setActiveTab] = useState('overview')
@@ -31,47 +32,36 @@ export default function EngineerEfficiencyPage() {
     }
   ]
 
-  const features = [
-    'AI-powered ticket analysis and solution recommendations',
-    'Integration with ConnectWise, IT Glue, and documentation systems',
-    'Automatic correlation of similar tickets and resolutions',
-    'Real-time knowledge base updates from resolved tickets',
-    'Natural language search across all your data sources',
-    'Proactive alerts for potential issues'
+  const timeSavingFeatures = [
+    {
+      title: 'Auto Ticket Classification & Prioritization',
+      description: 'AI instantly categorizes incoming tickets and assigns priority levels based on business impact, SLA requirements, and historical patterns. No more manual sorting - tickets flow to the right queues automatically.'
+    },
+    {
+      title: 'Intelligent Ticket Summarization',
+      description: 'Get instant, concise summaries of lengthy ticket threads. Our AI extracts the key issues, actions taken, and current status - perfect for handoffs or catching up on escalated tickets.'
+    },
+    {
+      title: 'Auto-Draft Client Responses',
+      description: 'Generate professional, contextually-aware response drafts in seconds. The AI understands ticket history and suggests appropriate next steps, saving 10+ minutes per response.'
+    },
+    {
+      title: 'Smart Escalation Management',
+      description: 'AI monitors ticket health and automatically suggests escalation when needed. It identifies the right resource based on expertise, availability, and past success with similar issues.'
+    },
+    {
+      title: 'Enterprise Search Across All Systems',
+      description: 'Find similar tickets, proven solutions, and relevant documentation instantly. Search across ConnectWise, IT Glue, SharePoint, and vendor portals from one unified interface.'
+    },
+    {
+      title: 'Automatic Time Entry Creation',
+      description: 'Never forget to log time again. AI tracks your work and creates accurate time entries automatically, capturing all activities and categorizing them correctly for billing.'
+    }
   ]
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Navigation */}
-      <nav className="p-6 mb-8 border-b border-gray-800">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <Link href="/">
-              <Image 
-                src="/xop-logo.png" 
-                alt="xop.ai" 
-                width={132} 
-                height={88} 
-                className="h-[88px] w-auto cursor-pointer"
-              />
-            </Link>
-            <Image 
-              src="/rezolve-logo.png" 
-              alt="Rezolve.ai" 
-              width={72} 
-              height={48} 
-              className="h-12 w-auto opacity-80"
-            />
-          </div>
-          
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="hover:text-green-400 transition-colors">Home</Link>
-            <Link href="/about" className="hover:text-green-400 transition-colors">About Us</Link>
-            <Link href="/resources" className="hover:text-green-400 transition-colors">Resources</Link>
-            <Link href="/contact" className="hover:text-green-400 transition-colors">Contact</Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="px-6 py-16 text-center">
@@ -83,23 +73,9 @@ export default function EngineerEfficiencyPage() {
             Engineer Efficiency
           </h1>
           <p className="text-2xl text-gray-300 mb-8 animate-fadeIn delay-200">
-            Free up engineers to solve complex problems while AI handles the routine
+            The Perfect AI Overlay for ConnectWise Manage
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeIn delay-400">
-            <Link
-              href="https://xop.im/partner"
-              className="relative bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 transition-all overflow-hidden group"
-            >
-              <span className="relative z-10">Schedule a Demo</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </Link>
-            <Link
-              href="https://xop.im/partner"
-              className="relative bg-gradient-to-r from-gray-800 to-gray-700 px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-gray-500/30 transform hover:scale-105 transition-all overflow-hidden group border border-gray-600"
-            >
-              <span className="relative z-10">Request ROI Report</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-700 to-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </Link>
+          <div className="flex justify-center animate-fadeIn delay-400">
             <Link
               href="/videos/engineer-efficiency-demo.mp4"
               className="relative bg-gradient-to-r from-green-600 to-emerald-500 px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-green-500/50 transform hover:scale-105 transition-all overflow-hidden group flex items-center justify-center gap-3"
@@ -116,15 +92,51 @@ export default function EngineerEfficiencyPage() {
         </div>
       </section>
 
-      {/* Benefits Grid */}
-      <section className="px-6 py-16 bg-gray-900">
+      {/* Time-Saving Features Section */}
+      <section className="px-6 py-16 bg-gray-900/50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Transform Your Service Desk</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">Transform How Your Engineers Work</h2>
+          <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+            Every feature is designed to save time and reduce cognitive load, letting your engineers focus on solving problems instead of managing processes.
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {timeSavingFeatures.map((feature, index) => (
+              <div 
+                key={index}
+                className="bg-black/50 border border-gray-800 rounded-lg p-6 hover:border-yellow-500/50 transition-all animate-fadeIn"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3 text-yellow-400">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <div className="inline-block bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-lg p-6">
+              <p className="text-lg text-yellow-400 font-semibold">
+                All features work seamlessly within ConnectWise Manage - no switching between systems
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Grid */}
+      <section className="px-6 py-16">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Measurable Impact</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div 
                 key={index}
-                className="bg-black border border-gray-800 rounded-lg p-6 hover:border-green-500 transition-all animate-fadeIn"
+                className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-green-500 transition-all animate-fadeIn"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="text-green-400 mb-4">{benefit.icon}</div>
@@ -137,7 +149,7 @@ export default function EngineerEfficiencyPage() {
       </section>
 
       {/* How It Works Tabs */}
-      <section className="px-6 py-16">
+      <section className="px-6 py-16 bg-gray-900/30">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">How It Works</h2>
           
@@ -149,7 +161,7 @@ export default function EngineerEfficiencyPage() {
                 onClick={() => setActiveTab(tab)}
                 className={`px-6 py-2 rounded-full transition-all ${
                   activeTab === tab
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600'
+                    ? 'bg-gradient-to-r from-yellow-600 to-orange-600'
                     : 'bg-gray-800 hover:bg-gray-700'
                 }`}
               >
@@ -159,33 +171,34 @@ export default function EngineerEfficiencyPage() {
           </div>
 
           {/* Tab Content */}
-          <div className="bg-gray-900 rounded-lg p-8">
+          <div className="bg-black/50 border border-gray-800 rounded-2xl p-8">
             {activeTab === 'overview' && (
               <div className="animate-fadeIn">
-                <h3 className="text-2xl font-semibold mb-4">AI-Powered Knowledge at Your Fingertips</h3>
+                <h3 className="text-2xl font-semibold mb-4">Your AI-Powered ConnectWise Companion</h3>
                 <p className="text-gray-300 mb-4">
-                  Our Engineer Efficiency solution acts as a force multiplier for your technical team. 
-                  By leveraging AI to instantly surface relevant solutions, documentation, and historical 
-                  ticket data, your engineers can focus on what they do best - solving complex problems.
+                  Engineer Efficiency seamlessly integrates with ConnectWise Manage to provide an intelligent overlay 
+                  that enhances every aspect of ticket management. From the moment a ticket arrives to final resolution, 
+                  our AI works alongside your engineers to eliminate repetitive tasks and surface critical information.
                 </p>
                 <p className="text-gray-300">
-                  The system learns from every interaction, continuously improving its recommendations 
-                  and building a comprehensive knowledge base unique to your MSP.
+                  Think of it as having a senior engineer looking over your shoulder, instantly providing answers, 
+                  automating routine tasks, and ensuring nothing falls through the cracks.
                 </p>
               </div>
             )}
 
             {activeTab === 'integration' && (
               <div className="animate-fadeIn">
-                <h3 className="text-2xl font-semibold mb-4">Seamless Integration</h3>
+                <h3 className="text-2xl font-semibold mb-4">Native ConnectWise Integration</h3>
                 <p className="text-gray-300 mb-4">
-                  Works with your existing tools:
+                  Works directly within your ConnectWise environment:
                 </p>
                 <ul className="list-disc list-inside text-gray-300 space-y-2">
-                  <li>ConnectWise Manage - Direct ticket integration</li>
-                  <li>IT Glue - Documentation search and retrieval</li>
-                  <li>SharePoint - Access to internal knowledge bases</li>
-                  <li>Vendor portals - Unified search across all resources</li>
+                  <li>Appears as an overlay within ConnectWise Manage</li>
+                  <li>No data synchronization delays - real-time updates</li>
+                  <li>Respects your existing security and permissions</li>
+                  <li>Works with your custom fields and workflows</li>
+                  <li>Integrates with IT Glue, SharePoint, and other documentation systems</li>
                 </ul>
               </div>
             )}
@@ -194,36 +207,38 @@ export default function EngineerEfficiencyPage() {
               <div className="animate-fadeIn">
                 <h3 className="text-2xl font-semibold mb-4">Powered by Advanced AI</h3>
                 <p className="text-gray-300 mb-4">
-                  Our AI engine uses natural language processing and machine learning to:
+                  Our AI engine continuously learns from your MSP's unique patterns:
                 </p>
                 <ul className="list-disc list-inside text-gray-300 space-y-2">
-                  <li>Understand ticket context and identify root causes</li>
-                  <li>Match current issues with historical resolutions</li>
-                  <li>Suggest relevant documentation and KB articles</li>
-                  <li>Learn from engineer feedback to improve accuracy</li>
-                  <li>Identify patterns and prevent recurring issues</li>
+                  <li>Understands your specific client environments and configurations</li>
+                  <li>Learns from successful ticket resolutions to improve recommendations</li>
+                  <li>Adapts to your team's communication style for better auto-drafts</li>
+                  <li>Identifies emerging issues before they become widespread</li>
+                  <li>Gets smarter with every ticket your team resolves</li>
                 </ul>
               </div>
             )}
 
             {activeTab === 'results' && (
               <div className="animate-fadeIn">
-                <h3 className="text-2xl font-semibold mb-4">Measurable Results</h3>
+                <h3 className="text-2xl font-semibold mb-4">Real MSP Results</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="text-xl font-semibold mb-2 text-green-400">Efficiency Gains</h4>
+                    <h4 className="text-xl font-semibold mb-2 text-yellow-400">Time Savings</h4>
                     <ul className="text-gray-300 space-y-1">
-                      <li>• 30% reduction in ticket resolution time</li>
-                      <li>• 40% fewer escalations</li>
-                      <li>• 25% increase in tickets per engineer</li>
+                      <li>• 15 minutes saved per ticket on average</li>
+                      <li>• 2+ hours saved daily per engineer</li>
+                      <li>• 90% reduction in time spent searching</li>
+                      <li>• 100% accurate time tracking</li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold mb-2 text-green-400">Quality Improvements</h4>
+                    <h4 className="text-xl font-semibold mb-2 text-yellow-400">Quality Improvements</h4>
                     <ul className="text-gray-300 space-y-1">
-                      <li>• 50% reduction in repeat tickets</li>
-                      <li>• 35% improvement in first-call resolution</li>
-                      <li>• 90%+ customer satisfaction scores</li>
+                      <li>• 50% fewer escalations needed</li>
+                      <li>• 35% faster ticket resolution</li>
+                      <li>• Zero missed SLAs due to prioritization</li>
+                      <li>• 95%+ client satisfaction scores</li>
                     </ul>
                   </div>
                 </div>
@@ -233,31 +248,11 @@ export default function EngineerEfficiencyPage() {
         </div>
       </section>
 
-      {/* Features List */}
-      <section className="px-6 py-16 bg-gray-900">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Key Features</h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            {features.map((feature, index) => (
-              <div 
-                key={index}
-                className="flex items-start gap-3 animate-fadeIn"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <ChevronRight className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300">{feature}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Learn More About Section */}
       <section className="px-6 py-16">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Learn More About</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {/* Engineer Efficiency is excluded since it's the current page */}
             <Link 
               href="/solutions/service-desk-management" 
               className="group relative bg-gradient-to-r from-blue-600 to-cyan-500 p-4 rounded-xl font-semibold text-center hover:shadow-lg hover:shadow-blue-500/50 transform hover:scale-105 transition-all overflow-hidden"
@@ -342,36 +337,7 @@ export default function EngineerEfficiencyPage() {
         </div>
       </section>
 
-      {/* ROI Calculator CTA */}
-      <section className="px-6 py-16">
-        <div className="max-w-4xl mx-auto text-center bg-gradient-to-r from-purple-900 to-pink-900 rounded-lg p-12">
-          <h2 className="text-3xl font-bold mb-4">Calculate Your ROI</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            See how much time and money you could save with AI-powered engineer efficiency
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="https://xop.im/partner"
-              className="bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all"
-            >
-              Access ROI Calculator
-            </Link>
-            <Link
-              href="/contact"
-              className="bg-transparent border-2 border-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-all"
-            >
-              Talk to an Expert
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="px-6 py-12 border-t border-gray-800">
-        <div className="max-w-7xl mx-auto text-center text-gray-400">
-          <p>&copy; 2025 xop.ai. All rights reserved. Powered by Rezolve.ai</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

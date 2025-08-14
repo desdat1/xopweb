@@ -1,20 +1,11 @@
 'use client'
 
-import { useState } from 'react'
-import Image from 'next/image'
+import Navigation from '@/app/components/Navigation'
+import Footer from '@/app/components/Footer'
 import Link from 'next/link'
 import { Book, FileText, Video, PlayCircle, ChevronRight } from 'lucide-react'
 
 export default function ResourcesPage() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Resources', href: '/resources' },
-    { name: 'Contact', href: '/contact' }
-  ]
-
   const resources = {
     ebook: {
       title: 'The MSP\'s Guide to AI Implementation',
@@ -90,81 +81,7 @@ export default function ResourcesPage() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Navigation */}
-      <nav className="p-6 mb-8">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <Link href="/">
-              <Image 
-                src="/xop-logo.png" 
-                alt="XOP.ai" 
-                width={132} 
-                height={88} 
-                className="h-[88px] w-auto cursor-pointer"
-              />
-            </Link>
-            <Image 
-              src="/rezolve-logo.png" 
-              alt="Rezolve.ai" 
-              width={72} 
-              height={48} 
-              className="h-12 w-auto"
-            />
-          </div>
-          
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="hover:text-gray-300 transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
-            <Link
-              href="/contact"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-2 rounded-full hover:opacity-90 transition-opacity"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={mobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="md:hidden mt-4 space-y-4">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block py-2 hover:text-gray-300 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <Link
-              href="/contact"
-              className="block bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-2 rounded-full hover:opacity-90 transition-opacity text-center"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Get Started
-            </Link>
-          </div>
-        )}
-      </nav>
+      <Navigation />
 
       {/* Resources Section */}
       <section className="px-6 py-16">
@@ -272,38 +189,10 @@ export default function ResourcesPage() {
             </div>
           </div>
 
-          {/* CTA Section */}
-          <div className="bg-gray-900 rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-bold mb-4">Ready to transform your MSP with AI?</h2>
-            <p className="text-gray-400 mb-6">
-              Get personalized guidance on implementing our solutions in your business.
-            </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <Link
-                href="https://xop.im/partner"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity inline-flex items-center justify-center"
-              >
-                Request ROI Analysis
-                <ChevronRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                href="/contact"
-                className="bg-gray-800 px-8 py-3 rounded-full font-semibold hover:bg-gray-700 transition-colors inline-flex items-center justify-center"
-              >
-                Schedule a Call
-                <ChevronRight className="ml-2 w-5 h-5" />
-              </Link>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="px-6 py-12 border-t border-gray-800 mt-16">
-        <div className="max-w-7xl mx-auto text-center text-gray-400">
-          <p>&copy; 2025 xop.ai. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

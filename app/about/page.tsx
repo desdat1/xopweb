@@ -1,14 +1,14 @@
 'use client'
 
 import Navigation from '@/app/components/Navigation'
+import Footer from '@/app/components/Footer'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function AboutPage() {
   return (
-  <div className="min-h-screen bg-black text-white">
-    <Navigation />
-
+    <div className="min-h-screen bg-black text-white">
+      <Navigation />
 
       {/* Hero Section */}
       <section className="px-6 py-12">
@@ -43,7 +43,7 @@ export default function AboutPage() {
                 After successfully building and running designDATA for decades, Matt Ruck saw an opportunity to revolutionize how MSPs operate. In 2021, he founded xop.ai with a clear vision: bring practical, ROI-driven AI solutions to the MSP community.
               </p>
               <p>
-                Having spent years testing and implementing various AI technologies within his own MSP, Matt discovered that most AI solutions were either too complex, too expensive, or simply didn't deliver on their promises. This firsthand experience drove him to create xop.ai – a company that bridges the gap between cutting-edge AI technology and real-world MSP operations.
+                Having spent years testing and implementing various AI technologies within his own MSP, Matt discovered that most AI solutions were either too complex, too expensive, or simply didn't deliver on their promises. This firsthand experience drove him to create xop.ai — a company that bridges the gap between cutting-edge AI technology and real-world MSP operations.
               </p>
               <p>
                 Today, xop.ai leverages exclusive access to Rezolve.ai's enterprise AI platform to deliver solutions specifically tailored for MSPs. Every tool we offer has been battle-tested in real MSP environments, ensuring they solve actual problems and deliver measurable results.
@@ -66,37 +66,13 @@ export default function AboutPage() {
           <div className="mb-16 animate-fadeIn delay-500">
             <h2 className="text-3xl font-semibold mb-6 text-green-400">Our Partnership with Rezolve.ai</h2>
             <p className="text-gray-300 leading-relaxed">
-              xop.ai has secured exclusive MSP distribution rights for Rezolve.ai's powerful AI platform. This partnership gives our clients access to enterprise-grade AI technology that would typically be reserved for Fortune 500 companies. By combining Rezolve.ai's technical excellence with our deep MSP expertise, we deliver solutions that are both powerful and practical – designed by MSPs, for MSPs.
+              xop.ai has secured exclusive MSP distribution rights for Rezolve.ai's powerful AI platform. This partnership gives our clients access to enterprise-grade AI technology that would typically be reserved for Fortune 500 companies. By combining Rezolve.ai's technical excellence with our deep MSP expertise, we deliver solutions that are both powerful and practical — designed by MSPs, for MSPs.
             </p>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center py-8 animate-fadeIn delay-600">
-            <h3 className="text-2xl mb-6">Ready to Transform Your MSP?</h3>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="https://xop.im/partner"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 transition-all"
-              >
-                Request a Customized ROI Analysis
-              </Link>
-              <Link
-                href="/contact"
-                className="bg-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-gray-700 transition-all"
-              >
-                Get in Touch
-              </Link>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="px-6 py-12 border-t border-gray-800 mt-16">
-        <div className="max-w-7xl mx-auto text-center text-gray-400">
-          <p>&copy; 2025 xop.ai. All rights reserved. Powered by Rezolve.ai</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

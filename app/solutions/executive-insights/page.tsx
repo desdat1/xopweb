@@ -1,5 +1,7 @@
 'use client'
 
+import Navigation from '@/app/components/Navigation'
+import Footer from '@/app/components/Footer'
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -42,36 +44,7 @@ export default function ExecutiveInsightsPage() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Navigation */}
-      <nav className="p-6 mb-8 border-b border-gray-800">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <Link href="/">
-              <Image 
-                src="/xop-logo.png" 
-                alt="xop.ai" 
-                width={132} 
-                height={88} 
-                className="h-[88px] w-auto cursor-pointer"
-              />
-            </Link>
-            <Image 
-              src="/rezolve-logo.png" 
-              alt="Rezolve.ai" 
-              width={72} 
-              height={48} 
-              className="h-12 w-auto opacity-80"
-            />
-          </div>
-          
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="hover:text-green-400 transition-colors">Home</Link>
-            <Link href="/about" className="hover:text-green-400 transition-colors">About Us</Link>
-            <Link href="/resources" className="hover:text-green-400 transition-colors">Resources</Link>
-            <Link href="/contact" className="hover:text-green-400 transition-colors">Contact</Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="px-6 py-16 text-center">
@@ -393,12 +366,7 @@ export default function ExecutiveInsightsPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="px-6 py-12 border-t border-gray-800">
-        <div className="max-w-7xl mx-auto text-center text-gray-400">
-          <p>&copy; 2025 xop.ai. All rights reserved. Powered by Rezolve.ai</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
