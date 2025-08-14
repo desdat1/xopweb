@@ -5,6 +5,7 @@ declare global {
   interface Window {
     Calendly: {
       initPopupWidget: (options: { url: string }) => void
+      initInlineWidget: (options: { url: string; parentElement: Element | null }) => void
     }
   }
 }
@@ -20,24 +21,40 @@ export default function Home() {
   const [expandedServices, setExpandedServices] = useState<number[]>([])
   const [mounted, setMounted] = useState(false)
   const [splashVisible, setSplashVisible] = useState(true)
+  const [calendlyModalOpen, setCalendlyModalOpen] = useState(false)
 
   useEffect(() => {
     setMounted(true)
-    
-    // Load Calendly widget script
-    const script = document.createElement('script')
-    script.src = 'https://assets.calendly.com/assets/external/widget.js'
-    script.async = true
-    document.body.appendChild(script)
+  }, [])
+
+  useEffect(() => {
+    if (calendlyModalOpen) {
+      // Load Calendly widget script when modal opens
+      const script = document.createElement('script')
+      script.src = 'https://assets.calendly.com/assets/external/widget.js'
+      script.async = true
+      script.onload = () => {
+        // Initialize the inline widget after script loads
+        if (window.Calendly) {
+          window.Calendly.initInlineWidget({
+            url: 'https://calendly.com/mattruck',
+            parentElement: document.querySelector('.calendly-inline-widget')
+          })
+        }
+      }
+      document.body.appendChild(script)
+      
+      // Prevent body scroll when modal is open
+      document.body.style.overflow = 'hidden'
+    } else {
+      // Re-enable body scroll when modal closes
+      document.body.style.overflow = 'unset'
+    }
     
     return () => {
-      // Clean up script on unmount
-      const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')
-      if (existingScript) {
-        document.body.removeChild(existingScript)
-      }
+      document.body.style.overflow = 'unset'
     }
-  }, [])
+  }, [calendlyModalOpen])
 
   // Reordered services array with Generate Recurring Revenue at position 4
   const services = [
@@ -177,11 +194,7 @@ export default function Home() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <button
-                      onClick={() => {
-                        if (typeof window !== 'undefined' && window.Calendly) {
-                          window.Calendly.initPopupWidget({ url: 'https://calendly.com/mattruck' })
-                        }
-                      }}
+                      onClick={() => setCalendlyModalOpen(true)}
                       className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-blue-500/50"
                     >
                       <span className="text-2xl">📅</span>
@@ -315,6 +328,37 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Calendly Modal */}
+      {calendlyModalOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              setCalendlyModalOpen(false)
+            }
+          }}
+        >
+          <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] relative">
+            {/* Close Button */}
+            <button
+              onClick={() => setCalendlyModalOpen(false)}
+              className="absolute top-4 right-4 z-10 bg-gray-100 hover:bg-gray-200 rounded-full p-2 text-gray-600 hover:text-gray-800 transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            
+            {/* Calendly Inline Widget */}
+            <div className="p-4 h-[600px] overflow-hidden rounded-lg">
+              <div 
+                className="calendly-inline-widget h-full w-full" 
+                data-url="https://calendly.com/mattruck"
+                data-auto-load="false"
+              ></div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </div>
