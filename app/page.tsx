@@ -1,5 +1,6 @@
 'use client'
 
+import Navigation from './components/Navigation'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -7,24 +8,16 @@ import { ChevronRight } from 'lucide-react'
 
 export default function Home() {
   const [expandedServices, setExpandedServices] = useState<number[]>([])
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Resources', href: '/resources' },
-    { name: 'Contact', href: '/contact' }
-  ]
-
   // Reordered services array with Generate Recurring Revenue at position 4
   const services = [
     {
-      icon: '👷',
+      icon: '⚡',
       title: 'Engineer Efficiency',
       description: 'Free up engineers to solve complex problems',
       details: 'Our AI assistant handles routine tasks, knowledge retrieval, and ticket correlation. Engineers spend less time searching and more time solving, resulting in 15-30% productivity gains.',
@@ -42,7 +35,7 @@ export default function Home() {
       slug: 'service-desk-management'
     },
     {
-      icon: '🎯',
+      icon: '📈',
       title: 'Executive Insights',
       description: 'Data-driven decisions at your fingertips',
       details: 'Transform your MSP data into actionable insights. Track profitability by client, identify growth opportunities, and forecast resource needs with AI-powered analytics.',
@@ -60,7 +53,7 @@ export default function Home() {
       slug: 'recurring-revenue'
     },
     {
-      icon: '💬',
+      icon: '🤖',
       title: 'Branded Chatbot for Clients',
       description: 'Let clients self-serve with your AI assistant',
       details: 'Deploy a white-labeled chatbot that deflects 20% of end-user tickets. Integrated with ConnectWise Manage, it provides instant answers while maintaining your brand experience.',
@@ -96,7 +89,7 @@ export default function Home() {
       slug: 'integrated-stack'
     },
     {
-      icon: '🔮',
+      icon: '🎯',
       title: 'AURA Insights',
       description: 'AI-powered ticket health monitoring',
       details: 'Monitor ticket health in real-time with our AI assistant. AURA identifies bottlenecks, predicts escalations, and suggests optimal routing to keep your service desk running smoothly.',
@@ -118,81 +111,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
-      {/* Navigation */}
-      <nav className="p-6 mb-8 border-b border-gray-800 animate-slideIn">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <div className="animate-pulse-slow">
-              <Image 
-                src="/xop-logo.png" 
-                alt="XOP.ai" 
-                width={132} 
-                height={88} 
-                className="h-[88px] w-auto"
-              />
-            </div>
-            <Image 
-              src="/rezolve-logo.png" 
-              alt="Rezolve.ai" 
-              width={72} 
-              height={48} 
-              className="h-12 w-auto opacity-80"
-            />
-          </div>
-          
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="hover:text-green-400 transition-colors duration-300"
-              >
-                {item.name}
-              </Link>
-            ))}
-            <Link
-              href="/contact"
-              className="cta-button bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-2 rounded-full hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 relative overflow-hidden"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={mobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="md:hidden mt-4 space-y-4 animate-fadeIn">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block py-2 hover:text-green-400 transition-colors duration-300"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <Link
-              href="/contact"
-              className="block bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-2 rounded-full hover:opacity-90 transition-all duration-300 text-center"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Get Started
-            </Link>
-          </div>
-        )}
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden px-6 py-12 text-center">
