@@ -104,16 +104,18 @@ export default function ResourcesPage() {
     ],
     webinars: [
       {
-        title: 'GenAI for MSPs Partnership Opportunities',
-        description: 'Discover how to leverage AI partnerships to grow your MSP business and increase MRR.',
-        status: 'upcoming',
-        link: 'https://xop.ai/webinar-register-msp-ai-partnership/'
+        title: 'Monetize, Boost your MSP Business Productivity with GenAI',
+        description: 'Discover proven strategies to leverage Generative AI for increasing MSP productivity and creating new revenue streams.',
+        status: 'available',
+        link: '/webinar/productivity',
+        youtubeLink: 'https://youtu.be/HRhcN9MLLsY'
       },
       {
-        title: 'AI Implementation Masterclass for MSPs',
-        description: 'Learn proven strategies for successfully implementing AI solutions in your MSP operations.',
-        status: 'upcoming', 
-        link: 'https://xop.ai/webinar-register/'
+        title: 'MSPs & GenAI - Build a Revenue Generating Practice',
+        description: 'Learn how to transform your MSP into a revenue-generating AI powerhouse with proven strategies for building and scaling an AI practice.',
+        status: 'available',
+        link: '/webinar/revenue',
+        youtubeLink: 'https://youtu.be/Jn0hEY9qMOI'
       }
     ],
     demos: [
@@ -217,24 +219,33 @@ export default function ResourcesPage() {
             <h2 className="text-3xl font-bold mb-8">Webinars</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {resources.webinars.map((webinar, index) => (
-                <div key={index} className="bg-gray-900 rounded-lg p-6 hover:bg-gray-800 transition-colors">
-                  <Video className="w-8 h-8 text-[#8BC34A] mb-4" />
+                <div key={index} className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-lg p-6 hover:bg-gray-800 transition-colors">
+                  <Video className="w-8 h-8 text-blue-400 mb-4" />
                   <h3 className="text-xl font-semibold mb-3">{webinar.title}</h3>
-                  <p className="text-gray-400 mb-4">{webinar.description}</p>
-                  <div className="mb-4">
+                  <p className="text-gray-400 mb-6">{webinar.description}</p>
+                  <div className="mb-6">
                     <span className="inline-block bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">
-                      Available
+                      Available Now
                     </span>
                   </div>
-                  <a
-                    href={webinar.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#8BC34A] hover:underline inline-flex items-center gap-1"
-                  >
-                    Register Now
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Link
+                      href={webinar.link}
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 px-4 py-2 rounded-full font-medium hover:opacity-90 transition-opacity text-sm"
+                    >
+                      Access Webinar
+                      <ChevronRight className="w-4 h-4" />
+                    </Link>
+                    <a
+                      href={webinar.youtubeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 border border-red-500/30 px-4 py-2 rounded-full font-medium hover:bg-red-500/10 transition-colors text-sm text-red-400"
+                    >
+                      <Play className="w-4 h-4" />
+                      YouTube
+                    </a>
+                  </div>
                 </div>
               ))}
             </div>
