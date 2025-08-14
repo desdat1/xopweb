@@ -8,8 +8,8 @@ import { Book, FileText, Video, PlayCircle, ChevronRight, Mic, ExternalLink, Pla
 export default function ResourcesPage() {
   const resources = {
     ebook: {
-      title: 'Free AI Implementation Guide for MSPs',
-      description: 'Get our comprehensive guide to successfully implementing AI solutions in your MSP operations. Join hundreds of MSPs already transforming their business with AI.',
+      title: 'Building a Revenue-Generating AI Practice for MSPs',
+      description: 'Get our comprehensive guide to successfully building a revenue-generating AI practice in your MSP. Join hundreds of MSPs already transforming their business with AI.',
       icon: Book,
       cta: 'Get Free E-Book',
       link: '/ebook'

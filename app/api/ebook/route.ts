@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
         <p>Hi ${firstName},</p>
         <p>Thank you for downloading our AI Implementation Guide for MSPs. This comprehensive resource will help you successfully implement AI solutions in your MSP operations.</p>
         
-        <p><strong>Download your guide here:</strong> [DOWNLOAD_LINK]</p>
+        <p><strong>Download your guide here:</strong> <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'https://xopweb.vercel.app'}/Building-a-Revenue-Generating-AI-Practice-for-MSPs-v4.pdf" style="color: #10B981; text-decoration: none;">Building a Revenue-Generating AI Practice for MSPs</a></p>
         
         <h2>What's Next?</h2>
         <ul>

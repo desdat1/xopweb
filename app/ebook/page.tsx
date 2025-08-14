@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
-import { Book, CheckCircle, Mail, User, Building, ArrowLeft } from 'lucide-react'
+import { Book, CheckCircle, Mail, User, Building, ArrowLeft, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
 
 export default function EbookPage() {
@@ -66,9 +66,21 @@ export default function EbookPage() {
             </div>
             
             <h1 className="text-4xl font-bold mb-6">Thank You!</h1>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-4">
               Your AI Implementation Guide is on its way to your inbox. You should receive it within the next few minutes.
             </p>
+            <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4 mb-8">
+              <p className="text-green-300 font-medium mb-2">Want to get started right away?</p>
+              <a 
+                href="/Building-a-Revenue-Generating-AI-Practice-for-MSPs-v4.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-medium transition-colors"
+              >
+                Download your guide directly
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
             
             <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 mb-8">
               <h2 className="text-lg font-semibold mb-4">What's Next?</h2>
@@ -130,9 +142,9 @@ export default function EbookPage() {
             <div>
               <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-xl p-8 mb-8">
                 <Book className="w-16 h-16 text-purple-400 mb-6" />
-                <h1 className="text-3xl font-bold mb-4">Free AI Implementation Guide for MSPs</h1>
+                <h1 className="text-3xl font-bold mb-4">Building a Revenue-Generating AI Practice for MSPs</h1>
                 <p className="text-lg text-gray-300 mb-6">
-                  Get our comprehensive guide to successfully implementing AI solutions in your MSP operations. 
+                  Get our comprehensive guide to successfully building a revenue-generating AI practice in your MSP. 
                   Join hundreds of MSPs already transforming their business with AI.
                 </p>
                 
