@@ -12,7 +12,7 @@ export default function ResourcesPage() {
       description: 'Get our comprehensive guide to successfully implementing AI solutions in your MSP operations. Join hundreds of MSPs already transforming their business with AI.',
       icon: Book,
       cta: 'Get Free E-Book',
-      link: 'https://xop.ai/resources#ebook-signup'
+      link: '/ebook'
     },
     podcasts: [
       {
@@ -112,7 +112,7 @@ export default function ResourcesPage() {
         title: 'AURA Insights: Your IT Service Desk\'s New Best Friend',
         duration: 'Interactive Demo',
         description: 'Experience how AURA identifies at-risk tickets, summarizes complex issues, and improves communication quality in real-time.',
-        link: 'https://xop.ai/aura-demo'
+        link: 'https://app.supademo.com/demo/cm6civ0j915eh280ife3r6d9b'
       }
     ]
   }
@@ -139,15 +139,13 @@ export default function ResourcesPage() {
                 <div className="flex-1 text-center md:text-left">
                   <h2 className="text-3xl font-bold mb-4">{resources.ebook.title}</h2>
                   <p className="text-lg text-gray-300 mb-6">{resources.ebook.description}</p>
-                  <a
+                  <Link
                     href={resources.ebook.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity"
                   >
                     {resources.ebook.cta}
-                    <ExternalLink className="w-5 h-5" />
-                  </a>
+                    <ChevronRight className="w-5 h-5" />
+                  </Link>
                 </div>
               </div>
             </div>

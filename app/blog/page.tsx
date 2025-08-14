@@ -3,7 +3,7 @@
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import Link from 'next/link'
-import { ChevronRight, Calendar, User } from 'lucide-react'
+import { ChevronRight, Calendar, User, Clock, TrendingUp } from 'lucide-react'
 
 export default function BlogPage() {
   const blogPosts = [
@@ -13,7 +13,11 @@ export default function BlogPage() {
       excerpt: 'The landscape has shifted. AI adoption is no longer a competitive advantage—it\'s becoming a necessity for MSP survival.',
       author: 'Matt Ruck',
       date: 'April 29, 2025',
-      category: 'AI Strategy'
+      category: 'AI Strategy',
+      readTime: '6 min read',
+      trending: true,
+      gradient: 'from-green-500/10 to-emerald-500/10',
+      borderColor: 'border-green-500/30'
     },
     {
       slug: '2025-ai-msps-survey',
@@ -21,7 +25,10 @@ export default function BlogPage() {
       excerpt: 'Help shape the future of AI in the MSP industry by participating in our comprehensive 2025 survey.',
       author: 'Matt Ruck', 
       date: 'March 15, 2025',
-      category: 'Industry Research'
+      category: 'Industry Research',
+      readTime: '4 min read',
+      gradient: 'from-blue-500/10 to-cyan-500/10',
+      borderColor: 'border-blue-500/30'
     },
     {
       slug: 'icon-awards-finalist',
@@ -29,7 +36,10 @@ export default function BlogPage() {
       excerpt: 'We\'re honored to be recognized as a finalist for our innovative AI solutions specifically designed for MSPs.',
       author: 'Matt Ruck',
       date: 'February 25, 2025',
-      category: 'Company News'
+      category: 'Company News',
+      readTime: '5 min read',
+      gradient: 'from-purple-500/10 to-pink-500/10',
+      borderColor: 'border-purple-500/30'
     },
     {
       slug: 'channel-futures-webinar',
@@ -37,7 +47,10 @@ export default function BlogPage() {
       excerpt: 'Missed our Channel Futures webinar? Catch up on the latest insights about Generative AI for MSPs.',
       author: 'Matt Ruck',
       date: 'February 10, 2025',
-      category: 'Webinars'
+      category: 'Webinars',
+      readTime: '7 min read',
+      gradient: 'from-orange-500/10 to-red-500/10',
+      borderColor: 'border-orange-500/30'
     },
     {
       slug: 'build-vs-buy-ai-product',
@@ -45,7 +58,10 @@ export default function BlogPage() {
       excerpt: 'Why MSPs should focus on ready-to-use AI products rather than building on general AI platforms.',
       author: 'Matt Ruck',
       date: 'January 28, 2025',
-      category: 'AI Strategy'
+      category: 'AI Strategy',
+      readTime: '8 min read',
+      gradient: 'from-green-500/10 to-emerald-500/10',
+      borderColor: 'border-green-500/30'
     },
     {
       slug: 'ai-explainability',
@@ -53,7 +69,10 @@ export default function BlogPage() {
       excerpt: 'Understanding the importance of AI explainability and how it impacts MSP decision-making and client trust.',
       author: 'Matt Ruck',
       date: 'January 15, 2025',
-      category: 'AI Technology'
+      category: 'AI Technology',
+      readTime: '9 min read',
+      gradient: 'from-cyan-500/10 to-blue-500/10',
+      borderColor: 'border-cyan-500/30'
     }
   ]
 
@@ -62,11 +81,22 @@ export default function BlogPage() {
       <Navigation />
 
       {/* Blog Header */}
-      <section className="px-6 py-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">AI for MSPs Blog</h1>
-          <p className="text-xl text-gray-300 mb-12">
+      <section className="px-6 py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-green-900/10 via-transparent to-blue-900/10"></div>
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 px-4 py-2 rounded-full mb-6">
+            <TrendingUp className="w-4 h-4 text-green-400" />
+            <span className="text-sm font-medium text-green-400">Latest AI Insights for MSPs</span>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-green-100 to-white bg-clip-text text-transparent">
+            AI for MSPs Blog
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto leading-relaxed">
             Insights, strategies, and real-world applications of AI for managed service providers
+          </p>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Discover how leading MSPs are leveraging artificial intelligence to deliver exceptional service, 
+            increase efficiency, and drive sustainable growth.
           </p>
         </div>
       </section>
@@ -76,15 +106,21 @@ export default function BlogPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <article key={post.slug} className="bg-gray-900 rounded-lg overflow-hidden hover:bg-gray-800 transition-colors">
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full">
+              <article key={post.slug} className={`bg-gradient-to-br ${post.gradient} border ${post.borderColor} rounded-xl overflow-hidden hover:shadow-lg hover:shadow-green-500/10 transition-all duration-300 transform hover:-translate-y-1`}>
+                <div className="p-6 bg-gray-900/80 backdrop-blur-sm">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full font-medium">
                       {post.category}
                     </span>
+                    {post.trending && (
+                      <div className="flex items-center gap-1 text-xs text-orange-400">
+                        <TrendingUp className="w-3 h-3" />
+                        Trending
+                      </div>
+                    )}
                   </div>
                   
-                  <h2 className="text-xl font-bold mb-3 line-clamp-2">
+                  <h2 className="text-xl font-bold mb-4 line-clamp-2 leading-tight">
                     <Link 
                       href={`/blog/${post.slug}`}
                       className="hover:text-green-400 transition-colors"
@@ -93,26 +129,29 @@ export default function BlogPage() {
                     </Link>
                   </h2>
                   
-                  <p className="text-gray-400 mb-4 line-clamp-3">{post.excerpt}</p>
+                  <p className="text-gray-300 mb-6 line-clamp-3 leading-relaxed">{post.excerpt}</p>
                   
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
                     <div className="flex items-center gap-2">
                       <User className="w-4 h-4" />
                       <span>{post.author}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>{post.date}</span>
+                      <Clock className="w-4 h-4" />
+                      <span>{post.readTime}</span>
                     </div>
                   </div>
                   
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="inline-flex items-center gap-1 text-green-400 hover:underline"
-                  >
-                    Read More
-                    <ChevronRight className="w-4 h-4" />
-                  </Link>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-gray-500">{post.date}</span>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-medium transition-colors group"
+                    >
+                      Read More
+                      <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  </div>
                 </div>
               </article>
             ))}
