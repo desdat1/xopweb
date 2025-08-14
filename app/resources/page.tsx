@@ -3,78 +3,116 @@
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import Link from 'next/link'
-import { Book, FileText, Video, PlayCircle, ChevronRight } from 'lucide-react'
+import { Book, FileText, Video, PlayCircle, ChevronRight, Mic, ExternalLink } from 'lucide-react'
 
 export default function ResourcesPage() {
   const resources = {
     ebook: {
-      title: 'The MSP\'s Guide to AI Implementation',
-      description: 'Learn how to successfully integrate AI into your MSP operations with our comprehensive guide.',
+      title: 'Free AI Implementation Guide for MSPs',
+      description: 'Get our comprehensive guide to successfully implementing AI solutions in your MSP operations. Join hundreds of MSPs already transforming their business with AI.',
       icon: Book,
-      cta: 'Download E-Book',
-      link: '#'
+      cta: 'Get Free E-Book',
+      link: 'https://xop.ai/resources#ebook-signup'
     },
+    podcasts: [
+      {
+        title: 'AI for MSPs - The Opportunity',
+        description: 'Exploring the landscape of AI opportunities specifically designed for managed service providers.',
+        episode: 1
+      },
+      {
+        title: 'AI for MSPs - Gen AI Middleware',
+        description: 'Understanding how generative AI middleware can bridge the gap between MSP operations and AI capabilities.',
+        episode: 2
+      },
+      {
+        title: 'AI for MSPs - How We Partner With MSPs',
+        description: 'Learn about our partnership approach and how we work with MSPs to implement AI solutions.',
+        episode: 3
+      },
+      {
+        title: 'AI for MSPs - The impact of AI on MRR Price Points',
+        description: 'Discussing how AI implementations affect monthly recurring revenue and pricing strategies.',
+        episode: 4
+      },
+      {
+        title: 'AI for MSPs - Building a Bot From Scratch?',
+        description: 'Should MSPs build custom AI bots or leverage existing solutions? We explore the pros and cons.',
+        episode: 5
+      },
+      {
+        title: 'AI for MSPs - The Evolution of From AI To Gen AI and Now Agentic AI',
+        description: 'Tracing the evolution of AI technologies and what agentic AI means for MSPs.',
+        episode: 6
+      },
+      {
+        title: 'AI for MSPs - Introducing HR chatbots to MSP community',
+        description: 'How HR chatbots can streamline MSP internal operations and employee support.',
+        episode: 7
+      },
+      {
+        title: 'AI for MSPs - Are MSPs Too Bogged Down with Automation Projects?',
+        description: 'Examining whether MSPs are overwhelmed by automation initiatives and how to prioritize effectively.',
+        episode: 8
+      },
+      {
+        title: 'AI for MSPs - Auto Categorizing Ticket Types, Priority Level & Time Entries',
+        description: 'Deep dive into automated ticket categorization and time tracking using AI.',
+        episode: 9
+      }
+    ],
     blogPosts: [
       {
-        title: 'How AI is Transforming MSP Service Delivery',
-        date: 'August 5, 2025',
-        excerpt: 'Discover the latest trends in AI-powered service desk management and how leading MSPs are leveraging these technologies.',
-        link: '#'
+        title: 'AI and MSPs – It\'s no longer \'optional\'',
+        excerpt: 'The landscape has shifted. AI adoption is no longer a competitive advantage—it\'s becoming a necessity for MSP survival.',
+        link: '/blog/ai-and-msps-no-longer-optional'
       },
       {
-        title: '5 Ways to Generate New Revenue Streams with AI',
-        date: 'July 28, 2025',
-        excerpt: 'Explore proven strategies for packaging AI solutions as premium services that clients love.',
-        link: '#'
+        title: 'Participate in the 2025 AI for MSPs Survey!',
+        excerpt: 'Help shape the future of AI in the MSP industry by participating in our comprehensive 2025 survey.',
+        link: '/blog/2025-ai-msps-survey'
       },
       {
-        title: 'Case Study: 200% ROI in Year 2',
-        date: 'July 15, 2025',
-        excerpt: 'Real-world example of how one MSP achieved exceptional returns with xop.ai solutions.',
-        link: '#'
+        title: 'xop.ai Named Finalist for Emerging Technology Company of the Year at the 2025 ICON Awards!',
+        excerpt: 'We\'re honored to be recognized as a finalist for our innovative AI solutions specifically designed for MSPs.',
+        link: '/blog/icon-awards-finalist'
+      },
+      {
+        title: 'GenAI for MSPs – Channel Futures Webinar',
+        excerpt: 'Missed our Channel Futures webinar? Catch up on the latest insights about Generative AI for MSPs.',
+        link: '/blog/channel-futures-webinar'
+      },
+      {
+        title: 'Build Versus Buy – You Need an AI Product Not a Platform',
+        excerpt: 'Why MSPs should focus on ready-to-use AI products rather than building on general AI platforms.',
+        link: '/blog/build-vs-buy-ai-product'
+      },
+      {
+        title: '\'Explainability\' in GenAI: What does it mean?',
+        excerpt: 'Understanding the importance of AI explainability and how it impacts MSP decision-making and client trust.',
+        link: '/blog/ai-explainability'
       }
     ],
     webinars: [
       {
-        title: 'AI-Powered Ticket Management Masterclass',
-        date: 'August 20, 2025',
-        time: '2:00 PM EST',
+        title: 'GenAI for MSPs Partnership Opportunities',
+        description: 'Discover how to leverage AI partnerships to grow your MSP business and increase MRR.',
         status: 'upcoming',
-        link: '#'
+        link: 'https://xop.ai/webinar-register-msp-ai-partnership/'
       },
       {
-        title: 'Building Your AI Service Offerings',
-        date: 'August 13, 2025',
-        time: '1:00 PM EST',
-        status: 'upcoming',
-        link: '#'
-      },
-      {
-        title: 'Engineer Efficiency with AI Tools',
-        date: 'July 30, 2025',
-        time: '2:00 PM EST',
-        status: 'recorded',
-        link: '#'
+        title: 'AI Implementation Masterclass for MSPs',
+        description: 'Learn proven strategies for successfully implementing AI solutions in your MSP operations.',
+        status: 'upcoming', 
+        link: 'https://xop.ai/webinar-register/'
       }
     ],
     demos: [
       {
-        title: 'AURA Insights Demo',
-        duration: '15 min',
-        description: 'See how AURA monitors ticket health in real-time',
-        link: '#'
-      },
-      {
-        title: 'Engineer App v4 Walkthrough',
-        duration: '20 min',
-        description: 'Complete tour of our AI-powered engineer assistant',
-        link: '#'
-      },
-      {
-        title: 'Branded Chatbot Setup',
-        duration: '12 min',
-        description: 'Learn how to deploy your white-labeled client chatbot',
-        link: '#'
+        title: 'AURA Insights: Your IT Service Desk\'s New Best Friend',
+        duration: 'Interactive Demo',
+        description: 'Experience how AURA identifies at-risk tickets, summarizes complex issues, and improves communication quality in real-time.',
+        link: 'https://xop.ai/aura-demo'
       }
     ]
   }
@@ -86,9 +124,9 @@ export default function ResourcesPage() {
       {/* Resources Section */}
       <section className="px-6 py-16">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold text-center mb-6">Resources</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-center mb-6">Resources Hub</h1>
           <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-            Everything you need to succeed with AI in your MSP business
+            Resources on our AI solutions for MSPs & the organizations they serve
           </p>
 
           {/* E-Book Section */}
@@ -101,27 +139,53 @@ export default function ResourcesPage() {
                 <div className="flex-1 text-center md:text-left">
                   <h2 className="text-3xl font-bold mb-4">{resources.ebook.title}</h2>
                   <p className="text-lg text-gray-300 mb-6">{resources.ebook.description}</p>
-                  <Link
+                  <a
                     href={resources.ebook.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity"
                   >
                     {resources.ebook.cta}
-                    <ChevronRight className="w-5 h-5" />
-                  </Link>
+                    <ExternalLink className="w-5 h-5" />
+                  </a>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Podcast Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold mb-8">Matt & Manish AI Automation for MSPs Podcast</h2>
+            <p className="text-lg text-gray-300 mb-8 text-center">
+              9 episodes focused on AI opportunities, implementation strategies, and real-world applications for MSPs
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {resources.podcasts.map((podcast, index) => (
+                <div key={index} className="bg-gray-900 rounded-lg p-6 hover:bg-gray-800 transition-colors">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Mic className="w-8 h-8 text-yellow-400" />
+                    <span className="text-sm bg-yellow-400/20 text-yellow-400 px-3 py-1 rounded-full">
+                      Episode {podcast.episode}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{podcast.title}</h3>
+                  <p className="text-gray-400 mb-4">{podcast.description}</p>
+                  <div className="text-sm text-gray-500">
+                    Available on all major podcast platforms
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Blog Posts Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold mb-8">Latest Blog Posts</h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {resources.blogPosts.map((post, index) => (
                 <div key={index} className="bg-gray-900 rounded-lg p-6 hover:bg-gray-800 transition-colors">
                   <FileText className="w-8 h-8 text-[#8BC34A] mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-                  <p className="text-sm text-gray-500 mb-3">{post.date}</p>
+                  <h3 className="text-xl font-semibold mb-3">{post.title}</h3>
                   <p className="text-gray-400 mb-4">{post.excerpt}</p>
                   <Link
                     href={post.link}
@@ -138,52 +202,60 @@ export default function ResourcesPage() {
           {/* Webinars Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold mb-8">Webinars</h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {resources.webinars.map((webinar, index) => (
                 <div key={index} className="bg-gray-900 rounded-lg p-6 hover:bg-gray-800 transition-colors">
                   <Video className="w-8 h-8 text-[#8BC34A] mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">{webinar.title}</h3>
-                  <p className="text-sm text-gray-500 mb-2">{webinar.date} at {webinar.time}</p>
+                  <h3 className="text-xl font-semibold mb-3">{webinar.title}</h3>
+                  <p className="text-gray-400 mb-4">{webinar.description}</p>
                   <div className="mb-4">
-                    {webinar.status === 'upcoming' ? (
-                      <span className="inline-block bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">
-                        Upcoming
-                      </span>
-                    ) : (
-                      <span className="inline-block bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm">
-                        Recorded
-                      </span>
-                    )}
+                    <span className="inline-block bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">
+                      Available
+                    </span>
                   </div>
-                  <Link
+                  <a
                     href={webinar.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-[#8BC34A] hover:underline inline-flex items-center gap-1"
                   >
-                    {webinar.status === 'upcoming' ? 'Register' : 'Watch Recording'}
-                    <ChevronRight className="w-4 h-4" />
-                  </Link>
+                    Register Now
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Product Demos Section */}
+          {/* Guided Demos Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8">Product Demos</h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <h2 className="text-3xl font-bold mb-8">Guided Demos</h2>
+            <div className="grid md:grid-cols-1 gap-6">
               {resources.demos.map((demo, index) => (
-                <div key={index} className="bg-gray-900 rounded-lg p-6 hover:bg-gray-800 transition-colors">
-                  <PlayCircle className="w-8 h-8 text-[#8BC34A] mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">{demo.title}</h3>
-                  <p className="text-sm text-gray-500 mb-2">Duration: {demo.duration}</p>
-                  <p className="text-gray-400 mb-4">{demo.description}</p>
-                  <Link
-                    href={demo.link}
-                    className="text-[#8BC34A] hover:underline inline-flex items-center gap-1"
-                  >
-                    Watch Demo
-                    <ChevronRight className="w-4 h-4" />
-                  </Link>
+                <div key={index} className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 rounded-lg p-8 border border-blue-500/20 hover:border-blue-500/40 transition-colors">
+                  <div className="flex flex-col md:flex-row items-center gap-8">
+                    <div className="flex-shrink-0">
+                      <PlayCircle className="w-24 h-24 text-blue-400" />
+                    </div>
+                    <div className="flex-1 text-center md:text-left">
+                      <h3 className="text-3xl font-bold mb-4">{demo.title}</h3>
+                      <p className="text-lg text-gray-300 mb-6">{demo.description}</p>
+                      <div className="flex items-center gap-4 mb-6">
+                        <span className="text-sm bg-blue-400/20 text-blue-400 px-3 py-1 rounded-full">
+                          {demo.duration}
+                        </span>
+                      </div>
+                      <a
+                        href={demo.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity"
+                      >
+                        Experience Demo
+                        <ExternalLink className="w-5 h-5" />
+                      </a>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
