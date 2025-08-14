@@ -1,5 +1,14 @@
 'use client'
 
+// Extend Window interface for Calendly
+declare global {
+  interface Window {
+    Calendly: {
+      initPopupWidget: (options: { url: string }) => void
+    }
+  }
+}
+
 import Navigation from './components/Navigation'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
@@ -14,6 +23,20 @@ export default function Home() {
 
   useEffect(() => {
     setMounted(true)
+    
+    // Load Calendly widget script
+    const script = document.createElement('script')
+    script.src = 'https://assets.calendly.com/assets/external/widget.js'
+    script.async = true
+    document.body.appendChild(script)
+    
+    return () => {
+      // Clean up script on unmount
+      const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')
+      if (existingScript) {
+        document.body.removeChild(existingScript)
+      }
+    }
   }, [])
 
   // Reordered services array with Generate Recurring Revenue at position 4
@@ -153,15 +176,17 @@ export default function Home() {
                     <span className="text-blue-400 font-semibold"> AI panel</span> occurring directly after the keynote presentation.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a
-                      href="https://calendly.com/mattruck"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <button
+                      onClick={() => {
+                        if (typeof window !== 'undefined' && window.Calendly) {
+                          window.Calendly.initPopupWidget({ url: 'https://calendly.com/mattruck' })
+                        }
+                      }}
                       className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-blue-500/50"
                     >
                       <span className="text-2xl">📅</span>
                       Schedule Time with Matt
-                    </a>
+                    </button>
                     <div className="text-sm text-gray-400 self-center">
                       Discuss AI automations for MSPs
                     </div>
