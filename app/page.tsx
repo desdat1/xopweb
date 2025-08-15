@@ -168,7 +168,7 @@ export default function Home() {
           </button>
           
           <div className="container mx-auto px-6 py-8">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-5xl mx-auto">
               <div className="flex flex-col lg:flex-row items-center gap-8">
                 {/* ConnectWise Logo */}
                 <div className="flex-shrink-0">

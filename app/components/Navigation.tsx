@@ -107,7 +107,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-white hover:text-green-400 transition-colors"
+              className="p-2 text-white hover:text-green-400 transition-colors mt-2"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
