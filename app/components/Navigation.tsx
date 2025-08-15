@@ -2,11 +2,14 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, Menu, X } from 'lucide-react'
 
 export default function Navigation() {
   const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false)
   const [appsDropdownOpen, setAppsDropdownOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false)
+  const [mobileAppsOpen, setMobileAppsOpen] = useState(false)
 
   const solutions = [
     { name: 'Engineer Efficiency', href: '/solutions/engineer-efficiency', icon: '⚡' },
@@ -99,7 +102,106 @@ export default function Navigation() {
             <Link href="/contact" className="hover:text-green-400 transition-colors">Contact</Link>
             <Link href="/" className="hover:text-green-400 transition-colors">Home</Link>
           </div>
+          
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 text-white hover:text-green-400 transition-colors"
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
+        
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-gray-900 border-t border-gray-800">
+            <div className="px-6 py-4 space-y-4">
+              {/* Mobile Solutions */}
+              <div>
+                <button
+                  onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
+                  className="flex items-center justify-between w-full text-left text-green-400 font-medium py-2"
+                >
+                  Solutions
+                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileSolutionsOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {mobileSolutionsOpen && (
+                  <div className="ml-4 mt-2 space-y-2">
+                    {solutions.map((solution) => (
+                      <Link
+                        key={solution.href}
+                        href={solution.href}
+                        className="flex items-center gap-3 py-2 text-gray-300 hover:text-green-400 transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        <span>{solution.icon}</span>
+                        <span>{solution.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+              
+              {/* Mobile Apps */}
+              <div>
+                <button
+                  onClick={() => setMobileAppsOpen(!mobileAppsOpen)}
+                  className="flex items-center justify-between w-full text-left text-yellow-400 font-medium py-2"
+                >
+                  Our Apps
+                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileAppsOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {mobileAppsOpen && (
+                  <div className="ml-4 mt-2 space-y-2">
+                    {apps.map((app) => (
+                      <Link
+                        key={app.href}
+                        href={app.href}
+                        className="flex items-center gap-3 py-2 text-gray-300 hover:text-green-400 transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        <span>{app.icon}</span>
+                        <span>{app.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+              
+              {/* Mobile Other Links */}
+              <Link 
+                href="/about" 
+                className="block py-2 text-gray-300 hover:text-green-400 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About Us
+              </Link>
+              <Link 
+                href="/resources" 
+                className="block py-2 text-gray-300 hover:text-green-400 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Resources
+              </Link>
+              <Link 
+                href="/contact" 
+                className="block py-2 text-gray-300 hover:text-green-400 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
+              <Link 
+                href="/" 
+                className="block py-2 text-gray-300 hover:text-green-400 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   )
