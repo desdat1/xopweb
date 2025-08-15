@@ -107,13 +107,13 @@ export default function Navigation() {
       
       {/* Mobile Menu Bar - appears below header on mobile only */}
       <div className="md:hidden bg-gray-900 border-b border-gray-800 sticky top-0 z-40">
-        <div className="container mx-auto px-6 py-3">
+        <div className="container mx-auto px-6 py-3 flex justify-end">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="flex items-center gap-2 text-white hover:text-green-400 transition-colors"
           >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             <span className="text-sm font-medium">Menu</span>
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
         
