@@ -115,14 +115,6 @@ export default function ResourcesPage() {
         status: 'available',
         link: '/webinar/revenue'
       }
-    ],
-    demos: [
-      {
-        title: 'AURA Insights: Your IT Service Desk\'s New Best Friend',
-        duration: 'Interactive Demo',
-        description: 'Experience how AURA identifies at-risk tickets, summarizes complex issues, and improves communication quality in real-time.',
-        link: 'https://app.supademo.com/demo/cm6civ0j915eh280ife3r6d9b'
-      }
     ]
   }
 
@@ -233,48 +225,6 @@ export default function ResourcesPage() {
                     Access Webinar
                     <ChevronRight className="w-4 h-4" />
                   </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Guided Demos Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8">Guided Demos</h2>
-            <div className="grid md:grid-cols-1 gap-6">
-              {resources.demos.map((demo, index) => (
-                <div key={index} className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 rounded-lg p-8 border border-blue-500/20">
-                  <div className="text-center mb-8">
-                    <h3 className="text-3xl font-bold mb-4">{demo.title}</h3>
-                    <p className="text-lg text-gray-300 mb-6">{demo.description}</p>
-                    <span className="text-sm bg-blue-400/20 text-blue-400 px-3 py-1 rounded-full">
-                      {demo.duration}
-                    </span>
-                  </div>
-                  
-                  {/* Embedded SupaDemo */}
-                  <div className="w-full rounded-lg overflow-hidden">
-                    <iframe
-                      src={demo.link}
-                      className="w-full h-[600px] md:h-[700px]"
-                      frameBorder="0"
-                      allow="fullscreen"
-                      title={demo.title}
-                      style={{ border: 'none' }}
-                    />
-                  </div>
-                  
-                  <div className="text-center mt-6">
-                    <a
-                      href={demo.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors"
-                    >
-                      Open in full screen
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  </div>
                 </div>
               ))}
             </div>
