@@ -102,21 +102,24 @@ export default function Navigation() {
             <Link href="/contact" className="hover:text-green-400 transition-colors">Contact</Link>
             <Link href="/" className="hover:text-green-400 transition-colors">Home</Link>
           </div>
-          
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-white hover:text-green-400 transition-colors mt-6"
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
+        </div>
+      </div>
+      
+      {/* Mobile Menu Bar - appears below header on mobile only */}
+      <div className="md:hidden bg-gray-900 border-b border-gray-800 sticky top-0 z-40">
+        <div className="container mx-auto px-6 py-3">
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="flex items-center gap-2 text-white hover:text-green-400 transition-colors"
+          >
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            <span className="text-sm font-medium">Menu</span>
+          </button>
         </div>
         
-        {/* Mobile Menu */}
+        {/* Mobile Menu Dropdown */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-gray-900 border-t border-gray-800">
+          <div className="bg-gray-800 border-t border-gray-700">
             <div className="px-6 py-4 space-y-4">
               {/* Mobile Solutions */}
               <div>
