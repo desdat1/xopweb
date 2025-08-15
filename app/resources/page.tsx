@@ -107,15 +107,13 @@ export default function ResourcesPage() {
         title: 'Monetize, Boost your MSP Business Productivity with GenAI',
         description: 'Discover proven strategies to leverage Generative AI for increasing MSP productivity and creating new revenue streams.',
         status: 'available',
-        link: '/webinar/productivity',
-        youtubeLink: 'https://youtu.be/HRhcN9MLLsY'
+        link: '/webinar/productivity'
       },
       {
         title: 'MSPs & GenAI - Build a Revenue Generating Practice',
         description: 'Learn how to transform your MSP into a revenue-generating AI powerhouse with proven strategies for building and scaling an AI practice.',
         status: 'available',
-        link: '/webinar/revenue',
-        youtubeLink: 'https://youtu.be/Jn0hEY9qMOI'
+        link: '/webinar/revenue'
       }
     ],
     demos: [
@@ -228,24 +226,13 @@ export default function ResourcesPage() {
                       Available Now
                     </span>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Link
-                      href={webinar.link}
-                      className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 px-4 py-2 rounded-full font-medium hover:opacity-90 transition-opacity text-sm"
-                    >
-                      Access Webinar
-                      <ChevronRight className="w-4 h-4" />
-                    </Link>
-                    <a
-                      href={webinar.youtubeLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 border border-red-500/30 px-4 py-2 rounded-full font-medium hover:bg-red-500/10 transition-colors text-sm text-red-400"
-                    >
-                      <Play className="w-4 h-4" />
-                      YouTube
-                    </a>
-                  </div>
+                  <Link
+                    href={webinar.link}
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity"
+                  >
+                    Access Webinar
+                    <ChevronRight className="w-4 h-4" />
+                  </Link>
                 </div>
               ))}
             </div>

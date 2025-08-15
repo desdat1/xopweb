@@ -34,12 +34,12 @@ export default function ServiceDeskManagementPage() {
   ]
 
   const features = [
-    'AI-powered ticket routing and load balancing',
-    'Real-time escalation boards with predictive alerts',
-    'Client health scorecards with actionable insights',
-    'Team performance analytics and coaching opportunities',
-    'SLA tracking with breach prevention alerts',
-    'Automated workflow optimization recommendations'
+    'AI-assisted ticket assignment based on engineer skills and workload',
+    'Human and AI-generated escalation tracking and monitoring',
+    'Client health scorecards with satisfaction and profitability metrics',
+    'Team performance analytics with weekly coaching insights',
+    'Escalation monitoring based on communication cadence and technical progress',
+    'Automated ticket assignment when AI confidence threshold is met'
   ]
 
   return (

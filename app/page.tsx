@@ -62,7 +62,7 @@ export default function Home() {
       icon: '⚡',
       title: 'Engineer Efficiency',
       description: 'Free up engineers to solve complex problems',
-      details: 'Our AI assistant handles routine tasks, knowledge retrieval, and ticket correlation. Engineers spend less time searching and more time solving, resulting in 15-30% productivity gains.',
+      details: 'Our Enterprise Search and Engineer V4 app provides AI workspace with customer overviews, historical ticket analysis, and resolution suggestions. Engineers spend less time searching and more time solving, resulting in 15-30% productivity gains.',
       colorClass: 'from-green-500 to-green-400',
       iconAnimation: 'animate-pulse-slow',
       slug: 'engineer-efficiency'
@@ -71,7 +71,7 @@ export default function Home() {
       icon: '📊',
       title: 'Service Desk Management',
       description: 'Real-time insights for service managers',
-      details: 'Get instant visibility into queue health, SLA compliance, and team performance. Our AI identifies patterns and suggests optimizations to improve service delivery.',
+      details: 'The Manager App provides AI-assisted ticket assignment, escalation tracking, client health monitoring, and team performance analytics. Track satisfaction scores, profitability metrics, and get weekly coaching insights.',
       colorClass: 'from-green-500 to-green-400',
       iconAnimation: 'animate-float',
       slug: 'service-desk-management'
@@ -88,8 +88,8 @@ export default function Home() {
     {
       icon: '💰',
       title: 'Generate Recurring Revenue',
-      description: 'Implement Knowledge Management chatbots, customized for your clients',
-      details: 'Package our AI solutions as a premium service offering. Most MSPs achieve 50%+ margins while delivering tangible value that increases client retention.',
+      description: 'Sell standalone Knowledge Management solutions to your clients',
+      details: 'Offer enterprise search applications that integrate with SharePoint and other data sources. Clients can search documents by department, region, and time period. Available as standalone app or with white-labeled chatbot integration.',
       colorClass: 'from-green-500 to-green-400',
       iconAnimation: 'animate-float',
       slug: 'recurring-revenue'

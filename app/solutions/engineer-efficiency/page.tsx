@@ -34,28 +34,28 @@ export default function EngineerEfficiencyPage() {
 
   const timeSavingFeatures = [
     {
-      title: 'Auto Ticket Classification & Prioritization',
-      description: 'AI instantly categorizes incoming tickets and assigns priority levels based on business impact, SLA requirements, and historical patterns. No more manual sorting - tickets flow to the right queues automatically.'
+      title: 'AI Workspace with Customer Overview',
+      description: 'Engineers get immediate context about customer environments including user count, primary contacts, application stack, and common issues - all integrated within ConnectWise Manage.'
     },
     {
       title: 'Intelligent Ticket Summarization',
       description: 'Get instant, concise summaries of lengthy ticket threads. Our AI extracts the key issues, actions taken, and current status - perfect for handoffs or catching up on escalated tickets.'
     },
     {
-      title: 'Auto-Draft Client Responses',
-      description: 'Generate professional, contextually-aware response drafts in seconds. The AI understands ticket history and suggests appropriate next steps, saving 10+ minutes per response.'
-    },
-    {
-      title: 'Smart Escalation Management',
-      description: 'AI monitors ticket health and automatically suggests escalation when needed. It identifies the right resource based on expertise, availability, and past success with similar issues.'
-    },
-    {
       title: 'Enterprise Search Across All Systems',
-      description: 'Find similar tickets, proven solutions, and relevant documentation instantly. Search across ConnectWise, IT Glue, SharePoint, and vendor portals from one unified interface.'
+      description: 'Find similar tickets, proven solutions, and relevant documentation instantly. Search across ConnectWise historical data, IT Glue, SharePoint, and other data sources from one unified interface.'
     },
     {
-      title: 'Automatic Time Entry Creation',
-      description: 'Never forget to log time again. AI tracks your work and creates accurate time entries automatically, capturing all activities and categorizing them correctly for billing.'
+      title: 'Resolution Suggestions',
+      description: 'AI analyzes similar historical tickets and provides suggested resolution steps based on what worked before, reducing problem-solving time and improving consistency.'
+    },
+    {
+      title: 'Automatic Time Entry Capture',
+      description: 'Auto-capture time entries as engineers work on tickets. The system tracks activities and creates accurate time entries, reducing administrative overhead.'
+    },
+    {
+      title: 'Escalation Communication Tools',
+      description: 'Built-in tools for communicating escalations to management and executive leadership, with all escalation activity tracked in the manager dashboard.'
     }
   ]
 
