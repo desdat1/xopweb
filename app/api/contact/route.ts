@@ -28,8 +28,7 @@ export async function POST(request: NextRequest) {
     // Send email using Resend
     const { data, error } = await resend.emails.send({
       from: 'xop.ai <noreply@xop.ai>',
-      to: [email],
-      bcc: ['matt@xop.ai'],
+      to: ['matt@xop.ai'],
       subject: `New Contact Form Submission from ${firstName} ${lastName}`,
       html: `
         <!DOCTYPE html>
