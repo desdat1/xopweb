@@ -11,7 +11,7 @@ import { ChevronRight } from 'lucide-react'
 // This would normally come from a database or CMS
 const solutionData: Record<string, any> = {
   'integrated-stack': {
-    title: 'Integrated to Your Stack',
+    title: 'Integrations',
     icon: '🔗',
     description: 'Seamless integration with your existing tools',
     content: 'Content coming soon for Integrated Stack solution...'

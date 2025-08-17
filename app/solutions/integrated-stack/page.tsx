@@ -22,7 +22,7 @@ export default function IntegrationsPage() {
               <span className="text-5xl animate-float">🔗</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fadeIn">
-              Integrated to Your Stack
+              Integrations
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-slideIn">
               Seamlessly connect with the tools that power your MSP and your clients' businesses

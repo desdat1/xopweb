@@ -123,7 +123,7 @@ export default function Home() {
     },
     {
       icon: '🔗',
-      title: 'Integrated to Your Stack',
+      title: 'Integrations',
       description: 'Seamless integration with your existing tools',
       details: 'We integrate with ConnectWise Manage, ServiceNow, IT Glue, Confluence, Hudu, & others. Our API-first approach ensures your data flows smoothly between systems, eliminating silos and reducing manual work.',
       colorClass: 'from-green-500 to-green-400',
@@ -190,7 +190,7 @@ export default function Home() {
                   </h2>
                   <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                     Matt will be in Milwaukee August 19 - 22 and is available to meet with MSPs to discuss 
-                    <span className="text-blue-400 font-semibold"> AI implementation strategies</span> and revenue generation opportunities.
+                    <span className="text-blue-400 font-semibold"> automation strategies</span> and revenue generation opportunities.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <button
