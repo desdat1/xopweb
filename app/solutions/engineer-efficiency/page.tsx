@@ -77,7 +77,7 @@ export default function EngineerEfficiencyPage() {
           </p>
           <div className="flex justify-center animate-fadeIn delay-400">
             <Link
-              href="/videos/engineer-efficiency-demo.mp4"
+              href="https://xop.im/partner"
               className="relative bg-gradient-to-r from-green-600 to-emerald-500 px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-green-500/50 transform hover:scale-105 transition-all overflow-hidden group flex items-center justify-center gap-3"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-green-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

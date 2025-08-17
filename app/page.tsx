@@ -202,9 +202,6 @@ export default function Home() {
                       <span className="text-2xl">📅</span>
                       Schedule Time with Matt
                     </button>
-                    <div className="text-sm text-gray-400 self-center">
-                      Discover AI solutions for efficiency, insights & revenue
-                    </div>
                   </div>
                 </div>
               </div>

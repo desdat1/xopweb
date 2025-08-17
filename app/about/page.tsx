@@ -30,7 +30,7 @@ export default function AboutPage() {
             <div className="w-full md:w-2/3">
               <h2 className="text-3xl font-semibold mb-4 text-green-400">Meet Matt Ruck</h2>
               <p className="text-lg text-gray-300 leading-relaxed">
-                With over 30 years of experience in the MSP industry, Matt Ruck brings a unique perspective to AI implementation. As the former CEO of designDATA, a $30M MSP, Matt understands the challenges and opportunities facing managed service providers today.
+                With over 30 years of experience in the MSP industry, Matt brings a unique perspective to AI implementation. As the former CEO of designDATA, a $30M MSP, Matt understands the challenges and opportunities facing managed service providers today.
               </p>
             </div>
           </div>
@@ -40,7 +40,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-semibold mb-6 text-green-400">Our Story</h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                After successfully building and running designDATA for decades, Matt Ruck saw an opportunity to revolutionize how MSPs operate. In 2021, he founded xop.ai with a clear vision: bring practical, ROI-driven AI solutions to the MSP community.
+                After successfully building and running designDATA for decades, Matt saw an opportunity to revolutionize how MSPs operate. In 2021, he founded xop.ai with a clear vision: bring practical, ROI-driven AI solutions to the MSP community.
               </p>
               <p>
                 Having spent years testing and implementing various AI technologies within his own MSP, Matt discovered that most AI solutions were either too complex, too expensive, or simply didn't deliver on their promises. This firsthand experience drove him to create xop.ai — a company that bridges the gap between cutting-edge AI technology and real-world MSP operations.
