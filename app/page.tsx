@@ -186,11 +186,13 @@ export default function Home() {
                 {/* Event Content */}
                 <div className="flex-1 text-center lg:text-left">
                   <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-white">
-                    Looking to Connect in Milwaukee, WI?
+                    Building the Future of MSP Operations in Milwaukee
                   </h2>
                   <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                    Matt will be in Milwaukee August 19 - 22 and is available to meet with MSPs to discuss 
-                    <span className="text-blue-400 font-semibold"> automation strategies</span> and revenue generation opportunities.
+                    Matt will be in Milwaukee August 19 - 22 and is available to meet with MSPs to discuss building 
+                    <span className="text-blue-400 font-semibold"> engineer efficiency</span>, gaining 
+                    <span className="text-green-400 font-semibold"> service desk insights</span>, and creating 
+                    <span className="text-purple-400 font-semibold"> new revenue streams</span> through AI automation.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <button
@@ -201,7 +203,7 @@ export default function Home() {
                       Schedule Time with Matt
                     </button>
                     <div className="text-sm text-gray-400 self-center">
-                      Discuss AI automations for MSPs
+                      Discover AI solutions for efficiency, insights & revenue
                     </div>
                   </div>
                 </div>
