@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
           <![endif]-->
           <style>
             body { margin: 0; padding: 0; background-color: #000000; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-            .email-container { max-width: 600px; margin: 0 auto; background-color: #111111; }
+            .email-container { max-width: 600px; margin: 0 auto; }
             .header { background: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%); padding: 40px 30px; text-align: center; }
             .header h1 { color: #ffffff; font-size: 28px; margin: 0; font-weight: 700; }
             .content { padding: 40px 30px; color: #e5e7eb; }
@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
             .next-steps h3 { color: #10b981; font-size: 20px; margin: 0 0 15px 0; }
             .next-steps ul { margin: 0; padding-left: 20px; }
             .next-steps li { margin: 8px 0; font-size: 15px; line-height: 1.5; }
-            .footer { background-color: #030712; padding: 30px; text-align: center; border-top: 1px solid #374151; }
+            .footer { padding: 30px; text-align: center; border-top: 2px solid #374151; }
             .footer p { color: #9ca3af; font-size: 14px; margin: 0; }
             .lead-details { border: 2px solid #6b7280; padding: 20px; border-radius: 8px; margin-top: 40px; }
             .lead-details h4 { color: #6b7280; font-size: 14px; margin: 0 0 15px 0; text-transform: uppercase; letter-spacing: 1px; }

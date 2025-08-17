@@ -27,8 +27,9 @@ export async function POST(request: NextRequest) {
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
-      from: 'xop.ai Contact Form <noreply@xop.ai>',
-      to: ['matt@xop.ai'],
+      from: 'xop.ai <noreply@xop.ai>',
+      to: [email],
+      bcc: ['matt@xop.ai'],
       subject: `New Contact Form Submission from ${firstName} ${lastName}`,
       html: `
         <!DOCTYPE html>
@@ -39,7 +40,7 @@ export async function POST(request: NextRequest) {
           <title>New Contact Form Submission</title>
           <style>
             body { margin: 0; padding: 0; background-color: #000000; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-            .email-container { max-width: 600px; margin: 0 auto; background-color: #111111; }
+            .email-container { max-width: 600px; margin: 0 auto; }
             .header { background: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%); padding: 30px; text-align: center; }
             .header h1 { color: #ffffff; font-size: 24px; margin: 0; font-weight: 700; }
             .content { padding: 30px; color: #e5e7eb; }
@@ -52,7 +53,7 @@ export async function POST(request: NextRequest) {
             .contact-details li strong { color: #ffffff; }
             .message-section { border: 2px solid #7c3aed; border-left: 4px solid #7c3aed; padding: 20px; margin: 20px 0; border-radius: 8px; }
             .message-section h3 { color: #7c3aed; font-size: 18px; margin: 0 0 15px 0; }
-            .footer { background-color: #030712; padding: 20px; text-align: center; border-top: 1px solid #374151; }
+            .footer { padding: 20px; text-align: center; border-top: 2px solid #374151; }
             .footer p { color: #9ca3af; font-size: 14px; margin: 0; }
           </style>
         </head>
