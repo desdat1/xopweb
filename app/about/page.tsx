@@ -29,7 +29,7 @@ export default function AboutPage() {
             </div>
             <div className="w-full md:w-2/3">
               <h2 className="text-3xl font-semibold mb-4 text-green-400">Meet Matt Ruck</h2>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed">
                 With over 30 years of experience in the MSP industry, Matt brings a unique perspective to AI implementation. As the former CEO of designDATA, a $30M MSP, Matt understands the challenges and opportunities facing managed service providers today.
               </p>
             </div>
