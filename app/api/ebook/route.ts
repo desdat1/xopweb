@@ -68,6 +68,12 @@ export async function POST(request: NextRequest) {
             .lead-details ul { list-style: none; padding: 0; margin: 0; }
             .lead-details li { padding: 5px 0; font-size: 14px; color: #d1d5db; border-bottom: 1px solid #374151; }
             .lead-details li:last-child { border-bottom: none; }
+            .signature { background-color: #1f2937; border-left: 4px solid #7c3aed; padding: 20px; margin: 0; border-radius: 0 8px 8px 0; }
+            .signature table { width: 100%; border-collapse: collapse; }
+            .signature td { vertical-align: top; }
+            .signature-logo { background: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 24px; }
+            .partnership-cta { background-color: #1f2937; border: 2px solid #10b981; border-radius: 12px; padding: 25px; margin: 30px 0; text-align: center; }
+            .partnership-button { display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #ffffff; text-decoration: none; padding: 16px 32px; border-radius: 8px; font-weight: 600; font-size: 18px; }
             @media only screen and (max-width: 480px) {
               .header { padding: 30px 20px; }
               .header h1 { font-size: 24px; }
@@ -75,6 +81,11 @@ export async function POST(request: NextRequest) {
               .download-section { padding: 20px; margin: 20px 0; }
               .download-button { padding: 14px 24px; font-size: 16px; }
               .next-steps { padding: 20px; margin: 20px 0; }
+              .partnership-cta { padding: 20px; margin: 20px 0; }
+              .partnership-button { padding: 14px 24px; font-size: 16px; }
+              .signature { padding: 15px; }
+              .signature td { display: block; padding: 0; }
+              .signature-logo { margin: 0 auto 15px auto; }
             }
           </style>
         </head>
@@ -108,10 +119,40 @@ export async function POST(request: NextRequest) {
               
               <p>Our team has helped MSPs like yours achieve <strong>20-30% efficiency gains</strong> through strategic AI implementation. If you have any questions or would like to discuss how xop.ai can help transform your MSP with AI, don't hesitate to reach out.</p>
               
-              <p style="margin-top: 30px;">
-                <strong>Best regards,</strong><br>
-                <span style="color: #7c3aed; font-weight: 600;">The xop.ai Team</span>
-              </p>
+              <div class="partnership-cta">
+                <h3 style="color: #10b981; margin: 0 0 15px 0; font-size: 20px;">🤝 Ready to Partner with Us?</h3>
+                <p style="margin: 0 0 20px 0; color: #d1d5db;">Join our partner program and discover how we can help you build a profitable AI practice for your MSP.</p>
+                <a href="https://xop.im/partner" class="partnership-button">
+                  📅 Schedule Partnership Meeting
+                </a>
+              </div>
+              
+              <div style="margin-top: 40px; padding-top: 30px; border-top: 2px solid #374151;">
+                <p style="margin: 0 0 20px 0;">
+                  <strong>Best regards,</strong>
+                </p>
+                
+                <div class="signature">
+                  <table>
+                    <tr>
+                      <td style="padding-right: 20px;">
+                        <div class="signature-logo">
+                          X
+                        </div>
+                      </td>
+                      <td>
+                        <p style="margin: 0; color: #ffffff; font-size: 18px; font-weight: 600;">The xop.ai Team</p>
+                        <p style="margin: 5px 0; color: #7c3aed; font-size: 16px; font-weight: 500;">Transforming MSPs with AI</p>
+                        <div style="margin-top: 10px;">
+                          <p style="margin: 2px 0; color: #d1d5db; font-size: 14px;">🌐 <a href="https://xop.ai" style="color: #7c3aed; text-decoration: none;">xop.ai</a></p>
+                          <p style="margin: 2px 0; color: #d1d5db; font-size: 14px;">📧 <a href="mailto:hello@xop.ai" style="color: #7c3aed; text-decoration: none;">hello@xop.ai</a></p>
+                          <p style="margin: 2px 0; color: #d1d5db; font-size: 14px;">🤝 <a href="https://xop.im/partner" style="color: #10b981; text-decoration: none;">Partner with us</a></p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
               
               <div class="lead-details">
                 <h4>📋 Your Submission Details</h4>
