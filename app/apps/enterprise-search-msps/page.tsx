@@ -293,14 +293,14 @@ export default function EnterpriseSearchMSPsPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8">Ready to Transform Your Search Experience?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Start your free trial today and see how Enterprise Search can revolutionize your MSP operations.
+            See how Enterprise Search can revolutionize your MSP operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="https://xop.im/partner"
               className="relative bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 transition-all overflow-hidden group"
             >
-              <span className="relative z-10">Start Free Trial</span>
+              <span className="relative z-10">Get Started</span>
               <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
             <Link
