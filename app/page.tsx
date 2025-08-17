@@ -180,17 +180,17 @@ export default function Home() {
                     />
                     <div className="text-3xl font-bold text-blue-400">EVOLVE</div>
                   </div>
-                  <div className="text-sm text-gray-400 text-center lg:text-left">Denver, CO</div>
+                  <div className="text-sm text-gray-400 text-center lg:text-left">August 19 - 22, Milwaukee, Wisconsin</div>
                 </div>
                 
                 {/* Event Content */}
                 <div className="flex-1 text-center lg:text-left">
                   <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-white">
-                    Attending ConnectWise Evolve in Denver, CO?
+                    Looking to Connect in Milwaukee, WI?
                   </h2>
                   <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                    Matt will be speaking to several peer groups and is participating in the 
-                    <span className="text-blue-400 font-semibold"> AI panel</span> occurring directly after the keynote presentation.
+                    Matt will be in Milwaukee August 19 - 22 and is available to meet with MSPs to discuss 
+                    <span className="text-blue-400 font-semibold"> AI implementation strategies</span> and revenue generation opportunities.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <button
