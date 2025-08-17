@@ -141,11 +141,12 @@ export async function POST(request: NextRequest) {
                         </div>
                       </td>
                       <td>
-                        <p style="margin: 0; color: #ffffff; font-size: 18px; font-weight: 600;">The xop.ai Team</p>
-                        <p style="margin: 5px 0; color: #7c3aed; font-size: 16px; font-weight: 500;">Transforming MSPs with AI</p>
+                        <p style="margin: 0; color: #ffffff; font-size: 18px; font-weight: 600;">Matt Ruck</p>
+                        <p style="margin: 5px 0; color: #7c3aed; font-size: 16px; font-weight: 500;">CEO, xop.ai - Transforming MSPs with AI</p>
                         <div style="margin-top: 10px;">
+                          <p style="margin: 2px 0; color: #d1d5db; font-size: 14px;">📧 <a href="mailto:matt@xop.ai" style="color: #7c3aed; text-decoration: none;">matt@xop.ai</a></p>
+                          <p style="margin: 2px 0; color: #d1d5db; font-size: 14px;">📱 <a href="tel:+12025258159" style="color: #7c3aed; text-decoration: none;">202-525-8159</a> (text or call)</p>
                           <p style="margin: 2px 0; color: #d1d5db; font-size: 14px;">🌐 <a href="https://xop.ai" style="color: #7c3aed; text-decoration: none;">xop.ai</a></p>
-                          <p style="margin: 2px 0; color: #d1d5db; font-size: 14px;">📧 <a href="mailto:hello@xop.ai" style="color: #7c3aed; text-decoration: none;">hello@xop.ai</a></p>
                           <p style="margin: 2px 0; color: #d1d5db; font-size: 14px;">🤝 <a href="https://xop.im/partner" style="color: #10b981; text-decoration: none;">Partner with us</a></p>
                         </div>
                       </td>
