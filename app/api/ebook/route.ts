@@ -54,25 +54,25 @@ export async function POST(request: NextRequest) {
             .header h1 { color: #ffffff; font-size: 28px; margin: 0; font-weight: 700; }
             .content { padding: 40px 30px; color: #e5e7eb; }
             .content p { font-size: 16px; line-height: 1.6; margin: 0 0 20px 0; }
-            .download-section { background-color: #1f2937; border: 2px solid #7c3aed; border-radius: 12px; padding: 30px; margin: 30px 0; text-align: center; }
+            .download-section { border: 2px solid #7c3aed; border-radius: 12px; padding: 30px; margin: 30px 0; text-align: center; }
             .download-button { display: inline-block; background: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%); color: #ffffff; text-decoration: none; padding: 16px 32px; border-radius: 8px; font-weight: 600; font-size: 18px; margin: 15px 0; }
             .download-button:hover { opacity: 0.9; }
-            .next-steps { background-color: #0f172a; border-left: 4px solid #10b981; padding: 25px; margin: 30px 0; border-radius: 0 8px 8px 0; }
+            .next-steps { border: 2px solid #10b981; border-left: 4px solid #10b981; padding: 25px; margin: 30px 0; border-radius: 8px; }
             .next-steps h3 { color: #10b981; font-size: 20px; margin: 0 0 15px 0; }
             .next-steps ul { margin: 0; padding-left: 20px; }
             .next-steps li { margin: 8px 0; font-size: 15px; line-height: 1.5; }
             .footer { background-color: #030712; padding: 30px; text-align: center; border-top: 1px solid #374151; }
             .footer p { color: #9ca3af; font-size: 14px; margin: 0; }
-            .lead-details { background-color: #1f2937; padding: 20px; border-radius: 8px; margin-top: 40px; }
+            .lead-details { border: 2px solid #6b7280; padding: 20px; border-radius: 8px; margin-top: 40px; }
             .lead-details h4 { color: #6b7280; font-size: 14px; margin: 0 0 15px 0; text-transform: uppercase; letter-spacing: 1px; }
             .lead-details ul { list-style: none; padding: 0; margin: 0; }
             .lead-details li { padding: 5px 0; font-size: 14px; color: #d1d5db; border-bottom: 1px solid #374151; }
             .lead-details li:last-child { border-bottom: none; }
-            .signature { background-color: #1f2937; border-left: 4px solid #7c3aed; padding: 20px; margin: 0; border-radius: 0 8px 8px 0; }
+            .signature { border: 2px solid #7c3aed; border-left: 4px solid #7c3aed; padding: 20px; margin: 0; border-radius: 8px; }
             .signature table { width: 100%; border-collapse: collapse; }
             .signature td { vertical-align: top; }
             .signature-logo { background: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 24px; }
-            .partnership-cta { background-color: #1f2937; border: 2px solid #10b981; border-radius: 12px; padding: 25px; margin: 30px 0; text-align: center; }
+            .partnership-cta { border: 2px solid #10b981; border-radius: 12px; padding: 25px; margin: 30px 0; text-align: center; }
             .partnership-button { display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #ffffff; text-decoration: none; padding: 16px 32px; border-radius: 8px; font-weight: 600; font-size: 18px; }
             @media only screen and (max-width: 480px) {
               .header { padding: 30px 20px; }
