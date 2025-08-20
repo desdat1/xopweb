@@ -266,14 +266,18 @@ export default function ComparePage() {
                 
                 <div className="bg-gray-900 border border-green-500/30 rounded-b-2xl overflow-hidden">
                   {/* Header */}
-                  <div className="grid bg-gray-800 border-b border-gray-700" style={{gridTemplateColumns: '2fr 1fr 1fr'}}>
-                    <div className="p-4 font-semibold text-left">Feature</div>
-                    <div className="p-4 font-semibold text-center bg-green-600/20">
-                      <Crown className="w-5 h-5 mx-auto mb-1" />
-                      Rezolve.ai
+                  <div className="grid grid-cols-[2fr_1fr_1fr] bg-gray-800 border-b border-gray-700">
+                    <div className="p-3 md:p-4 font-semibold text-left text-sm md:text-base">Feature</div>
+                    <div className="p-3 md:p-4 font-semibold text-center bg-green-600/20 text-sm md:text-base">
+                      <Crown className="w-4 h-4 md:w-5 md:h-5 mx-auto mb-1" />
+                      <div className="hidden sm:block">Rezolve.ai</div>
+                      <div className="sm:hidden">Rezolve</div>
                     </div>
                     {competitors.map((competitor, index) => (
-                      <div key={index} className="p-4 font-semibold text-center">{competitor}</div>
+                      <div key={index} className="p-3 md:p-4 font-semibold text-center text-sm md:text-base">
+                        <div className="hidden sm:block">{competitor}</div>
+                        <div className="sm:hidden">Competition</div>
+                      </div>
                     ))}
                   </div>
                   
@@ -281,15 +285,15 @@ export default function ComparePage() {
                   {category.features.map((feature, featureIndex) => {
                     const globalFeatureIndex = comparisonData.categories.slice(0, categoryIndex).reduce((acc, cat) => acc + cat.features.length, 0) + featureIndex;
                     return (
-                      <div key={featureIndex} className="grid border-b border-gray-700 last:border-b-0 hover:bg-gray-800/50" style={{gridTemplateColumns: '2fr 1fr 1fr'}}>
-                        <div className="p-4">
-                          <div className="font-medium text-left">{feature.name}</div>
-                          <div className="text-sm text-gray-400 mt-1 text-left">{feature.description}</div>
+                      <div key={featureIndex} className="grid grid-cols-[2fr_1fr_1fr] border-b border-gray-700 last:border-b-0 hover:bg-gray-800/50">
+                        <div className="p-3 md:p-4">
+                          <div className="font-medium text-left text-sm md:text-base">{feature.name}</div>
+                          <div className="text-xs md:text-sm text-gray-400 mt-1 text-left hidden md:block">{feature.description}</div>
                         </div>
-                        <div className="p-4 flex items-center justify-center bg-green-600/10 border-l border-r border-green-500/30">
+                        <div className="p-3 md:p-4 flex items-center justify-center bg-green-600/10 border-l border-r border-green-500/30">
                           {getFeatureIcon('full')}
                         </div>
-                        <div className="p-4 flex items-center justify-center">
+                        <div className="p-3 md:p-4 flex items-center justify-center">
                           {getFeatureIcon(competitorResponses[globalFeatureIndex] || 'none')}
                         </div>
                       </div>
