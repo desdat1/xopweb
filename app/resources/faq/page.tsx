@@ -24,6 +24,18 @@ export default function FAQPage() {
     {
       question: "How does AI integration work with our existing ConnectWise/PSA tools?",
       answer: "Our platform integrates natively with ConnectWise Manage through deep API connections, not just surface-level plugins. Tickets created by our voice agents appear instantly in your PSA with full context. Our Enterprise Search pulls data directly from ConnectWise, IT Glue, and your other tools to provide contextual results. The Engineer App v4 works as an intelligent overlay - your technicians see AI-generated responses, time entries, and solutions right within their familiar ConnectWise interface. Everything syncs bidirectionally, so your existing workflows, reporting, and processes remain unchanged."
+    },
+    {
+      question: "What does the Teams end user bot do? How is it different than Enterprise Search for end users?",
+      answer: "Our Teams bot creates a direct communication channel between your end users and engineers through Microsoft Teams. It's trained on common end user issues to deflect simple tickets, but when escalation is needed, it seamlessly creates tickets in ConnectWise Manage with full context. Updates flow bidirectionally - engineers can update tickets and end users see responses in Teams. Enterprise Search for end users is different - it's a standalone revenue-generating product you sell to clients for $250+ monthly, allowing them to search their own documentation and systems independently. The Teams bot is about communication and ticket management; Enterprise Search is about client self-service and recurring revenue."
+    },
+    {
+      question: "Security: Where is my data stored?",
+      answer: "We maintain secure instances in the US, Canada, and Europe, allowing you to select data residency based on your compliance requirements. We conduct SOC2 Type 2 audits and maintain additional security and compliance certifications. We're happy to complete security questionnaires and share detailed compliance documentation as appropriate, subject to non-disclosure agreements. Your data security is paramount, and we work closely with MSPs to meet their specific compliance and regulatory requirements."
+    },
+    {
+      question: "What underlying AI engine do you use?",
+      answer: "Our platform is completely portable across AI engines - we support OpenAI, Google, Claude, and others with automatic failover capabilities between models. This gives you flexibility and protection against vendor lock-in or service disruptions. If one provider has issues, your operations continue seamlessly with another. This multi-model approach also allows us to optimize performance and cost by using the best AI engine for each specific task, ensuring you always have access to cutting-edge AI capabilities regardless of market changes."
     }
   ]
 
