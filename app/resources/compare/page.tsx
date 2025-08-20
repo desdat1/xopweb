@@ -252,15 +252,142 @@ export default function ComparePage() {
               <Crown className="w-12 h-12 text-white" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fadeIn">
-              Compare Our Application Suite to the Competition
+              Rezolve.ai vs. The Competition
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-slideIn">
-              See how our comprehensive AI platform compares across all critical MSP capabilities
+              Discover why Rezolve.ai delivers unmatched value compared to fragmented point solutions in the MSP AI market
             </p>
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 px-6 py-3 rounded-full font-semibold text-lg">
               <Trophy className="w-5 h-5" />
               Industry's Only Complete AI Platform for MSPs
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Five Applications Overview */}
+      <section className="py-16 bg-gray-900/50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Our Complete Application Suite</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Five specialized applications designed for MSP efficiency and end-user empowerment
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {applications.map((category, categoryIndex) => (
+              <div key={categoryIndex} className={`bg-gradient-to-br ${category.color}/10 border border-green-500/30 rounded-2xl p-8`}>
+                <h3 className="text-2xl font-bold mb-6 text-white">
+                  {category.category}
+                </h3>
+                <div className="space-y-6">
+                  {category.apps.map((app, appIndex) => (
+                    <div key={appIndex} className="bg-black/50 rounded-xl p-6 border border-gray-700/50">
+                      <div className="flex items-center justify-between mb-3">
+                        <h4 className="text-xl font-semibold text-green-400">{app.name}</h4>
+                        <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(app.status)}`}>
+                          {app.status}
+                        </span>
+                      </div>
+                      <p className="text-gray-300 mb-3">{app.description}</p>
+                      <div className="inline-flex items-center gap-2 text-green-400 font-semibold">
+                        <Star className="w-4 h-4" />
+                        {app.impact}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Competitive Advantages */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Unmatched Competitive Advantages</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Revolutionary capabilities that set us apart from every other solution in the market
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            {competitiveAdvantages.map((advantage, index) => (
+              <div key={index} className="mb-4">
+                <div 
+                  className={`bg-gradient-to-r from-gray-900 to-gray-800 border rounded-2xl cursor-pointer transition-all duration-300 ${
+                    expandedAdvantage === index ? 'border-green-500 shadow-lg shadow-green-500/20' : 'border-gray-700 hover:border-green-500/50'
+                  }`}
+                  onClick={() => setExpandedAdvantage(expandedAdvantage === index ? null : index)}
+                >
+                  <div className="p-6">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4">
+                        <span className="text-4xl">{advantage.icon}</span>
+                        <div>
+                          <div className="flex items-center gap-3 mb-2">
+                            <span className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-3 py-1 rounded-full text-sm font-bold uppercase">
+                              {advantage.badge}
+                            </span>
+                          </div>
+                          <h3 className="text-2xl font-bold text-green-400">{advantage.title}</h3>
+                        </div>
+                      </div>
+                      {expandedAdvantage === index ? (
+                        <ChevronUp className="w-6 h-6 text-green-400" />
+                      ) : (
+                        <ChevronDown className="w-6 h-6 text-gray-400" />
+                      )}
+                    </div>
+                  </div>
+                  
+                  {expandedAdvantage === index && (
+                    <div className="px-6 pb-6 animate-fadeIn">
+                      <div className="border-t border-gray-700 pt-6">
+                        <p className="text-gray-300 text-lg mb-6">{advantage.description}</p>
+                        
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div>
+                            <h4 className="text-lg font-semibold text-green-400 mb-4 flex items-center gap-2">
+                              <Zap className="w-5 h-5" />
+                              Key Capabilities
+                            </h4>
+                            <ul className="space-y-3">
+                              {advantage.features.map((feature, featureIndex) => (
+                                <li key={featureIndex} className="flex items-start gap-3">
+                                  <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                                  <span className="text-gray-300">{feature}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          
+                          <div>
+                            <h4 className="text-lg font-semibold text-green-400 mb-4 flex items-center gap-2">
+                              <Target className="w-5 h-5" />
+                              Business Impact
+                            </h4>
+                            <div className="grid grid-cols-2 gap-4">
+                              <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-4 text-center">
+                                <div className="text-3xl font-bold text-green-400">{advantage.metrics.primary}</div>
+                                <div className="text-sm text-green-300">{advantage.metrics.secondary}</div>
+                              </div>
+                              <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-4 text-center">
+                                <div className="text-3xl font-bold text-green-400">{advantage.metrics.tertiary}</div>
+                                <div className="text-sm text-green-300">{advantage.metrics.quaternary}</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
