@@ -443,7 +443,7 @@ export default function ComparePage() {
                         </div>
                       </div>
                     );
-                  })}}
+                  })}
                 </div>
               </div>
             ))}
