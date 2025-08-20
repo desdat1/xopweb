@@ -24,6 +24,17 @@ const nextConfig: NextConfig = {
     ];
   },
   
+  // Add redirects
+  async redirects() {
+    return [
+      {
+        source: '/compare',
+        destination: '/resources/compare',
+        permanent: true,
+      },
+    ];
+  },
+  
   // Optional: Add headers for better security
   async headers() {
     return [
