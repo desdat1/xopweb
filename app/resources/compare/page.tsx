@@ -243,6 +243,65 @@ export default function ComparePage() {
     <div className="min-h-screen bg-black text-white">
       <Navigation />
 
+      {/* Detailed Comparison Table */}
+      <section className="py-16 bg-gray-900/30">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Comprehensive Feature Comparison</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See how Rezolve.ai compares across all critical MSP AI capabilities
+            </p>
+          </div>
+
+          {/* Comparison Categories */}
+          <div className="max-w-6xl mx-auto">
+            {comparisonData.categories.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="mb-8">
+                <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-t-2xl p-4">
+                  <h3 className="text-2xl font-bold text-white flex items-center gap-3">
+                    {category.icon}
+                    {category.name}
+                  </h3>
+                </div>
+                
+                <div className="bg-gray-900 border border-green-500/30 rounded-b-2xl overflow-hidden">
+                  {/* Header */}
+                  <div className="grid bg-gray-800 border-b border-gray-700" style={{gridTemplateColumns: '2fr 1fr 1fr'}}>
+                    <div className="p-4 font-semibold text-left">Feature</div>
+                    <div className="p-4 font-semibold text-center bg-green-600/20">
+                      <Crown className="w-5 h-5 mx-auto mb-1" />
+                      Rezolve.ai
+                    </div>
+                    {competitors.map((competitor, index) => (
+                      <div key={index} className="p-4 font-semibold text-center">{competitor}</div>
+                    ))}
+                  </div>
+                  
+                  {/* Features */}
+                  {category.features.map((feature, featureIndex) => {
+                    const globalFeatureIndex = comparisonData.categories.slice(0, categoryIndex).reduce((acc, cat) => acc + cat.features.length, 0) + featureIndex;
+                    return (
+                      <div key={featureIndex} className="grid border-b border-gray-700 last:border-b-0 hover:bg-gray-800/50" style={{gridTemplateColumns: '2fr 1fr 1fr'}}>
+                        <div className="p-4">
+                          <div className="font-medium text-left">{feature.name}</div>
+                          <div className="text-sm text-gray-400 mt-1 text-left">{feature.description}</div>
+                        </div>
+                        <div className="p-4 flex items-center justify-center bg-green-600/10 border-l border-r border-green-500/30">
+                          {getFeatureIcon('full')}
+                        </div>
+                        <div className="p-4 flex items-center justify-center">
+                          {getFeatureIcon(competitorResponses[globalFeatureIndex] || 'none')}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Our Five Applications Overview */}
       <section className="py-16 bg-gray-900/50">
         <div className="container mx-auto px-6">
@@ -363,65 +422,6 @@ export default function ComparePage() {
                       </div>
                     </div>
                   )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Detailed Comparison Table */}
-      <section className="py-16 bg-gray-900/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Comprehensive Feature Comparison</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how Rezolve.ai compares across all critical MSP AI capabilities
-            </p>
-          </div>
-
-          {/* Comparison Categories */}
-          <div className="max-w-6xl mx-auto">
-            {comparisonData.categories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="mb-8">
-                <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-t-2xl p-4">
-                  <h3 className="text-2xl font-bold text-white flex items-center gap-3">
-                    {category.icon}
-                    {category.name}
-                  </h3>
-                </div>
-                
-                <div className="bg-gray-900 border border-green-500/30 rounded-b-2xl overflow-hidden">
-                  {/* Header */}
-                  <div className="grid bg-gray-800 border-b border-gray-700" style={{gridTemplateColumns: '2fr 1fr 1fr'}}>
-                    <div className="p-4 font-semibold text-left">Feature</div>
-                    <div className="p-4 font-semibold text-center bg-green-600/20">
-                      <Crown className="w-5 h-5 mx-auto mb-1" />
-                      Rezolve.ai
-                    </div>
-                    {competitors.map((competitor, index) => (
-                      <div key={index} className="p-4 font-semibold text-center">{competitor}</div>
-                    ))}
-                  </div>
-                  
-                  {/* Features */}
-                  {category.features.map((feature, featureIndex) => {
-                    const globalFeatureIndex = comparisonData.categories.slice(0, categoryIndex).reduce((acc, cat) => acc + cat.features.length, 0) + featureIndex;
-                    return (
-                      <div key={featureIndex} className="grid border-b border-gray-700 last:border-b-0 hover:bg-gray-800/50" style={{gridTemplateColumns: '2fr 1fr 1fr'}}>
-                        <div className="p-4">
-                          <div className="font-medium text-left">{feature.name}</div>
-                          <div className="text-sm text-gray-400 mt-1 text-left">{feature.description}</div>
-                        </div>
-                        <div className="p-4 flex items-center justify-center bg-green-600/10 border-l border-r border-green-500/30">
-                          {getFeatureIcon('full')}
-                        </div>
-                        <div className="p-4 flex items-center justify-center">
-                          {getFeatureIcon(competitorResponses[globalFeatureIndex] || 'none')}
-                        </div>
-                      </div>
-                    );
-                  })}
                 </div>
               </div>
             ))}
