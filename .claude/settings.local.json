@@ -4,7 +4,10 @@
       "WebFetch(domain:www.connectwise.com)",
       "Bash(git add:*)",
       "Bash(git push:*)",
-      "WebFetch(domain:xop.ai)"
+      "WebFetch(domain:xop.ai)",
+      "WebSearch",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)"
     ],
     "defaultMode": "acceptEdits"
   }
