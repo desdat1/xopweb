@@ -435,10 +435,10 @@ export default function ComparePage() {
                           <div className="font-medium text-left">{feature.name}</div>
                           <div className="text-sm text-gray-400 mt-1 text-left">{feature.description}</div>
                         </div>
-                        <div className="p-4 text-center bg-green-600/10 border-l border-r border-green-500/30">
+                        <div className="p-4 flex items-center justify-center bg-green-600/10 border-l border-r border-green-500/30">
                           {getFeatureIcon('full')}
                         </div>
-                        <div className="p-4 text-center">
+                        <div className="p-4 flex items-center justify-center">
                           {getFeatureIcon(competitorResponses[globalFeatureIndex] || 'none')}
                         </div>
                       </div>
