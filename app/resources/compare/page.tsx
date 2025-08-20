@@ -265,40 +265,47 @@ export default function ComparePage() {
                 </div>
                 
                 <div className="bg-gray-900 border border-green-500/30 rounded-b-2xl overflow-hidden">
-                  {/* Header */}
-                  <div className="grid grid-cols-[2fr_1fr_1fr] bg-gray-800 border-b border-gray-700">
-                    <div className="p-3 md:p-4 font-semibold text-left text-sm md:text-base">Feature</div>
-                    <div className="p-3 md:p-4 font-semibold text-center bg-green-600/20 text-sm md:text-base">
-                      <Crown className="w-4 h-4 md:w-5 md:h-5 mx-auto mb-1" />
-                      <div className="hidden sm:block">Rezolve.ai</div>
-                      <div className="sm:hidden">Rezolve</div>
-                    </div>
-                    {competitors.map((competitor, index) => (
-                      <div key={index} className="p-3 md:p-4 font-semibold text-center text-sm md:text-base">
-                        <div className="hidden sm:block">{competitor}</div>
-                        <div className="sm:hidden">Competition</div>
-                      </div>
-                    ))}
+                  {/* Mobile-first table structure */}
+                  <div className="overflow-x-auto">
+                    <table className="w-full min-w-full">
+                      {/* Header */}
+                      <thead>
+                        <tr className="bg-gray-800 border-b border-gray-700">
+                          <th className="p-3 md:p-4 font-semibold text-left text-sm md:text-base w-1/2">Feature</th>
+                          <th className="p-3 md:p-4 font-semibold text-center bg-green-600/20 text-sm md:text-base w-1/4">
+                            <Crown className="w-4 h-4 md:w-5 md:h-5 mx-auto mb-1" />
+                            <div className="hidden sm:block">Rezolve.ai</div>
+                            <div className="sm:hidden">Rezolve</div>
+                          </th>
+                          <th className="p-3 md:p-4 font-semibold text-center text-sm md:text-base w-1/4">
+                            <div className="hidden sm:block">The Competition</div>
+                            <div className="sm:hidden">Competition</div>
+                          </th>
+                        </tr>
+                      </thead>
+                      
+                      {/* Features */}
+                      <tbody>
+                        {category.features.map((feature, featureIndex) => {
+                          const globalFeatureIndex = comparisonData.categories.slice(0, categoryIndex).reduce((acc, cat) => acc + cat.features.length, 0) + featureIndex;
+                          return (
+                            <tr key={featureIndex} className="border-b border-gray-700 last:border-b-0 hover:bg-gray-800/50">
+                              <td className="p-3 md:p-4 align-top">
+                                <div className="font-medium text-left text-sm md:text-base">{feature.name}</div>
+                                <div className="text-xs md:text-sm text-gray-400 mt-1 text-left hidden md:block">{feature.description}</div>
+                              </td>
+                              <td className="p-3 md:p-4 text-center align-middle bg-green-600/10 border-l border-r border-green-500/30">
+                                {getFeatureIcon('full')}
+                              </td>
+                              <td className="p-3 md:p-4 text-center align-middle">
+                                {getFeatureIcon(competitorResponses[globalFeatureIndex] || 'none')}
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
                   </div>
-                  
-                  {/* Features */}
-                  {category.features.map((feature, featureIndex) => {
-                    const globalFeatureIndex = comparisonData.categories.slice(0, categoryIndex).reduce((acc, cat) => acc + cat.features.length, 0) + featureIndex;
-                    return (
-                      <div key={featureIndex} className="grid grid-cols-[2fr_1fr_1fr] border-b border-gray-700 last:border-b-0 hover:bg-gray-800/50">
-                        <div className="p-3 md:p-4">
-                          <div className="font-medium text-left text-sm md:text-base">{feature.name}</div>
-                          <div className="text-xs md:text-sm text-gray-400 mt-1 text-left hidden md:block">{feature.description}</div>
-                        </div>
-                        <div className="p-3 md:p-4 flex items-center justify-center bg-green-600/10 border-l border-r border-green-500/30">
-                          {getFeatureIcon('full')}
-                        </div>
-                        <div className="p-3 md:p-4 flex items-center justify-center">
-                          {getFeatureIcon(competitorResponses[globalFeatureIndex] || 'none')}
-                        </div>
-                      </div>
-                    );
-                  })}
                 </div>
               </div>
             ))}
