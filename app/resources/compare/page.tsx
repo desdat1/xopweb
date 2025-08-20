@@ -223,7 +223,7 @@ export default function ComparePage() {
   const competitors = ["The Competition"]
   
   const competitorResponses = [
-    'partial', 'partial', 'full', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'partial', 'none', 'none'
+    'partial', 'partial', 'full', 'none', 'partial', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'partial', 'none', 'none'
   ]
 
   const getStatusColor = (status: string) => {
