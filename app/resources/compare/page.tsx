@@ -290,15 +290,19 @@ export default function ComparePage() {
                           const globalFeatureIndex = comparisonData.categories.slice(0, categoryIndex).reduce((acc, cat) => acc + cat.features.length, 0) + featureIndex;
                           return (
                             <tr key={featureIndex} className="border-b border-gray-700 last:border-b-0 hover:bg-gray-800/50">
-                              <td className="p-3 md:p-4 align-top">
+                              <td className="p-3 md:p-4 align-top text-left">
                                 <div className="font-medium text-left text-sm md:text-base">{feature.name}</div>
                                 <div className="text-xs md:text-sm text-gray-400 mt-1 text-left hidden md:block">{feature.description}</div>
                               </td>
                               <td className="p-3 md:p-4 text-center align-middle bg-green-600/10 border-l border-r border-green-500/30">
-                                {getFeatureIcon('full')}
+                                <div className="flex justify-center items-center">
+                                  {getFeatureIcon('full')}
+                                </div>
                               </td>
                               <td className="p-3 md:p-4 text-center align-middle">
-                                {getFeatureIcon(competitorResponses[globalFeatureIndex] || 'none')}
+                                <div className="flex justify-center items-center">
+                                  {getFeatureIcon(competitorResponses[globalFeatureIndex] || 'none')}
+                                </div>
                               </td>
                             </tr>
                           );
