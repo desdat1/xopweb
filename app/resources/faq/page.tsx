@@ -31,7 +31,7 @@ export default function FAQPage() {
     },
     {
       question: "Security: Where is my data stored?",
-      answer: "We maintain secure instances in the US, Canada, and Europe, allowing you to select data residency based on your compliance requirements. We conduct SOC2 Type 2 audits and maintain additional security and compliance certifications. We're happy to complete security questionnaires and share detailed compliance documentation as appropriate, subject to non-disclosure agreements. Your data security is paramount, and we work closely with MSPs to meet their specific compliance and regulatory requirements."
+      answer: "We maintain secure instances in the US, Canada, and Europe, allowing you to select data residency based on your compliance requirements. We conduct SOC2 Type 2 audits and maintain ISO 27001, HIPAA, and GDPR compliance certifications. We're happy to complete security questionnaires and share detailed compliance documentation as appropriate, subject to non-disclosure agreements. Your data security is paramount, and we work closely with MSPs to meet their specific compliance and regulatory requirements."
     },
     {
       question: "What underlying AI engine do you use?",
