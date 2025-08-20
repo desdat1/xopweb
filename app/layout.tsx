@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { inject } from '@vercel/analytics'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,10 +14,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  inject()
-  
   return (
     <html lang="en">
+      <head>
+        <script 
+          defer 
+          src="https://va.vercel-scripts.com/v1/script.js" 
+          data-endpoint="/api/_vercel/insights/view"
+        />
+      </head>
       <body className={inter.className}>
         {children}
       </body>
