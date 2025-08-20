@@ -7,7 +7,10 @@
       "WebFetch(domain:xop.ai)",
       "WebSearch",
       "Bash(npm install:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(git commit:*)",
+      "WebFetch(domain:gethread.com)",
+      "WebFetch(domain:www.getthread.com)"
     ],
     "defaultMode": "acceptEdits"
   }
