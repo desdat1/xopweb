@@ -40,6 +40,7 @@ export default function Navigation() {
     { name: 'On Demand Webinars', href: '/resources/webinars', icon: '🎥' },
     { name: 'FAQ\'s', href: '/resources/faq', icon: '❓' },
     { name: 'Rezolve.ai vs. Competition', href: '/resources/compare', icon: '⚖️' },
+    { name: 'Request custom ROI', href: '/resources/roi', icon: '📊' },
   ]
 
   return (

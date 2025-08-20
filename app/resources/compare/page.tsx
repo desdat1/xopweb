@@ -278,8 +278,7 @@ export default function ComparePage() {
                             <div className="sm:hidden">Rezolve</div>
                           </th>
                           <th className="p-3 md:p-4 font-semibold text-center text-sm md:text-base w-1/4">
-                            <div className="hidden sm:block">The Competition</div>
-                            <div className="sm:hidden">Competition</div>
+                            Competition
                           </th>
                         </tr>
                       </thead>
