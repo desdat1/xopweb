@@ -243,33 +243,11 @@ export default function ComparePage() {
     <div className="min-h-screen bg-black text-white">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-black to-emerald-900/20"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="mb-8 inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 animate-pulse-slow">
-              <Crown className="w-12 h-12 text-white" />
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fadeIn">
-              Rezolve.ai vs. The Competition
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-slideIn">
-              Discover why Rezolve.ai delivers unmatched value compared to fragmented point solutions in the MSP AI market
-            </p>
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 px-6 py-3 rounded-full font-semibold text-lg">
-              <Trophy className="w-5 h-5" />
-              Industry's Only Complete AI Platform for MSPs
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Our Five Applications Overview */}
       <section className="py-16 bg-gray-900/50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Our Complete Application Suite</h2>
+            <h2 className="text-4xl font-bold mb-4">Compare Our Application Suite to the Competition</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Five specialized applications designed for MSP efficiency and end-user empowerment
             </p>
