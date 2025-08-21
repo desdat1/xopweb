@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { ChevronRight, Calendar, User, Clock, TrendingUp } from 'lucide-react'
 
 export default function BlogPage() {
+  // Blog posts array with new strategic posts
   const blogPosts = [
     {
       slug: 'ai-and-msps-no-longer-optional',
@@ -16,6 +17,50 @@ export default function BlogPage() {
       category: 'AI Strategy',
       readTime: '6 min read',
       trending: true,
+      gradient: 'from-green-500/10 to-emerald-500/10',
+      borderColor: 'border-green-500/30'
+    },
+    {
+      slug: '2025-ai-msps-survey',
+      title: 'Participate in the 2025 AI for MSPs Survey!',
+      excerpt: 'Help shape the future of AI in the MSP industry by participating in our comprehensive 2025 survey.',
+      author: 'Matt Ruck', 
+      date: 'March 15, 2025',
+      category: 'Industry Research',
+      readTime: '4 min read',
+      gradient: 'from-blue-500/10 to-cyan-500/10',
+      borderColor: 'border-blue-500/30'
+    },
+    {
+      slug: 'icon-awards-finalist',
+      title: 'xop.ai Named Finalist for Emerging Technology Company of the Year at the 2025 ICON Awards!',
+      excerpt: 'We\'re honored to be recognized as a finalist for our innovative AI solutions specifically designed for MSPs.',
+      author: 'Matt Ruck',
+      date: 'February 25, 2025',
+      category: 'Company News',
+      readTime: '5 min read',
+      gradient: 'from-purple-500/10 to-pink-500/10',
+      borderColor: 'border-purple-500/30'
+    },
+    {
+      slug: 'channel-futures-webinar',
+      title: 'GenAI for MSPs – Channel Futures Webinar',
+      excerpt: 'Missed our Channel Futures webinar? Catch up on the latest insights about Generative AI for MSPs.',
+      author: 'Matt Ruck',
+      date: 'February 10, 2025',
+      category: 'Webinars',
+      readTime: '7 min read',
+      gradient: 'from-orange-500/10 to-red-500/10',
+      borderColor: 'border-orange-500/30'
+    },
+    {
+      slug: 'build-vs-buy-ai-product',
+      title: 'Build Versus Buy – You Need an AI Product Not a Platform',
+      excerpt: 'Why MSPs should focus on ready-to-use AI products rather than building on general AI platforms.',
+      author: 'Matt Ruck',
+      date: 'January 28, 2025',
+      category: 'AI Strategy',
+      readTime: '8 min read',
       gradient: 'from-green-500/10 to-emerald-500/10',
       borderColor: 'border-green-500/30'
     },
@@ -62,50 +107,6 @@ export default function BlogPage() {
       readTime: '12 min read',
       gradient: 'from-blue-500/10 to-purple-500/10',
       borderColor: 'border-blue-500/30'
-    },
-    {
-      slug: '2025-ai-msps-survey',
-      title: 'Participate in the 2025 AI for MSPs Survey!',
-      excerpt: 'Help shape the future of AI in the MSP industry by participating in our comprehensive 2025 survey.',
-      author: 'Matt Ruck', 
-      date: 'March 15, 2025',
-      category: 'Industry Research',
-      readTime: '4 min read',
-      gradient: 'from-blue-500/10 to-cyan-500/10',
-      borderColor: 'border-blue-500/30'
-    },
-    {
-      slug: 'icon-awards-finalist',
-      title: 'xop.ai Named Finalist for Emerging Technology Company of the Year at the 2025 ICON Awards!',
-      excerpt: 'We\'re honored to be recognized as a finalist for our innovative AI solutions specifically designed for MSPs.',
-      author: 'Matt Ruck',
-      date: 'February 25, 2025',
-      category: 'Company News',
-      readTime: '5 min read',
-      gradient: 'from-purple-500/10 to-pink-500/10',
-      borderColor: 'border-purple-500/30'
-    },
-    {
-      slug: 'channel-futures-webinar',
-      title: 'GenAI for MSPs – Channel Futures Webinar',
-      excerpt: 'Missed our Channel Futures webinar? Catch up on the latest insights about Generative AI for MSPs.',
-      author: 'Matt Ruck',
-      date: 'February 10, 2025',
-      category: 'Webinars',
-      readTime: '7 min read',
-      gradient: 'from-orange-500/10 to-red-500/10',
-      borderColor: 'border-orange-500/30'
-    },
-    {
-      slug: 'build-vs-buy-ai-product',
-      title: 'Build Versus Buy – You Need an AI Product Not a Platform',
-      excerpt: 'Why MSPs should focus on ready-to-use AI products rather than building on general AI platforms.',
-      author: 'Matt Ruck',
-      date: 'January 28, 2025',
-      category: 'AI Strategy',
-      readTime: '8 min read',
-      gradient: 'from-green-500/10 to-emerald-500/10',
-      borderColor: 'border-green-500/30'
     },
     {
       slug: 'ai-explainability',
