@@ -275,7 +275,7 @@ export default function GreatAITrainingDividePage() {
                 <div className="bg-red-900/30 p-3 rounded">
                   <p className="text-gray-300 mb-2"><strong>AI Response:</strong></p>
                   <p className="text-gray-400 italic">
-                    "Sign into your Microsoft 365 admin center, navigate to Users > Active users, 
+                    "Sign into your Microsoft 365 admin center, navigate to Users &gt; Active users, 
                     select the user account, and reset the password..."
                   </p>
                 </div>
