@@ -5,7 +5,7 @@ import Footer from '@/app/components/Footer'
 import Link from 'next/link'
 import { 
   FileText, Download, Zap, MessageCircle, Search,
-  ExternalLink, Printer, Mail
+  ExternalLink, Printer, Mail, BarChart3
 } from 'lucide-react'
 
 export default function PDFIndexPage() {
@@ -16,7 +16,15 @@ export default function PDFIndexPage() {
       description: 'AI-Powered Engineering Assistant That Transforms MSP Service Delivery',
       icon: <Zap className="w-6 h-6" />,
       color: 'from-green-500 to-emerald-600',
-      highlights: ['45% time savings per ticket', '$18K annual savings per engineer', '500+ engineers using']
+      highlights: ['45% time savings per ticket', '$18K annual savings per engineer', 'Thousands of engineers using']
+    },
+    {
+      slug: 'manager-app',
+      title: 'Manager App - Service Desk Management',
+      description: 'Unified AI Platform for Predictive Management with Intelligence from Voice, Email, Teams & Search',
+      icon: <BarChart3 className="w-6 h-6" />,
+      color: 'from-blue-500 to-indigo-600',
+      highlights: ['40% faster assignment', '30% reduction in escalations', '25% client satisfaction improvement']
     },
     {
       slug: 'teams-chatbot', 

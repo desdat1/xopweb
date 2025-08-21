@@ -6,7 +6,8 @@ import Link from 'next/link'
 import { 
   Shield, Zap, Target, Search, Bot, Phone, Mail, Clock,
   CheckCircle, TrendingUp, Users, Star, MessageCircle,
-  FileText, BarChart3, Headphones, ArrowRight, Database
+  FileText, BarChart3, Headphones, ArrowRight, Database,
+  Download
 } from 'lucide-react'
 
 export default function EngineerAppV4Page() {
@@ -308,12 +309,65 @@ export default function EngineerAppV4Page() {
         </div>
       </section>
 
+      {/* PDF Download Section */}
+      <section className="px-6 py-16 bg-gray-900/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Get the Complete Product Overview</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Download our comprehensive PDF guide with pricing, ROI calculations, and implementation details
+          </p>
+          
+          <div className="bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8 mb-8">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="text-left">
+                <h3 className="text-2xl font-bold mb-4">Engineer App v4 Product Guide</h3>
+                <div className="space-y-3 text-gray-300">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Complete feature overview and technical specs</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>ROI calculations and time savings metrics</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Pricing details and implementation timeline</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Integration guide and security information</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-black/50 rounded-xl p-6 mb-6">
+                  <FileText className="w-16 h-16 text-green-400 mx-auto mb-4" />
+                  <div className="text-lg font-semibold text-white mb-2">Professional PDF Guide</div>
+                  <div className="text-sm text-gray-400">Perfect for sharing with stakeholders</div>
+                </div>
+                
+                <Link
+                  href="/pdf/engineer-app-v4"
+                  target="_blank"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all transform hover:scale-105"
+                >
+                  <Download className="w-5 h-5" />
+                  View & Download PDF
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="px-6 py-16 bg-gradient-to-r from-green-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Transform Your Engineering Team Today</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join 500+ MSP engineers who are saving 2.5 hours daily with our complete AI platform
+            Join thousands of MSP engineers who are saving 2.5 hours daily with our complete AI platform
           </p>
           
           <div className="bg-black/30 rounded-2xl p-8 mb-8">
