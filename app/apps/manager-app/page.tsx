@@ -8,7 +8,7 @@ import {
   ChevronRight, BarChart3, Users, AlertCircle, TrendingUp, Clock, Shield, 
   Target, Zap, Brain, CheckCircle, Award, MessageCircle, Settings,
   UserCheck, TrendingDown, AlertTriangle, Star, Calendar, DollarSign,
-  Mail, Search, FileText, Download
+  Mail, Search
 } from 'lucide-react'
 
 export default function ManagerAppPage() {
@@ -514,58 +514,6 @@ export default function ManagerAppPage() {
               <div className="text-center">
                 <div className="text-2xl font-bold text-purple-400 mb-2">Team Development</div>
                 <p className="text-gray-400 text-sm">Data-driven coaching based on real interaction patterns</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PDF Download Section */}
-      <section className="px-6 py-16 bg-gray-900/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Get the Complete AI Platform Guide</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Download our comprehensive guide covering the entire platform - Engineer App, Manager App, Revenue Solutions, ROI Calculator & Implementation Roadmap
-          </p>
-          
-          <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-500/30 rounded-2xl p-8">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="text-left">
-                <h3 className="text-2xl font-bold mb-4">Complete AI Platform Guide</h3>
-                <div className="space-y-3 text-gray-300">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400" />
-                    <span>Engineer App v4, Manager App & Revenue Solutions</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400" />
-                    <span>Complete ROI calculator with $625K+ potential</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400" />
-                    <span>8-week implementation roadmap</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400" />
-                    <span>Early access pricing and exclusive benefits</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-black/50 rounded-xl p-6 mb-6">
-                  <FileText className="w-16 h-16 text-blue-400 mx-auto mb-4" />
-                  <div className="text-lg font-semibold text-white mb-2">8-Page Professional Guide</div>
-                  <div className="text-sm text-gray-400">Complete platform overview for stakeholders</div>
-                </div>
-                
-                <Link
-                  href="/download/complete-guide"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all transform hover:scale-105"
-                >
-                  <Download className="w-5 h-5" />
-                  Get Free Guide
-                </Link>
               </div>
             </div>
           </div>
