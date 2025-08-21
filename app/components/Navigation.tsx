@@ -34,11 +34,12 @@ export default function Navigation() {
   ]
 
   const resources = [
+    { name: 'FAQ\'s', href: '/resources/faq', icon: '❓' },
+    { name: 'Certified AI Professional', href: '/resources/certified-ai-professional', icon: '🏆' },
     { name: 'MSP e-book "Generating AI Revenue"', href: '/ebook', icon: '📖' },
     { name: 'Read our latest blogs', href: '/blog', icon: '📝' },
     { name: 'Matt & Manish AI podcast', href: '/resources/podcast', icon: '🎙️' },
     { name: 'On Demand Webinars', href: '/resources/webinars', icon: '🎥' },
-    { name: 'FAQ\'s', href: '/resources/faq', icon: '❓' },
     { name: 'Rezolve.ai vs. Competition', href: '/resources/compare', icon: '⚖️' },
     { name: 'Request custom ROI', href: '/resources/roi', icon: '📊' },
   ]
