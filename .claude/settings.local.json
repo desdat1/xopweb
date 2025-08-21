@@ -10,7 +10,8 @@
       "Bash(npm run build:*)",
       "Bash(git commit:*)",
       "WebFetch(domain:gethread.com)",
-      "WebFetch(domain:www.getthread.com)"
+      "WebFetch(domain:www.getthread.com)",
+      "Bash(npm run dev:*)"
     ],
     "defaultMode": "acceptEdits"
   }
