@@ -23,6 +23,7 @@ export default function Navigation() {
     { name: 'Email Agents', href: '/solutions/email-agents', icon: '📧' },
     { name: 'Integrations', href: '/solutions/integrated-stack', icon: '🔗' },
     { name: 'AURA Insights', href: '/solutions/aura-insights', icon: '🎯' },
+    { name: 'Future / Roadmap', href: '/solutions/roadmap', icon: '🚀' },
   ]
 
   const apps = [
@@ -37,7 +38,7 @@ export default function Navigation() {
     { name: 'FAQ\'s', href: '/resources/faq', icon: '❓' },
     { name: 'Certified AI Professional', href: '/resources/certified-ai-professional', icon: '🏆' },
     { name: 'MSP e-book "Generating AI Revenue"', href: '/ebook', icon: '📖' },
-    { name: 'Read our latest blogs', href: '/blog', icon: '📝' },
+    { name: 'Blogs / News', href: '/blog', icon: '📝' },
     { name: 'Matt & Manish AI podcast', href: '/resources/podcast', icon: '🎙️' },
     { name: 'On Demand Webinars', href: '/resources/webinars', icon: '🎥' },
     { name: 'Rezolve.ai vs. Competition', href: '/resources/compare', icon: '⚖️' },
