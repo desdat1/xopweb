@@ -170,12 +170,12 @@ export default function CertifiedAIProfessionalPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
-                <div className="bg-gray-900 border border-gray-700 rounded-2xl p-6 hover:border-yellow-500/50 transition-all hover:transform hover:scale-105">
+                <div className="bg-gray-900 border border-gray-700 rounded-2xl p-6 hover:border-yellow-500/50 transition-all hover:transform hover:scale-105 h-full min-h-[200px] flex flex-col">
                   <div className="flex justify-center mb-4">
                     {benefit.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-gray-400">{benefit.description}</p>
+                  <p className="text-gray-400 flex-grow">{benefit.description}</p>
                 </div>
               </div>
             ))}
