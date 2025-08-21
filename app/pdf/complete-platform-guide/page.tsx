@@ -22,9 +22,9 @@ export default function CompletePlatformGuidePDF() {
         "Automated time entries and workflow optimization"
       ],
       metrics: [
-        { label: "Time Savings", value: "45% per ticket" },
-        { label: "Daily Hours Saved", value: "2.5 hours" },
-        { label: "Annual Savings", value: "$18K per engineer" }
+        { label: "Time Savings", value: "25-40% per ticket" },
+        { label: "Daily Hours Saved", value: "1-2 hours" },
+        { label: "Annual Savings", value: "$8-15K per engineer" }
       ]
     },
     {
@@ -40,9 +40,9 @@ export default function CompletePlatformGuidePDF() {
         "Unified intelligence from all AI touchpoints"
       ],
       metrics: [
-        { label: "Faster Assignment", value: "40%" },
-        { label: "Escalation Reduction", value: "30%" },
-        { label: "Client Satisfaction", value: "25% improvement" }
+        { label: "Faster Assignment", value: "20-30%" },
+        { label: "Escalation Reduction", value: "15-25%" },
+        { label: "Client Satisfaction", value: "10-20% improvement" }
       ]
     },
     {
@@ -58,18 +58,18 @@ export default function CompletePlatformGuidePDF() {
         "Fully managed with MSP branding"
       ],
       metrics: [
-        { label: "Revenue Potential", value: "$250K+ ARR" },
-        { label: "Profit Margins", value: "40-60%" },
-        { label: "Helpdesk Reduction", value: "60-75%" }
+        { label: "Revenue Potential", value: "$50K+ ARR" },
+        { label: "Profit Margins", value: "30-50%" },
+        { label: "Helpdesk Reduction", value: "20-40%" }
       ]
     }
   ]
 
   const roiCalculator = [
-    { category: "Engineer Efficiency", engineers: 10, savings: "$18K", total: "$180K" },
-    { category: "Manager Productivity", managers: 3, savings: "$25K", total: "$75K" },
-    { category: "Client Revenue", clients: 5, revenue: "$50K", total: "$250K" },
-    { category: "Operational Savings", tickets: "30% reduction", value: "$120K", total: "$120K" }
+    { category: "Engineer Efficiency", engineers: 10, savings: "$8K", total: "$80K" },
+    { category: "Manager Productivity", managers: 3, savings: "$12K", total: "$36K" },
+    { category: "Client Revenue", clients: 2, revenue: "$25K", total: "$50K" },
+    { category: "Operational Savings", tickets: "20% reduction", value: "$15K", total: "$15K" }
   ]
 
   const implementationPhases = [
@@ -104,11 +104,21 @@ export default function CompletePlatformGuidePDF() {
       {/* Cover Page */}
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-blue-50 print:min-h-screen">
         <div className="max-w-4xl mx-auto text-center p-8">
-          {/* Header Branding */}
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="text-3xl font-bold text-gray-900">xop.ai</div>
+          {/* Header Branding with Logos */}
+          <div className="flex items-center justify-center gap-6 mb-8">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">X</span>
+              </div>
+              <div className="text-3xl font-bold text-gray-900">xop.ai</div>
+            </div>
             <div className="text-xl text-gray-400">×</div>
-            <div className="text-3xl font-bold text-blue-600">Rezolve.ai</div>
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">R</span>
+              </div>
+              <div className="text-3xl font-bold text-blue-600">Rezolve.ai</div>
+            </div>
           </div>
           
           <div className="mb-12">
@@ -131,15 +141,15 @@ export default function CompletePlatformGuidePDF() {
             
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div className="bg-white rounded-xl p-6 shadow-lg">
-                <div className="text-4xl font-bold text-green-600 mb-2">45%</div>
+                <div className="text-4xl font-bold text-green-600 mb-2">25-45%</div>
                 <div className="text-gray-600">Time Savings per Ticket</div>
               </div>
               <div className="bg-white rounded-xl p-6 shadow-lg">
-                <div className="text-4xl font-bold text-blue-600 mb-2">$250K+</div>
-                <div className="text-gray-600">Revenue Potential</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">$50K+</div>
+                <div className="text-gray-600">Potential Annual Value</div>
               </div>
               <div className="bg-white rounded-xl p-6 shadow-lg">
-                <div className="text-4xl font-bold text-purple-600 mb-2">1000+</div>
+                <div className="text-4xl font-bold text-purple-600 mb-2">500+</div>
                 <div className="text-gray-600">Engineers Using</div>
               </div>
             </div>
@@ -290,6 +300,155 @@ export default function CompletePlatformGuidePDF() {
         </div>
       </div>
 
+      {/* Solutions Overview */}
+      <div className="max-w-4xl mx-auto p-8 print:p-6 page-break-before">
+        <div className="mb-8">
+          <h2 className="text-4xl font-bold mb-6 text-gray-900">Complete Solutions Catalog</h2>
+          <div className="h-1 w-20 bg-gradient-to-r from-green-500 to-blue-500 mb-8"></div>
+        </div>
+
+        <p className="text-xl text-gray-700 mb-8">
+          Our comprehensive AI platform includes multiple solutions across different applications. 
+          Each solution is designed to integrate seamlessly with your existing MSP operations.
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          {/* Engineer App v4 Solutions */}
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-100 rounded-xl p-6">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-green-800">Engineer App v4</h3>
+            </div>
+            
+            <div className="space-y-4">
+              <div className="bg-white rounded-lg p-4 border border-green-200">
+                <div className="flex items-center gap-2 mb-2">
+                  <Search className="w-4 h-4 text-green-600" />
+                  <span className="font-semibold text-green-800">Enterprise Search</span>
+                </div>
+                <p className="text-sm text-gray-600">AI-powered search across IT Glue, SharePoint, historical tickets, and documentation</p>
+              </div>
+              
+              <div className="bg-white rounded-lg p-4 border border-green-200">
+                <div className="flex items-center gap-2 mb-2">
+                  <Phone className="w-4 h-4 text-green-600" />
+                  <span className="font-semibold text-green-800">Voice AI Integration</span>
+                </div>
+                <p className="text-sm text-gray-600">Call documentation, ticket creation, and conversation monitoring</p>
+              </div>
+              
+              <div className="bg-white rounded-lg p-4 border border-green-200">
+                <div className="flex items-center gap-2 mb-2">
+                  <Mail className="w-4 h-4 text-green-600" />
+                  <span className="font-semibold text-green-800">Email Agents</span>
+                </div>
+                <p className="text-sm text-gray-600">Smart email processing, categorization, and automated responses</p>
+              </div>
+              
+              <div className="bg-white rounded-lg p-4 border border-green-200">
+                <div className="flex items-center gap-2 mb-2">
+                  <MessageCircle className="w-4 h-4 text-green-600" />
+                  <span className="font-semibold text-green-800">Teams Chatbot</span>
+                </div>
+                <p className="text-sm text-gray-600">End-user support with ticket deflection and escalation</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Manager App Solutions */}
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-100 rounded-xl p-6">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
+                <BarChart3 className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-blue-800">Manager App</h3>
+            </div>
+            
+            <div className="space-y-4">
+              <div className="bg-white rounded-lg p-4 border border-blue-200">
+                <div className="flex items-center gap-2 mb-2">
+                  <Target className="w-4 h-4 text-blue-600" />
+                  <span className="font-semibold text-blue-800">AI Ticket Assignment</span>
+                </div>
+                <p className="text-sm text-gray-600">Skills-based routing with workload balancing</p>
+              </div>
+              
+              <div className="bg-white rounded-lg p-4 border border-blue-200">
+                <div className="flex items-center gap-2 mb-2">
+                  <AlertTriangle className="w-4 h-4 text-blue-600" />
+                  <span className="font-semibold text-blue-800">Escalations Board</span>
+                </div>
+                <p className="text-sm text-gray-600">Predictive escalation detection with AURA insights</p>
+              </div>
+              
+              <div className="bg-white rounded-lg p-4 border border-blue-200">
+                <div className="flex items-center gap-2 mb-2">
+                  <Shield className="w-4 h-4 text-blue-600" />
+                  <span className="font-semibold text-blue-800">Client Health Monitoring</span>
+                </div>
+                <p className="text-sm text-gray-600">CSAT tracking, churn prevention, and profitability analysis</p>
+              </div>
+              
+              <div className="bg-white rounded-lg p-4 border border-blue-200">
+                <div className="flex items-center gap-2 mb-2">
+                  <Award className="w-4 h-4 text-blue-600" />
+                  <span className="font-semibold text-blue-800">Team Performance</span>
+                </div>
+                <p className="text-sm text-gray-600">Performance analytics with coaching recommendations</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Revenue Solutions */}
+        <div className="bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-100 rounded-xl p-6 mb-8">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+              <DollarSign className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-purple-800">White-Labeled Revenue Solutions</h3>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="bg-white rounded-lg p-4 border border-purple-200">
+              <div className="flex items-center gap-2 mb-2">
+                <Search className="w-4 h-4 text-purple-600" />
+                <span className="font-semibold text-purple-800">Enterprise Search for End Users</span>
+              </div>
+              <p className="text-sm text-gray-600">White-labeled AI search solution for client deployment</p>
+            </div>
+            
+            <div className="bg-white rounded-lg p-4 border border-purple-200">
+              <div className="flex items-center gap-2 mb-2">
+                <MessageCircle className="w-4 h-4 text-purple-600" />
+                <span className="font-semibold text-purple-800">MSP Branded Chatbots</span>
+              </div>
+              <p className="text-sm text-gray-600">Teams-integrated chatbots with your MSP branding</p>
+            </div>
+            
+            <div className="bg-white rounded-lg p-4 border border-purple-200">
+              <div className="flex items-center gap-2 mb-2">
+                <Phone className="w-4 h-4 text-purple-600" />
+                <span className="font-semibold text-purple-800">Voice AI for Clients</span>
+              </div>
+              <p className="text-sm text-gray-600">After-hours support and call handling for clients</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Integration Note */}
+        <div className="bg-gray-100 rounded-xl p-6 text-center">
+          <h4 className="text-xl font-bold mb-3 text-gray-900">Unified Platform Integration</h4>
+          <p className="text-gray-700">
+            All solutions work together seamlessly, sharing intelligence and insights across the platform. 
+            Data from Voice AI calls informs Manager App escalation detection, Teams Chatbot interactions 
+            enhance performance analytics, and Enterprise Search patterns improve assignment algorithms.
+          </p>
+        </div>
+      </div>
+
       {/* ROI Calculator */}
       <div className="max-w-4xl mx-auto p-8 print:p-6 page-break-before">
         <div className="mb-8">
@@ -325,7 +484,7 @@ export default function CompletePlatformGuidePDF() {
                   <td className="py-4 px-4 font-bold">Total Annual Value</td>
                   <td className="py-4 px-4"></td>
                   <td className="py-4 px-4"></td>
-                  <td className="py-4 px-4 text-right text-2xl font-bold">$625K+</td>
+                  <td className="py-4 px-4 text-right text-2xl font-bold">$181K</td>
                 </tr>
               </tfoot>
             </table>
@@ -360,7 +519,7 @@ export default function CompletePlatformGuidePDF() {
             <div className="space-y-4">
               <div className="flex justify-between">
                 <span>Annual Value Generated</span>
-                <span className="font-semibold">$625,000</span>
+                <span className="font-semibold">$181,000</span>
               </div>
               <div className="flex justify-between">
                 <span>Annual Platform Cost</span>
@@ -368,11 +527,11 @@ export default function CompletePlatformGuidePDF() {
               </div>
               <div className="flex justify-between border-t border-white/30 pt-2">
                 <span className="font-bold">Net Annual Benefit</span>
-                <span className="font-bold">$614,836</span>
+                <span className="font-bold">$170,836</span>
               </div>
               <div className="text-center mt-4 p-4 bg-white/20 rounded-lg">
-                <div className="text-3xl font-bold">6,148% ROI</div>
-                <div className="text-sm opacity-90">Payback in &lt; 1 month</div>
+                <div className="text-3xl font-bold">1,680% ROI</div>
+                <div className="text-sm opacity-90">Payback in 3-6 months</div>
               </div>
             </div>
           </div>
@@ -517,10 +676,20 @@ export default function CompletePlatformGuidePDF() {
       {/* Footer */}
       <footer className="bg-gray-50 p-8 text-center text-gray-600 mt-8">
         <div className="max-w-4xl mx-auto">
-          <div className="flex justify-center items-center gap-4 mb-4">
-            <div className="text-xl font-bold text-gray-900">xop.ai</div>
+          <div className="flex justify-center items-center gap-6 mb-4">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded flex items-center justify-center">
+                <span className="text-white font-bold text-sm">X</span>
+              </div>
+              <div className="text-xl font-bold text-gray-900">xop.ai</div>
+            </div>
             <div className="text-gray-400">×</div>
-            <div className="text-xl font-bold text-blue-600">Rezolve.ai</div>
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded flex items-center justify-center">
+                <span className="text-white font-bold text-sm">R</span>
+              </div>
+              <div className="text-xl font-bold text-blue-600">Rezolve.ai</div>
+            </div>
           </div>
           <p>© 2024 XOP.ai - Transforming MSP Operations with Enterprise AI Solutions</p>
           <p className="text-sm mt-2">SOC2 Type 2 • ISO 27001 • HIPAA Compliant • GDPR Ready</p>
