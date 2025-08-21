@@ -67,11 +67,6 @@ export default function EngineerAppV4Page() {
     { metric: "30%+", label: "Tickets deflected before reaching engineers", color: "text-orange-400" }
   ]
 
-  const clientSuccessMetrics = [
-    { company: "Midwest Tech", size: "45 engineers", result: "225 hours saved monthly" },
-    { company: "Pacific MSP", size: "28 engineers", result: "67% faster ticket resolution" },
-    { company: "Atlantic Services", size: "67 engineers", result: "$810K annual cost savings" }
-  ]
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -197,18 +192,6 @@ export default function EngineerAppV4Page() {
             ))}
           </div>
 
-          <div className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border border-green-500/30 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-6 text-center">Client Success Stories</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              {clientSuccessMetrics.map((client, index) => (
-                <div key={index} className="text-center">
-                  <div className="font-semibold text-white mb-1">{client.company}</div>
-                  <div className="text-sm text-gray-400 mb-2">{client.size}</div>
-                  <div className="text-green-400 font-semibold">{client.result}</div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
