@@ -98,7 +98,7 @@ export default function EngineerAppV4Page() {
               </div>
               <div className="flex items-center gap-2 bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full">
                 <Users className="w-4 h-4" />
-                <span className="font-medium">500+ Engineers Using</span>
+                <span className="font-medium">Thousands of Engineers Using</span>
               </div>
             </div>
           </div>
