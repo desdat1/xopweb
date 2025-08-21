@@ -154,13 +154,13 @@ export default function EngineerAppV4Page() {
           <div className="grid md:grid-cols-4 gap-6">
             {workflowIntegrations.map((step, index) => (
               <div key={index} className="relative">
-                <div className="bg-gray-900 border border-gray-700 rounded-xl p-6 text-center">
+                <div className="bg-gray-900 border border-gray-700 rounded-xl p-6 text-center h-full min-h-[280px] flex flex-col">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold">{index + 1}</span>
                   </div>
                   <h3 className="text-lg font-semibold mb-3">{step.step}</h3>
-                  <p className="text-gray-300 mb-3 text-sm">{step.description}</p>
-                  <p className="text-xs text-green-400 italic">{step.tech}</p>
+                  <p className="text-gray-300 mb-3 text-sm flex-grow">{step.description}</p>
+                  <p className="text-xs text-green-400 italic mt-auto">{step.tech}</p>
                 </div>
                 {index < workflowIntegrations.length - 1 && (
                   <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2">
