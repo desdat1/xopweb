@@ -20,6 +20,50 @@ export default function BlogPage() {
       borderColor: 'border-green-500/30'
     },
     {
+      slug: 'reactive-to-predictive',
+      title: 'From Reactive to Predictive: How AI is Transforming MSP Operations from Firefighting to Strategic Leadership',
+      excerpt: 'The most successful MSPs are moving beyond reactive support to predictive operations. Here\'s how AI is enabling this transformation and why it\'s becoming essential for competitive MSPs.',
+      author: 'Matt Ruck',
+      date: 'August 14, 2024',
+      category: 'Operational Excellence',
+      readTime: '11 min read',
+      gradient: 'from-green-500/10 to-blue-500/10',
+      borderColor: 'border-green-500/30'
+    },
+    {
+      slug: 'the-30-percent-rule',
+      title: 'The 30% Rule: Why Level 1 Ticket Deflection is the New MSP Metric That Matters',
+      excerpt: 'Move beyond reactive support to proactive deflection. The MSPs winning today are eliminating 30%+ of Level 1 tickets before they reach human engineers.',
+      author: 'Matt Ruck',
+      date: 'July 15, 2024',
+      category: 'MSP Operations',
+      readTime: '8 min read',
+      gradient: 'from-green-500/10 to-emerald-500/10',
+      borderColor: 'border-green-500/30'
+    },
+    {
+      slug: 'great-ai-training-divide',
+      title: 'The Great AI Training Divide: Why Generic AI Fails and Environment-Specific Training Wins',
+      excerpt: 'The difference between 15% and 80% AI effectiveness isn\'t the model or the interface – it\'s what you train the AI on. Most MSPs are getting this fundamentally wrong.',
+      author: 'Matt Ruck',
+      date: 'July 8, 2024',
+      category: 'AI Strategy',
+      readTime: '10 min read',
+      gradient: 'from-purple-500/10 to-blue-500/10',
+      borderColor: 'border-purple-500/30'
+    },
+    {
+      slug: 'beyond-cost-savings',
+      title: 'Beyond Cost Savings: How MSPs Are Generating $250K+ Annual Recurring Revenue with White-Labeled AI',
+      excerpt: 'While other MSPs focus on AI for internal efficiency, forward-thinking providers are building entirely new revenue streams with productized AI solutions.',
+      author: 'Matt Ruck',
+      date: 'June 22, 2024',
+      category: 'Revenue Generation',
+      readTime: '12 min read',
+      gradient: 'from-blue-500/10 to-purple-500/10',
+      borderColor: 'border-blue-500/30'
+    },
+    {
       slug: '2025-ai-msps-survey',
       title: 'Participate in the 2025 AI for MSPs Survey!',
       excerpt: 'Help shape the future of AI in the MSP industry by participating in our comprehensive 2025 survey.',
