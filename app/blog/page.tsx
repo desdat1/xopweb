@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { ChevronRight, Calendar, User, Clock, TrendingUp } from 'lucide-react'
 
 export default function BlogPage() {
-  // Blog posts array with new strategic posts
+  // Blog posts array with new strategic posts - sorted newest to oldest
   const blogPosts = [
     {
       slug: 'ai-and-msps-no-longer-optional',
@@ -65,6 +65,17 @@ export default function BlogPage() {
       borderColor: 'border-green-500/30'
     },
     {
+      slug: 'ai-explainability',
+      title: '\'Explainability\' in GenAI: What does it mean?',
+      excerpt: 'Understanding the importance of AI explainability and how it impacts MSP decision-making and client trust.',
+      author: 'Matt Ruck',
+      date: 'January 15, 2025',
+      category: 'AI Technology',
+      readTime: '9 min read',
+      gradient: 'from-cyan-500/10 to-blue-500/10',
+      borderColor: 'border-cyan-500/30'
+    },
+    {
       slug: 'reactive-to-predictive',
       title: 'From Reactive to Predictive: How AI is Transforming MSP Operations from Firefighting to Strategic Leadership',
       excerpt: 'The most successful MSPs are moving beyond reactive support to predictive operations. Here\'s how AI is enabling this transformation and why it\'s becoming essential for competitive MSPs.',
@@ -107,17 +118,6 @@ export default function BlogPage() {
       readTime: '12 min read',
       gradient: 'from-blue-500/10 to-purple-500/10',
       borderColor: 'border-blue-500/30'
-    },
-    {
-      slug: 'ai-explainability',
-      title: '\'Explainability\' in GenAI: What does it mean?',
-      excerpt: 'Understanding the importance of AI explainability and how it impacts MSP decision-making and client trust.',
-      author: 'Matt Ruck',
-      date: 'January 15, 2025',
-      category: 'AI Technology',
-      readTime: '9 min read',
-      gradient: 'from-cyan-500/10 to-blue-500/10',
-      borderColor: 'border-cyan-500/30'
     }
   ]
 
