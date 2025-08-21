@@ -523,31 +523,31 @@ export default function ManagerAppPage() {
       {/* PDF Download Section */}
       <section className="px-6 py-16 bg-gray-900/30">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Get the Complete Manager App Guide</h2>
+          <h2 className="text-3xl font-bold mb-6">Get the Complete AI Platform Guide</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Download our comprehensive PDF overview with module details, AI integration, and pre-release pricing
+            Download our comprehensive guide covering the entire platform - Engineer App, Manager App, Revenue Solutions, ROI Calculator & Implementation Roadmap
           </p>
           
           <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-500/30 rounded-2xl p-8">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="text-left">
-                <h3 className="text-2xl font-bold mb-4">Manager App Product Guide</h3>
+                <h3 className="text-2xl font-bold mb-4">Complete AI Platform Guide</h3>
                 <div className="space-y-3 text-gray-300">
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-blue-400" />
-                    <span>Four management modules detailed overview</span>
+                    <span>Engineer App v4, Manager App & Revenue Solutions</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-blue-400" />
-                    <span>AI intelligence consolidation explained</span>
+                    <span>Complete ROI calculator with $625K+ potential</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-blue-400" />
-                    <span>Pre-release pricing and early access details</span>
+                    <span>8-week implementation roadmap</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-blue-400" />
-                    <span>ConnectWise integration and implementation</span>
+                    <span>Early access pricing and exclusive benefits</span>
                   </div>
                 </div>
               </div>
@@ -555,17 +555,16 @@ export default function ManagerAppPage() {
               <div className="text-center">
                 <div className="bg-black/50 rounded-xl p-6 mb-6">
                   <FileText className="w-16 h-16 text-blue-400 mx-auto mb-4" />
-                  <div className="text-lg font-semibold text-white mb-2">Professional PDF Guide</div>
-                  <div className="text-sm text-gray-400">Perfect for stakeholder presentations</div>
+                  <div className="text-lg font-semibold text-white mb-2">8-Page Professional Guide</div>
+                  <div className="text-sm text-gray-400">Complete platform overview for stakeholders</div>
                 </div>
                 
                 <Link
-                  href="/pdf/manager-app"
-                  target="_blank"
+                  href="/download/complete-guide"
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all transform hover:scale-105"
                 >
                   <Download className="w-5 h-5" />
-                  View & Download PDF
+                  Get Free Guide
                 </Link>
               </div>
             </div>
