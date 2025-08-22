@@ -157,7 +157,7 @@ export default function Home() {
 
       {/* ConnectWise Evolve Splash Screen */}
       {splashVisible && (
-        <section className="bg-gradient-to-r from-blue-900/30 via-purple-900/20 to-blue-900/30 border-b border-blue-500/30 relative">
+        <section className="bg-gradient-to-r from-yellow-600/30 via-yellow-500/20 to-yellow-600/30 border-b border-yellow-500/30 relative">
           {/* Close Button */}
           <button
             onClick={() => setSplashVisible(false)}
@@ -180,16 +180,16 @@ export default function Home() {
                     />
                     <div className="text-3xl font-bold text-blue-400">EVOLVE</div>
                   </div>
-                  <div className="text-sm text-gray-400 text-center lg:text-left">August 19 - 22, Milwaukee, Wisconsin</div>
+                  <div className="text-sm text-gray-400 text-center lg:text-left">September 2 - 5, Honolulu, Hawaii</div>
                 </div>
                 
                 {/* Event Content */}
                 <div className="flex-1 text-center lg:text-left">
                   <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-white">
-                    Building the Future of MSP Operations in Milwaukee
+                    Building the Future of MSP Operations in Honolulu
                   </h2>
                   <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                    Matt will be in Milwaukee August 19 - 22 and is available to meet with MSPs to discuss building 
+                    Matt will be in Honolulu September 2 - 5 and is available to meet with MSPs to discuss building 
                     <span className="text-blue-400 font-semibold"> engineer efficiency</span>, gaining 
                     <span className="text-green-400 font-semibold"> service desk insights</span>, and creating 
                     <span className="text-purple-400 font-semibold"> new revenue streams</span> through AI automation.
