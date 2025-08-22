@@ -307,7 +307,7 @@ export default function EnterpriseSearchMSPsPage() {
               href="/contact"
               className="relative bg-gradient-to-r from-gray-800 to-gray-700 px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-gray-500/30 transform hover:scale-105 transition-all overflow-hidden group border border-gray-600"
             >
-              <span className="relative z-10">Schedule Demo</span>
+              <span className="relative z-10">Contact Us</span>
               <div className="absolute inset-0 bg-gradient-to-r from-gray-700 to-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
           </div>

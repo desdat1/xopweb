@@ -335,15 +335,8 @@ export default function EngineerAppV4Page() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://xop.im/partner"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all transform hover:scale-105"
-            >
-              <Zap className="w-5 h-5" />
-              Start Free Trial
-            </Link>
-            <Link
               href="/resources/roi"
-              className="inline-flex items-center gap-2 bg-transparent border-2 border-green-500 text-green-400 px-8 py-4 rounded-full font-semibold hover:bg-green-500 hover:text-black transition-all"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all transform hover:scale-105"
             >
               <BarChart3 className="w-5 h-5" />
               Calculate Your ROI

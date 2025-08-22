@@ -196,7 +196,7 @@ export default function FAQPage() {
                   href="https://xop.im/partner"
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all transform hover:scale-105"
                 >
-                  Schedule a Demo
+                  Schedule a Meeting
                 </a>
                 <a
                   href="/contact"

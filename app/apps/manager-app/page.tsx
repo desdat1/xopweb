@@ -243,7 +243,7 @@ export default function ManagerAppPage() {
               href="/contact"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 px-8 py-4 rounded-full font-semibold hover:opacity-90 transform hover:scale-105 transition-all"
             >
-              See Manager App Demo
+              Contact Us
               <ChevronRight className="w-5 h-5" />
             </Link>
           </div>
@@ -557,7 +557,7 @@ export default function ManagerAppPage() {
                 href="/contact"
                 className="inline-flex items-center gap-2 border border-blue-500/30 px-8 py-4 rounded-full font-semibold hover:bg-blue-500/10 transition-colors"
               >
-                Schedule a Demo
+                Learn More
               </Link>
             </div>
           </div>
