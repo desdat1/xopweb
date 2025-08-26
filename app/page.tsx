@@ -20,7 +20,7 @@ import Footer from '@/app/components/Footer'
 export default function Home() {
   const [expandedServices, setExpandedServices] = useState<number[]>([])
   const [mounted, setMounted] = useState(false)
-  const [splashVisible, setSplashVisible] = useState(true)
+  // const [splashVisible, setSplashVisible] = useState(true) // Commented out for future use
   const [calendlyModalOpen, setCalendlyModalOpen] = useState(false)
 
   useEffect(() => {
@@ -155,10 +155,12 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <Navigation />
 
-      {/* ConnectWise Evolve Splash Screen */}
+      {/* ConnectWise Evolve Splash Screen - Commented out for future use */}
+      {/*
       {splashVisible && (
         <section className="bg-gradient-to-r from-blue-900/30 via-purple-900/20 to-blue-900/30 border-b border-blue-500/30 relative">
           {/* Close Button */}
+          {/*
           <button
             onClick={() => setSplashVisible(false)}
             className="absolute top-4 right-4 z-10 p-2 rounded-full bg-gray-800/50 hover:bg-gray-700/70 text-gray-400 hover:text-white transition-all"
@@ -171,6 +173,7 @@ export default function Home() {
             <div className="max-w-5xl mx-auto">
               <div className="flex flex-col lg:flex-row items-center gap-8">
                 {/* ConnectWise Logo */}
+                {/*
                 <div className="flex-shrink-0">
                   <div className="flex items-center gap-4 mb-4 lg:mb-0">
                     <img 
@@ -184,6 +187,7 @@ export default function Home() {
                 </div>
                 
                 {/* Event Content */}
+                {/*
                 <div className="flex-1 text-center lg:text-left">
                   <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-white">
                     Building the Future of MSP Operations in Milwaukee
@@ -209,6 +213,7 @@ export default function Home() {
           </div>
         </section>
       )}
+      */}
 
       {/* Hero Section */}
       <section className="relative overflow-hidden px-6 py-12 text-center">
