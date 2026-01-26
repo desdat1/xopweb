@@ -223,6 +223,23 @@ export default function Home() {
         </h1>
       </section>
 
+      {/* Video Section */}
+      <section className="px-6 py-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="relative rounded-xl overflow-hidden shadow-2xl shadow-purple-500/20 border border-gray-800">
+            <video
+              className="w-full h-auto"
+              controls
+              preload="metadata"
+              poster=""
+            >
+              <source src="/rezolve-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="px-6 py-6" id="services">
         <div className="max-w-7xl mx-auto">
