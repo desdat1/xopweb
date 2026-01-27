@@ -86,7 +86,7 @@ export default function ManagerAppPage() {
       icon: <FileText className="w-8 h-8" />,
       color: 'from-green-600 to-emerald-500',
       description: 'Client satisfaction and profitability reporting',
-      video: null
+      video: '/client-health-video.mp4'
     },
     {
       id: 'team-performance',
@@ -422,48 +422,9 @@ export default function ManagerAppPage() {
         </section>
       ) : (
         <>
-          {/* Five Modules Overview */}
-          <section className="px-6 py-16">
-            <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-8">
-                <div className="mb-4 flex items-center justify-center gap-4">
-                  <div className="bg-white rounded-lg p-3">
-                    <img src={activePSAData.logo} alt={activePSAData.name} className="h-8 w-auto" />
-                  </div>
-                </div>
-                <h2 className="text-3xl font-bold mb-4">Five AI-Powered Management Modules for {activePSAData.name}</h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Leverages data from Voice AI calls, Email Agent processing, Enterprise Search queries, and Teams Chatbot interactions
-                  to provide intelligent service desk management and team optimization
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-                {modules.map((module, index) => (
-                  <div
-                    key={module.id}
-                    className={`bg-gradient-to-br ${module.color} p-8 rounded-xl border border-gray-800 hover:border-gray-600 transition-all transform hover:-translate-y-1 cursor-pointer animate-fadeIn`}
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                    onClick={() => setActiveModule(module.id)}
-                  >
-                    <div className="text-white mb-4">{module.icon}</div>
-                    <h3 className="text-xl font-bold mb-3 text-white">{module.title}</h3>
-                    <p className="text-white/90 text-sm">{module.description}</p>
-                    <div className="mt-4 flex items-center text-white/80 text-sm">
-                      <span>Learn more</span>
-                      <ChevronRight className="w-4 h-4 ml-1" />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
           {/* Module Selector */}
           <section className="px-6 py-16 bg-gray-900/50">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">Detailed Module Overview</h2>
-
               {/* Module Navigation */}
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 {modules.map((module) => (
