@@ -80,7 +80,7 @@ export default function EngineerAssistConnectWisePage() {
                   controls
                   preload="metadata"
                 >
-                  <source src="/second-screen-video.mp4" type="video/mp4" />
+                  <source src="/rezolve-video.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
