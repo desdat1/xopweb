@@ -52,7 +52,7 @@ export default function ManagerAppPage() {
       id: 'autotask',
       name: "Autotask PSA",
       shortName: "Autotask",
-      logo: "/autotask-logo.png",
+      logo: "/autotask.png",
       accentColor: "text-orange-400",
       gradientFrom: "from-orange-600",
       gradientTo: "to-amber-500",

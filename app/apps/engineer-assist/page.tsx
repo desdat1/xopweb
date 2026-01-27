@@ -91,7 +91,7 @@ export default function EngineerAssistPage() {
       id: 'autotask',
       name: "Autotask PSA",
       shortName: "Autotask",
-      logo: "/autotask-logo.png",
+      logo: "/autotask.png",
       video: null,
       accentColor: "text-orange-400",
       borderColor: "border-orange-500/50",
