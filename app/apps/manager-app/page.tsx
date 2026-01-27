@@ -302,16 +302,15 @@ export default function ManagerAppPage() {
               <button
                 key={psa.id}
                 onClick={() => setActivePSA(psa.id)}
-                className={`relative flex items-center gap-3 px-6 py-4 rounded-xl transition-all ${
+                className={`relative flex items-center px-4 py-3 rounded-xl transition-all ${
                   activePSA === psa.id
-                    ? `bg-gradient-to-r ${psa.gradientFrom} ${psa.gradientTo} text-white shadow-lg`
-                    : 'bg-gray-800 hover:bg-gray-700 text-gray-300'
+                    ? `bg-gradient-to-r ${psa.gradientFrom} ${psa.gradientTo} shadow-lg`
+                    : 'bg-gray-800 hover:bg-gray-700'
                 }`}
               >
                 <div className={`bg-white rounded-lg p-2 ${activePSA === psa.id ? '' : 'opacity-70'}`}>
-                  <img src={psa.logo} alt={psa.name} className="h-6 w-auto" />
+                  <img src={psa.logo} alt={psa.name} className="h-8 w-auto" />
                 </div>
-                <span className="font-medium">{psa.shortName}</span>
                 {!psa.available && (
                   <span className="absolute -top-2 -right-2 bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded-full">
                     {psa.comingSoon}
