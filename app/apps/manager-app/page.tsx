@@ -7,12 +7,12 @@ import Link from 'next/link'
 import {
   ChevronRight, BarChart3, Users, AlertCircle, TrendingUp, Clock, Shield,
   Target, Zap, Brain, CheckCircle, Award, MessageCircle, Settings,
-  AlertTriangle, Star, DollarSign, Mail, Search
+  AlertTriangle, Star, DollarSign, Mail, Search, Calendar, FileText
 } from 'lucide-react'
 
 export default function ManagerAppPage() {
   const [activePSA, setActivePSA] = useState('connectwise')
-  const [activeModule, setActiveModule] = useState('assignment')
+  const [activeModule, setActiveModule] = useState('triage')
 
   const psaOptions = [
     {
@@ -65,37 +65,49 @@ export default function ManagerAppPage() {
 
   const modules = [
     {
-      id: 'assignment',
-      title: 'AI Ticket Assignment',
+      id: 'triage',
+      title: 'AI Triage',
       icon: <Target className="w-8 h-8" />,
       color: 'from-blue-600 to-cyan-500',
-      description: 'Intelligent ticket routing based on skills and workload'
+      description: 'Intelligent ticket routing based on skills and workload',
+      video: '/triage-video.mp4'
     },
     {
       id: 'escalations',
       title: 'Escalations Board',
       icon: <AlertTriangle className="w-8 h-8" />,
       color: 'from-red-600 to-orange-500',
-      description: 'Human and AI-generated escalation tracking'
+      description: 'Human and AI-generated escalation tracking',
+      video: '/escalations-video.mp4'
     },
     {
-      id: 'client-health',
-      title: 'Client Health',
-      icon: <Shield className="w-8 h-8" />,
+      id: 'client-reports',
+      title: 'Client Reports',
+      icon: <FileText className="w-8 h-8" />,
       color: 'from-green-600 to-emerald-500',
-      description: 'Satisfaction and profitability monitoring'
+      description: 'Client satisfaction and profitability reporting',
+      video: null
     },
     {
       id: 'team-performance',
-      title: 'Team Performance',
+      title: 'Engineer & Team Performance',
       icon: <Award className="w-8 h-8" />,
       color: 'from-purple-600 to-pink-500',
-      description: 'Analytics with weekly coaching insights'
+      description: 'Analytics with weekly coaching insights',
+      video: null
+    },
+    {
+      id: 'scheduler',
+      title: 'Scheduler',
+      icon: <Calendar className="w-8 h-8" />,
+      color: 'from-teal-600 to-cyan-500',
+      description: 'AI-powered scheduling and resource planning',
+      video: null
     }
   ]
 
   const moduleDetails = {
-    assignment: {
+    triage: {
       subtitle: 'Intelligent Resource Matching',
       features: [
         {
@@ -171,8 +183,8 @@ export default function ManagerAppPage() {
         'Take immediate action to prevent client issues'
       ]
     },
-    'client-health': {
-      subtitle: 'Comprehensive Client Monitoring',
+    'client-reports': {
+      subtitle: 'Comprehensive Client Reporting',
       features: [
         {
           icon: <Star className="w-6 h-6 text-green-400" />,
@@ -245,6 +257,44 @@ export default function ManagerAppPage() {
         'Identifies patterns in repeat service calls',
         'Provides weekly coaching and recognition insights',
         'Tracks team performance trends over time'
+      ]
+    },
+    scheduler: {
+      subtitle: 'AI-Powered Resource Planning',
+      features: [
+        {
+          icon: <Calendar className="w-6 h-6 text-teal-400" />,
+          title: 'Smart Scheduling',
+          description: 'AI optimizes engineer schedules based on skills, availability, travel time, and client preferences.'
+        },
+        {
+          icon: <Users className="w-6 h-6 text-teal-400" />,
+          title: 'Resource Optimization',
+          description: 'Balance workload across team members while considering expertise and geographic proximity.'
+        },
+        {
+          icon: <Clock className="w-6 h-6 text-teal-400" />,
+          title: 'Appointment Management',
+          description: 'Coordinate on-site visits, remote sessions, and project work with intelligent time blocking.'
+        },
+        {
+          icon: <Zap className="w-6 h-6 text-teal-400" />,
+          title: 'Conflict Resolution',
+          description: 'Automatically detect and resolve scheduling conflicts with smart rescheduling suggestions.'
+        }
+      ],
+      benefits: [
+        'Maximize engineer utilization rates',
+        'Reduce travel time between appointments',
+        'Improve client appointment satisfaction',
+        'Eliminate double-booking and conflicts'
+      ],
+      process: [
+        'Service request or project requires scheduling',
+        'AI analyzes engineer skills and availability',
+        'System considers travel time and client location',
+        'Optimal time slots are suggested or auto-scheduled',
+        'Calendar sync ensures real-time availability'
       ]
     }
   }
@@ -340,7 +390,7 @@ export default function ManagerAppPage() {
                 <div className="grid gap-3 text-left max-w-md mx-auto">
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-orange-400" />
-                    <span>AI Ticket Assignment</span>
+                    <span>AI Triage</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-orange-400" />
@@ -348,11 +398,15 @@ export default function ManagerAppPage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-orange-400" />
-                    <span>Client Health Monitoring</span>
+                    <span>Client Reports</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-orange-400" />
-                    <span>Team Performance Analytics</span>
+                    <span>Engineer & Team Performance</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-orange-400" />
+                    <span>Scheduler</span>
                   </div>
                 </div>
               </div>
@@ -368,7 +422,7 @@ export default function ManagerAppPage() {
         </section>
       ) : (
         <>
-          {/* Four Modules Overview */}
+          {/* Five Modules Overview */}
           <section className="px-6 py-16">
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-8">
@@ -377,14 +431,14 @@ export default function ManagerAppPage() {
                     <img src={activePSAData.logo} alt={activePSAData.name} className="h-8 w-auto" />
                   </div>
                 </div>
-                <h2 className="text-3xl font-bold mb-4">Four AI-Powered Management Modules for {activePSAData.name}</h2>
+                <h2 className="text-3xl font-bold mb-4">Five AI-Powered Management Modules for {activePSAData.name}</h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                   Leverages data from Voice AI calls, Email Agent processing, Enterprise Search queries, and Teams Chatbot interactions
                   to provide intelligent service desk management and team optimization
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
                 {modules.map((module, index) => (
                   <div
                     key={module.id}
@@ -438,6 +492,39 @@ export default function ManagerAppPage() {
                     {moduleDetails[activeModule as keyof typeof moduleDetails]?.subtitle}
                   </p>
                 </div>
+
+                {/* Video Section - if module has video */}
+                {modules.find(m => m.id === activeModule)?.video && (
+                  <div className="mb-12">
+                    <div className="relative rounded-2xl overflow-hidden border border-gray-700 bg-black aspect-video">
+                      <video
+                        key={activeModule}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-contain"
+                      >
+                        <source src={modules.find(m => m.id === activeModule)?.video!} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                )}
+
+                {/* Coming Soon Video Placeholder */}
+                {!modules.find(m => m.id === activeModule)?.video && (
+                  <div className="mb-12">
+                    <div className="relative rounded-2xl overflow-hidden border border-gray-700 bg-gray-900/50 aspect-video flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <Clock className="w-8 h-8 text-gray-500" />
+                        </div>
+                        <p className="text-gray-400 text-lg">Video Coming Soon</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 <div className="grid lg:grid-cols-2 gap-12">
                   {/* Features */}
