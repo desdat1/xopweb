@@ -94,7 +94,7 @@ export default function ManagerAppPage() {
       icon: <Award className="w-8 h-8" />,
       color: 'from-purple-600 to-pink-500',
       description: 'Analytics with weekly coaching insights',
-      video: null
+      video: '/engineer-health-video.mp4'
     },
     {
       id: 'scheduler',
@@ -457,14 +457,12 @@ export default function ManagerAppPage() {
                 {/* Video Section - if module has video */}
                 {modules.find(m => m.id === activeModule)?.video && (
                   <div className="mb-12">
-                    <div className="relative rounded-2xl overflow-hidden border border-gray-700 bg-black aspect-video">
+                    <div className="relative rounded-2xl overflow-hidden border border-gray-700 bg-black">
                       <video
                         key={activeModule}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="w-full h-full object-contain"
+                        className="w-full h-auto"
+                        controls
+                        preload="metadata"
                       >
                         <source src={modules.find(m => m.id === activeModule)?.video!} type="video/mp4" />
                         Your browser does not support the video tag.
