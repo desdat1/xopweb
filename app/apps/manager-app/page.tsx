@@ -232,12 +232,6 @@ export default function ManagerAppPage() {
             </div>
           </div>
           
-          {/* Coming Soon Badge */}
-          <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-400 px-6 py-3 rounded-full font-semibold mb-8">
-            <span className="text-xl">🚀</span>
-            <span>Coming December 2025</span>
-          </div>
-          
           <div className="flex justify-center">
             <Link
               href="/contact"

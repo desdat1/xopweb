@@ -205,17 +205,17 @@ export default function ComparePage() {
       category: "MSP Internal Efficiency",
       color: "from-green-600 to-emerald-600",
       apps: [
-        { name: "Engineer App v4", status: "Coming Sept 2025", description: "AI-powered efficiency tools that work as an intelligent overlay to ConnectWise Manage", impact: "40% faster resolution" },
-        { name: "Manager App", status: "Coming Dec 2025", description: "Four integrated modules: AI ticket assignment, escalations board, client health monitoring, team analytics", impact: "30% reduction in escalations" },
-        { name: "Enterprise Search for MSPs", status: "Available Now", description: "Unified AI search across ConnectWise, IT Glue, SharePoint, and vendor portals", impact: "50% faster resolution" }
+        { name: "Engineer App v4", description: "AI-powered efficiency tools that work as an intelligent overlay to ConnectWise Manage", impact: "40% faster resolution" },
+        { name: "Manager App", description: "Four integrated modules: AI ticket assignment, escalations board, client health monitoring, team analytics", impact: "30% reduction in escalations" },
+        { name: "Enterprise Search for MSPs", description: "Unified AI search across ConnectWise, IT Glue, SharePoint, and vendor portals", impact: "50% faster resolution" }
       ]
     },
     {
       category: "End-User Revenue Solutions", 
       color: "from-purple-600 to-pink-600",
       apps: [
-        { name: "End User Teams Chatbot", status: "Available Now", description: "White-labeled AI chatbot for ticket deflection with seamless escalation to ConnectWise Manage", impact: "20% ticket deflection" },
-        { name: "Enterprise Search for End Users", status: "Available Now", description: "Revenue-generating standalone product - white-labeled enterprise search for client organizations", impact: "$250+ monthly MRR" }
+        { name: "End User Teams Chatbot", description: "White-labeled AI chatbot for ticket deflection with seamless escalation to ConnectWise Manage", impact: "20% ticket deflection" },
+        { name: "Enterprise Search for End Users", description: "Revenue-generating standalone product - white-labeled enterprise search for client organizations", impact: "$250+ monthly MRR" }
       ]
     }
   ]
@@ -225,11 +225,6 @@ export default function ComparePage() {
   const competitorResponses = [
     'partial', 'partial', 'full', 'none', 'partial', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'partial', 'none', 'none'
   ]
-
-  const getStatusColor = (status: string) => {
-    if (status.includes("Available")) return "bg-green-500/20 text-green-400"
-    return "bg-orange-500/20 text-orange-400"
-  }
 
   const getFeatureIcon = (type: string) => {
     switch (type) {
@@ -335,11 +330,8 @@ export default function ComparePage() {
                 <div className="space-y-6">
                   {category.apps.map((app, appIndex) => (
                     <div key={appIndex} className="bg-black/50 rounded-xl p-6 border border-gray-700/50">
-                      <div className="flex items-center justify-between mb-3">
+                      <div className="mb-3">
                         <h4 className="text-xl font-semibold text-green-400">{app.name}</h4>
-                        <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(app.status)}`}>
-                          {app.status}
-                        </span>
                       </div>
                       <p className="text-gray-300 mb-3">{app.description}</p>
                       <div className="inline-flex items-center gap-2 text-green-400 font-semibold">

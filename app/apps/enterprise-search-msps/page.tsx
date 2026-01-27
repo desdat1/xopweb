@@ -129,11 +129,6 @@ export default function EnterpriseSearchMSPsPage() {
               Find any piece of information in seconds with intelligent AI-powered search that understands context
             </p>
             
-            {/* Available Now Badge */}
-            <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-400 px-6 py-3 rounded-full font-semibold">
-              <span className="text-xl">✅</span>
-              <span>Available Now</span>
-            </div>
           </div>
         </div>
       </section>

@@ -37,11 +37,10 @@ export default function VoiceAgentsPage() {
           <h2 className="text-3xl font-bold text-center mb-12 text-gradient">Two Powerful Voice Solutions</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Phone Intake Agent - Available Now */}
+            {/* Phone Intake Agent */}
             <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-green-500/30 rounded-2xl p-8 hover:border-green-500/50 transition-all">
               <div className="flex items-center gap-3 mb-4">
                 <div className="text-5xl">🎯</div>
-                <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-semibold">Available Now</span>
               </div>
               <h3 className="text-2xl font-bold mb-4 text-green-400">Phone Intake Agent</h3>
               <p className="text-gray-300 mb-6">
