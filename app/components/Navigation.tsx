@@ -26,13 +26,9 @@ export default function Navigation() {
   ]
 
   const apps = [
-    { name: 'Engineer Assist for ConnectWise Manage PSA', href: '/apps/engineer-assist-connectwise', icon: '⚡' },
-    { name: 'Engineer Assist for Halo PSA', href: '/apps/engineer-assist-halo', icon: '⚡' },
-    { name: 'Engineer Assist for ServiceNow ITSM', href: '/apps/engineer-assist-servicenow', icon: '⚡' },
-    { name: 'Manager App for ConnectWise Manage', href: '/apps/engineer-app-v4', icon: '👨‍💼' },
-    { name: 'Manager App for Halo PSA', href: '/apps/engineer-manager-halo', icon: '👨‍💼' },
-    { name: 'Manager App for ServiceNow ITSM', href: '/apps/engineer-manager-servicenow', icon: '👨‍💼' },
-    { name: 'End User Teams Chatbot', href: '/apps/msp-branded-client-chatbot', icon: '💬' },
+    { name: 'AI Engineer Assist', href: '/apps/engineer-assist', icon: '⚡' },
+    { name: 'AI Manager Application', href: '/apps/manager-app', icon: '👨‍💼' },
+    { name: 'AI End User Chatbot', href: '/apps/end-user-chatbot', icon: '💬' },
   ]
 
   const resources = [

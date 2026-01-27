@@ -507,11 +507,11 @@ export default function GreatAITrainingDividePage() {
               Learn About AI Training
             </Link>
             <Link
-              href="/apps/engineer-app-v4"
+              href="/apps/engineer-assist"
               className="inline-flex items-center gap-2 bg-transparent border-2 border-purple-500 text-purple-400 px-8 py-4 rounded-full font-semibold hover:bg-purple-500 hover:text-black transition-all"
             >
               <BookOpen className="w-5 h-5" />
-              Explore Engineer App v4
+              Explore AI Engineer Assist
             </Link>
           </div>
         </section>

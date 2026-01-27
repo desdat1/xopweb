@@ -4,14 +4,13 @@ import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import { useState } from 'react'
 import Link from 'next/link'
-import { 
-  ChevronRight, Bot, MessageCircle, Users, Clock, Shield, Zap,
-  FileText, BarChart3, CheckCircle, TrendingUp, Settings,
-  Building2, Target, Brain, Ticket, AlertCircle, Phone, Mail,
-  DollarSign, Database, Search, ArrowUp, Calculator, Layers
+import {
+  MessageCircle, Users, Clock, Shield, Zap,
+  FileText, BarChart3, CheckCircle, Brain, Ticket, Phone, Mail,
+  DollarSign, Database, Search, ArrowUp, Calculator, Layers, Target
 } from 'lucide-react'
 
-export default function MSPBrandedChatbotPage() {
+export default function EndUserChatbotPage() {
   const [activeTab, setActiveTab] = useState('deflection')
 
   const impactStats = [
@@ -65,17 +64,17 @@ export default function MSPBrandedChatbotPage() {
                   <MessageCircle className="w-10 h-10 text-white" />
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                  End User Teams Chatbot
+                  AI End User Chatbot
                 </h1>
                 <p className="text-xl text-gray-300 mb-6">
-                  <span className="text-green-400 font-bold">Eliminate 30%+ of Level 1 tickets</span> with AI-powered 
+                  <span className="text-green-400 font-bold">Eliminate 30%+ of Level 1 tickets</span> with AI-powered
                   end user support trained on their specific environment and application stack.
                 </p>
                 <p className="text-lg text-gray-400 mb-8">
-                  Dramatically reduce phone calls, email tickets, and helpdesk queue volume while 
+                  Dramatically reduce phone calls, email tickets, and helpdesk queue volume while
                   providing instant 24/7 support under your brand.
                 </p>
-                
+
                 {/* Key ROI Point */}
                 <div className="bg-green-900/30 border border-green-500/30 rounded-xl p-6 mb-8">
                   <div className="flex items-center gap-3 mb-3">
@@ -83,8 +82,8 @@ export default function MSPBrandedChatbotPage() {
                     <h3 className="text-xl font-bold">ROI Reality Check</h3>
                   </div>
                   <p className="text-gray-300">
-                    If your MSP handles 1,000 Level 1 tickets monthly at 45 minutes average resolution time, 
-                    deflecting just 30% saves <span className="text-green-400 font-bold">22.5 hours weekly</span> of 
+                    If your MSP handles 1,000 Level 1 tickets monthly at 45 minutes average resolution time,
+                    deflecting just 30% saves <span className="text-green-400 font-bold">22.5 hours weekly</span> of
                     engineering time.
                   </p>
                 </div>
@@ -117,7 +116,7 @@ export default function MSPBrandedChatbotPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Trained on Their Environment</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Unlike generic chatbots, we train on your client's specific data, applications, 
+              Unlike generic chatbots, we train on your client's specific data, applications,
               and proven solutions for maximum deflection effectiveness.
             </p>
           </div>
@@ -140,7 +139,7 @@ export default function MSPBrandedChatbotPage() {
       <section className="px-6 py-16">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Complete Solution Architecture</h2>
-          
+
           {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {tabs.map((tab) => (
@@ -346,10 +345,10 @@ export default function MSPBrandedChatbotPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Eliminate 30%+ of Your Level 1 Tickets</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Ready to dramatically reduce helpdesk volume while improving client satisfaction? 
+            Ready to dramatically reduce helpdesk volume while improving client satisfaction?
             Let's discuss your specific environment and ROI potential.
           </p>
-          
+
           {/* ROI Highlight */}
           <div className="bg-green-900/30 border border-green-500/30 rounded-xl p-6 mb-8 max-w-2xl mx-auto">
             <div className="grid grid-cols-3 gap-4 text-center">
@@ -370,11 +369,11 @@ export default function MSPBrandedChatbotPage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://xop.im/partner"
+              href="/contact"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all transform hover:scale-105"
             >
               <Calculator className="w-5 h-5" />
-              Calculate Your ROI
+              Request Demo
             </Link>
             <Link
               href="/resources/roi"
