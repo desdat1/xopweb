@@ -96,59 +96,6 @@ export default function EngineerAssistHaloPage() {
         </div>
       </section>
 
-      {/* AI Escalations Video Section */}
-      <section className="px-6 py-16 bg-gray-900/30">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">AI-Powered Escalations Board</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-6">
-              Define escalation parameters and let AI identify tickets that need attention before they become critical issues.
-            </p>
-          </div>
-
-          <div className="relative rounded-xl overflow-hidden shadow-2xl shadow-cyan-500/20 border border-gray-700 mb-8">
-            <video
-              className="w-full h-auto"
-              controls
-              preload="metadata"
-            >
-              <source src="/ai-escalations-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-cyan-400 mb-3">Customizable Scoring Weights</h3>
-              <p className="text-gray-300 text-sm mb-3">
-                Fine-tune how AI identifies escalations by adjusting weights for:
-              </p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• Disruption to end user work day</li>
-                <li>• Priority level and ticket age</li>
-                <li>• Communication cadence</li>
-                <li>• Technical issue complexity</li>
-                <li>• End user sentiment and empathy</li>
-                <li>• Chronic/repeat call patterns</li>
-              </ul>
-            </div>
-            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-cyan-400 mb-3">AI Assignment & Skills Evaluation</h3>
-              <p className="text-gray-300 text-sm mb-3">
-                When escalating tickets, AI helps with intelligent reassignment:
-              </p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• "Why Escalate" rationale for each ticket</li>
-                <li>• Engineer suggestions with confidence scores</li>
-                <li>• Technical skills evaluation before assignment</li>
-                <li>• Real-time confidence threshold updates</li>
-                <li>• Training tools for managers and engineers</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Features */}
       <section className="px-6 py-16">
         <div className="max-w-6xl mx-auto">
