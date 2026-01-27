@@ -47,6 +47,7 @@ export default function ServiceDeskManagementPage() {
   const moduleDetails = {
     assignment: {
       subtitle: 'Intelligent Resource Matching',
+      video: '/triage-video.mp4',
       features: [
         {
           icon: <Brain className="w-6 h-6 text-blue-400" />,
@@ -85,6 +86,7 @@ export default function ServiceDeskManagementPage() {
     },
     escalations: {
       subtitle: 'Proactive Issue Detection',
+      video: null, // escalations video coming soon
       features: [
         {
           icon: <Users className="w-6 h-6 text-red-400" />,
@@ -123,6 +125,7 @@ export default function ServiceDeskManagementPage() {
     },
     'client-health': {
       subtitle: 'Comprehensive Client Monitoring',
+      video: null, // client health video coming soon
       features: [
         {
           icon: <Star className="w-6 h-6 text-green-400" />,
@@ -161,6 +164,7 @@ export default function ServiceDeskManagementPage() {
     },
     'team-performance': {
       subtitle: 'Engineer Development & Recognition',
+      video: null, // team performance video coming soon
       features: [
         {
           icon: <TrendingUp className="w-6 h-6 text-purple-400" />,
@@ -295,6 +299,23 @@ export default function ServiceDeskManagementPage() {
                 {moduleDetails[activeModule as keyof typeof moduleDetails]?.subtitle}
               </p>
             </div>
+
+            {/* Module Video */}
+            {moduleDetails[activeModule as keyof typeof moduleDetails]?.video && (
+              <div className="mb-10">
+                <div className="relative rounded-xl overflow-hidden shadow-2xl shadow-blue-500/20 border border-gray-700 max-w-4xl mx-auto">
+                  <video
+                    key={moduleDetails[activeModule as keyof typeof moduleDetails]?.video}
+                    className="w-full h-auto"
+                    controls
+                    preload="metadata"
+                  >
+                    <source src={moduleDetails[activeModule as keyof typeof moduleDetails]?.video || ''} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            )}
 
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Features */}
