@@ -4,15 +4,64 @@ import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import { useState } from 'react'
 import Link from 'next/link'
-import { 
-  ChevronRight, BarChart3, Users, AlertCircle, TrendingUp, Clock, Shield, 
+import {
+  ChevronRight, BarChart3, Users, AlertCircle, TrendingUp, Clock, Shield,
   Target, Zap, Brain, CheckCircle, Award, MessageCircle, Settings,
-  UserCheck, TrendingDown, AlertTriangle, Star, Calendar, DollarSign,
-  Mail, Search
+  AlertTriangle, Star, DollarSign, Mail, Search
 } from 'lucide-react'
 
 export default function ManagerAppPage() {
+  const [activePSA, setActivePSA] = useState('connectwise')
   const [activeModule, setActiveModule] = useState('assignment')
+
+  const psaOptions = [
+    {
+      id: 'connectwise',
+      name: "ConnectWise Manage",
+      shortName: "ConnectWise",
+      logo: "/connectwise-logo.png",
+      accentColor: "text-red-400",
+      gradientFrom: "from-red-600",
+      gradientTo: "to-orange-500",
+      available: true,
+      video: "/triage-video.mp4"
+    },
+    {
+      id: 'halo',
+      name: "Halo PSA",
+      shortName: "Halo PSA",
+      logo: "/halo-logo.png",
+      accentColor: "text-cyan-400",
+      gradientFrom: "from-cyan-600",
+      gradientTo: "to-blue-500",
+      available: true,
+      video: "/triage-video.mp4"
+    },
+    {
+      id: 'servicenow',
+      name: "ServiceNow ITSM",
+      shortName: "ServiceNow",
+      logo: "/servicenow-logo.png",
+      accentColor: "text-green-400",
+      gradientFrom: "from-green-600",
+      gradientTo: "to-emerald-500",
+      available: true,
+      video: "/triage-video.mp4"
+    },
+    {
+      id: 'autotask',
+      name: "Autotask PSA",
+      shortName: "Autotask",
+      logo: "/autotask-logo.png",
+      accentColor: "text-orange-400",
+      gradientFrom: "from-orange-600",
+      gradientTo: "to-amber-500",
+      available: false,
+      comingSoon: "March 2026"
+    }
+  ]
+
+  const activePSAData = psaOptions.find(p => p.id === activePSA)!
 
   const modules = [
     {
@@ -77,7 +126,7 @@ export default function ManagerAppPage() {
         'Ensure tickets go to most qualified engineers'
       ],
       process: [
-        'New ticket arrives in ConnectWise Manage',
+        'New ticket arrives in your PSA',
         'AI analyzes ticket content and requirements',
         'System evaluates engineer skills and current workload',
         'Provides ranked assignment suggestions with confidence scores',
@@ -210,28 +259,28 @@ export default function ManagerAppPage() {
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-4 py-2 rounded-full mb-6">
             <BarChart3 className="w-4 h-4 text-blue-400" />
-            <span className="text-sm font-medium text-blue-400">Manager App</span>
+            <span className="text-sm font-medium text-blue-400">AI Manager Application</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
             Service Desk Management
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-6 max-w-4xl mx-auto leading-relaxed">
-            Unified AI Platform for Service Desk Management - Intelligence from Voice Calls, Email Processing, 
+            Unified AI Platform for Service Desk Management - Intelligence from Voice Calls, Email Processing,
             Enterprise Search, and Teams Interactions Automatically Feed Manager Insights
           </p>
           <p className="text-gray-400 max-w-3xl mx-auto mb-8">
-            Your engineers use Voice AI, Email Agents, Teams Chatbots, and Enterprise Search daily. 
-            Manager App consolidates all this intelligence into actionable insights for ticket assignment, 
+            Your engineers use Voice AI, Email Agents, Teams Chatbots, and Enterprise Search daily.
+            Manager App consolidates all this intelligence into actionable insights for ticket assignment,
             escalation prevention, client health monitoring, and team performance optimization.
           </p>
-          
+
           <div className="flex items-center justify-center gap-6 mb-8">
             <div className="flex items-center gap-2 bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full">
               <Award className="w-4 h-4" />
               <span className="font-medium">Pre-Release Access</span>
             </div>
           </div>
-          
+
           <div className="flex justify-center">
             <Link
               href="/contact"
@@ -244,286 +293,290 @@ export default function ManagerAppPage() {
         </div>
       </section>
 
-      {/* Four Modules Overview */}
-      <section className="px-6 py-16 bg-gray-900/50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">Four AI-Powered Management Modules</h2>
-          <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-            Leverages data from Voice AI calls, Email Agent processing, Enterprise Search queries, and Teams Chatbot interactions 
-            to provide intelligent service desk management and team optimization
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {modules.map((module, index) => (
-              <div 
-                key={module.id}
-                className={`bg-gradient-to-br ${module.color} p-8 rounded-xl border border-gray-800 hover:border-gray-600 transition-all transform hover:-translate-y-1 cursor-pointer animate-fadeIn`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-                onClick={() => setActiveModule(module.id)}
-              >
-                <div className="text-white mb-4">{module.icon}</div>
-                <h3 className="text-xl font-bold mb-3 text-white">{module.title}</h3>
-                <p className="text-white/90 text-sm">{module.description}</p>
-                <div className="mt-4 flex items-center text-white/80 text-sm">
-                  <span>Learn more</span>
-                  <ChevronRight className="w-4 h-4 ml-1" />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Module Selector */}
-      <section className="px-6 py-16">
+      {/* PSA Selector Tabs */}
+      <section className="px-6 py-8 bg-gray-900/50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Detailed Module Overview</h2>
-          
-          {/* Module Navigation */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {modules.map((module) => (
+          <h2 className="text-2xl font-bold text-center mb-8">Select Your PSA Platform</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            {psaOptions.map((psa) => (
               <button
-                key={module.id}
-                onClick={() => setActiveModule(module.id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all ${
-                  activeModule === module.id
-                    ? `bg-gradient-to-r ${module.color} text-white`
+                key={psa.id}
+                onClick={() => setActivePSA(psa.id)}
+                className={`relative flex items-center gap-3 px-6 py-4 rounded-xl transition-all ${
+                  activePSA === psa.id
+                    ? `bg-gradient-to-r ${psa.gradientFrom} ${psa.gradientTo} text-white shadow-lg`
                     : 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                 }`}
               >
-                {module.icon}
-                <span className="font-medium">{module.title}</span>
+                <div className={`bg-white rounded-lg p-2 ${activePSA === psa.id ? '' : 'opacity-70'}`}>
+                  <img src={psa.logo} alt={psa.name} className="h-6 w-auto" />
+                </div>
+                <span className="font-medium">{psa.shortName}</span>
+                {!psa.available && (
+                  <span className="absolute -top-2 -right-2 bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded-full">
+                    {psa.comingSoon}
+                  </span>
+                )}
               </button>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Active Module Details */}
-          <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-8">
-            <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold mb-2">
-                {modules.find(m => m.id === activeModule)?.title}
-              </h3>
-              <p className="text-xl text-gray-300">
-                {moduleDetails[activeModule as keyof typeof moduleDetails]?.subtitle}
+      {/* PSA-specific content or Coming Soon */}
+      {!activePSAData.available ? (
+        <section className="px-6 py-16">
+          <div className="max-w-2xl mx-auto text-center">
+            <div className={`bg-gray-900/50 border border-orange-500/50 rounded-2xl p-12`}>
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-orange-500/20 mb-6">
+                <Clock className="w-10 h-10 text-orange-400" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Coming {activePSAData.comingSoon}</h3>
+              <p className="text-gray-300 mb-8">
+                We're working hard to bring AI Manager Application to {activePSAData.name}.
+                Join the waitlist to be notified when it's available.
               </p>
+              <div className="space-y-4 mb-8">
+                <h4 className="text-lg font-semibold text-orange-400">Planned Features</h4>
+                <div className="grid gap-3 text-left max-w-md mx-auto">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-orange-400" />
+                    <span>AI Ticket Assignment</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-orange-400" />
+                    <span>Escalations Board</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-orange-400" />
+                    <span>Client Health Monitoring</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-orange-400" />
+                    <span>Team Performance Analytics</span>
+                  </div>
+                </div>
+              </div>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-amber-500 px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all"
+              >
+                Join Waitlist
+                <ChevronRight className="w-5 h-5" />
+              </Link>
             </div>
+          </div>
+        </section>
+      ) : (
+        <>
+          {/* Four Modules Overview */}
+          <section className="px-6 py-16">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-8">
+                <div className="mb-4 flex items-center justify-center gap-4">
+                  <div className="bg-white rounded-lg p-3">
+                    <img src={activePSAData.logo} alt={activePSAData.name} className="h-8 w-auto" />
+                  </div>
+                </div>
+                <h2 className="text-3xl font-bold mb-4">Four AI-Powered Management Modules for {activePSAData.name}</h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Leverages data from Voice AI calls, Email Agent processing, Enterprise Search queries, and Teams Chatbot interactions
+                  to provide intelligent service desk management and team optimization
+                </p>
+              </div>
 
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* Features */}
-              <div>
-                <h4 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-                  <Settings className="w-6 h-6 text-blue-400" />
-                  Key Features
-                </h4>
-                <div className="space-y-6">
-                  {moduleDetails[activeModule as keyof typeof moduleDetails]?.features.map((feature, index) => (
-                    <div key={index} className="flex gap-4">
-                      <div className="flex-shrink-0 bg-gray-800 p-3 rounded-lg">
-                        {feature.icon}
-                      </div>
-                      <div>
-                        <h5 className="font-semibold mb-2">{feature.title}</h5>
-                        <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {modules.map((module, index) => (
+                  <div
+                    key={module.id}
+                    className={`bg-gradient-to-br ${module.color} p-8 rounded-xl border border-gray-800 hover:border-gray-600 transition-all transform hover:-translate-y-1 cursor-pointer animate-fadeIn`}
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                    onClick={() => setActiveModule(module.id)}
+                  >
+                    <div className="text-white mb-4">{module.icon}</div>
+                    <h3 className="text-xl font-bold mb-3 text-white">{module.title}</h3>
+                    <p className="text-white/90 text-sm">{module.description}</p>
+                    <div className="mt-4 flex items-center text-white/80 text-sm">
+                      <span>Learn more</span>
+                      <ChevronRight className="w-4 h-4 ml-1" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Module Selector */}
+          <section className="px-6 py-16 bg-gray-900/50">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-12">Detailed Module Overview</h2>
+
+              {/* Module Navigation */}
+              <div className="flex flex-wrap justify-center gap-4 mb-12">
+                {modules.map((module) => (
+                  <button
+                    key={module.id}
+                    onClick={() => setActiveModule(module.id)}
+                    className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all ${
+                      activeModule === module.id
+                        ? `bg-gradient-to-r ${module.color} text-white`
+                        : 'bg-gray-800 hover:bg-gray-700 text-gray-300'
+                    }`}
+                  >
+                    {module.icon}
+                    <span className="font-medium">{module.title}</span>
+                  </button>
+                ))}
+              </div>
+
+              {/* Active Module Details */}
+              <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-8">
+                <div className="text-center mb-8">
+                  <h3 className="text-3xl font-bold mb-2">
+                    {modules.find(m => m.id === activeModule)?.title}
+                  </h3>
+                  <p className="text-xl text-gray-300">
+                    {moduleDetails[activeModule as keyof typeof moduleDetails]?.subtitle}
+                  </p>
+                </div>
+
+                <div className="grid lg:grid-cols-2 gap-12">
+                  {/* Features */}
+                  <div>
+                    <h4 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+                      <Settings className="w-6 h-6 text-blue-400" />
+                      Key Features
+                    </h4>
+                    <div className="space-y-6">
+                      {moduleDetails[activeModule as keyof typeof moduleDetails]?.features.map((feature, index) => (
+                        <div key={index} className="flex gap-4">
+                          <div className="flex-shrink-0 bg-gray-800 p-3 rounded-lg">
+                            {feature.icon}
+                          </div>
+                          <div>
+                            <h5 className="font-semibold mb-2">{feature.title}</h5>
+                            <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Benefits & Process */}
+                  <div className="space-y-8">
+                    {/* Benefits */}
+                    <div>
+                      <h4 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+                        <TrendingUp className="w-6 h-6 text-green-400" />
+                        Key Benefits
+                      </h4>
+                      <div className="space-y-3">
+                        {moduleDetails[activeModule as keyof typeof moduleDetails]?.benefits.map((benefit, index) => (
+                          <div key={index} className="flex items-start gap-3">
+                            <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-300">{benefit}</span>
+                          </div>
+                        ))}
                       </div>
                     </div>
-                  ))}
-                </div>
-              </div>
 
-              {/* Benefits & Process */}
-              <div className="space-y-8">
-                {/* Benefits */}
-                <div>
-                  <h4 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-                    <TrendingUp className="w-6 h-6 text-green-400" />
-                    Key Benefits
-                  </h4>
-                  <div className="space-y-3">
-                    {moduleDetails[activeModule as keyof typeof moduleDetails]?.benefits.map((benefit, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-300">{benefit}</span>
+                    {/* Process */}
+                    <div>
+                      <h4 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+                        <Clock className="w-6 h-6 text-purple-400" />
+                        How It Works
+                      </h4>
+                      <div className="space-y-4">
+                        {moduleDetails[activeModule as keyof typeof moduleDetails]?.process.map((step, index) => (
+                          <div key={index} className="flex gap-4">
+                            <div className="flex-shrink-0 w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                              {index + 1}
+                            </div>
+                            <span className="text-gray-300">{step}</span>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Process */}
-                <div>
-                  <h4 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-                    <Clock className="w-6 h-6 text-purple-400" />
-                    How It Works
-                  </h4>
-                  <div className="space-y-4">
-                    {moduleDetails[activeModule as keyof typeof moduleDetails]?.process.map((step, index) => (
-                      <div key={index} className="flex gap-4">
-                        <div className="flex-shrink-0 w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
-                          {index + 1}
-                        </div>
-                        <span className="text-gray-300">{step}</span>
-                      </div>
-                    ))}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* AI Integration Section */}
-      <section className="px-6 py-16 bg-gray-900/50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">Unified AI Intelligence Platform</h2>
-          <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-            Manager App consolidates intelligence from all AI touchpoints - Voice calls automatically transcribed, 
-            emails processed by AI agents, Teams chatbot interactions, and Enterprise Search patterns - 
-            all feeding into ConnectWise Manage for comprehensive management insights
-          </p>
-          
-          <div className="grid md:grid-cols-4 gap-6 mb-8">
-            <div className="bg-black/50 border border-gray-800 rounded-lg p-6 text-center">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MessageCircle className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold mb-3">Voice AI Integration</h3>
-              <p className="text-gray-400 text-sm">
-                Call transcriptions and sentiment analysis automatically feed escalation and performance tracking
+          {/* AI Integration Section */}
+          <section className="px-6 py-16">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-4">Unified AI Intelligence Platform</h2>
+              <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+                Manager App consolidates intelligence from all AI touchpoints - Voice calls automatically transcribed,
+                emails processed by AI agents, Teams chatbot interactions, and Enterprise Search patterns -
+                all feeding into {activePSAData.name} for comprehensive management insights
               </p>
-            </div>
-            
-            <div className="bg-black/50 border border-gray-800 rounded-lg p-6 text-center">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold mb-3">Email Agent Data</h3>
-              <p className="text-gray-400 text-sm">
-                Email processing patterns and resolution data enhance assignment algorithms and client health scoring
-              </p>
-            </div>
-            
-            <div className="bg-black/50 border border-gray-800 rounded-lg p-6 text-center">
-              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold mb-3">Teams Chatbot Analytics</h3>
-              <p className="text-gray-400 text-sm">
-                End-user interaction patterns and deflection success rates inform team performance metrics
-              </p>
-            </div>
-            
-            <div className="bg-black/50 border border-gray-800 rounded-lg p-6 text-center">
-              <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Search className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold mb-3">Enterprise Search Insights</h3>
-              <p className="text-gray-400 text-sm">
-                Knowledge gap analysis from search patterns helps identify training needs and process improvements
-              </p>
-            </div>
-          </div>
-          
-          <div className="bg-blue-900/20 border border-blue-500/30 rounded-xl p-6 text-center">
-            <h3 className="text-xl font-semibold mb-3">Complete ConnectWise Integration</h3>
-            <p className="text-gray-300">
-              All AI-generated insights automatically sync with ConnectWise Manage - no workflow changes required. 
-              Manager App works as an intelligent overlay that enhances your existing processes with predictive analytics.
-            </p>
-          </div>
-        </div>
-      </section>
 
-      {/* AI Workflow Integration */}
-      <section className="px-6 py-16">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">How AI Intelligence Flows into Management Decisions</h2>
-          <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-            Every interaction your engineers have with AI tools automatically creates valuable management intelligence
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <div className="bg-gray-900/50 border border-gray-700 rounded-xl p-6 text-center">
-              <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MessageCircle className="w-6 h-6 text-white" />
+              <div className="grid md:grid-cols-4 gap-6 mb-8">
+                <div className="bg-black/50 border border-gray-800 rounded-lg p-6 text-center">
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <MessageCircle className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-3">Voice AI Integration</h3>
+                  <p className="text-gray-400 text-sm">
+                    Call transcriptions and sentiment analysis automatically feed escalation and performance tracking
+                  </p>
+                </div>
+
+                <div className="bg-black/50 border border-gray-800 rounded-lg p-6 text-center">
+                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Mail className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-3">Email Agent Data</h3>
+                  <p className="text-gray-400 text-sm">
+                    Email processing patterns and resolution data enhance assignment algorithms and client health scoring
+                  </p>
+                </div>
+
+                <div className="bg-black/50 border border-gray-800 rounded-lg p-6 text-center">
+                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-3">Teams Chatbot Analytics</h3>
+                  <p className="text-gray-400 text-sm">
+                    End-user interaction patterns and deflection success rates inform team performance metrics
+                  </p>
+                </div>
+
+                <div className="bg-black/50 border border-gray-800 rounded-lg p-6 text-center">
+                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Search className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-3">Enterprise Search Insights</h3>
+                  <p className="text-gray-400 text-sm">
+                    Knowledge gap analysis from search patterns helps identify training needs and process improvements
+                  </p>
+                </div>
               </div>
-              <h3 className="font-semibold mb-3">Voice AI Calls</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Engineers use voice AI for call documentation → Sentiment analysis feeds escalation detection → 
-                Call complexity patterns inform skills-based assignment
-              </p>
-            </div>
-            
-            <div className="bg-gray-900/50 border border-gray-700 rounded-xl p-6 text-center">
-              <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-semibold mb-3">Email Agents</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                AI processes client emails → Response quality and speed metrics feed performance tracking → 
-                Communication patterns influence client health scoring
-              </p>
-            </div>
-            
-            <div className="bg-gray-900/50 border border-gray-700 rounded-xl p-6 text-center">
-              <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-semibold mb-3">Teams Chatbot</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                End users interact with Teams AI → Deflection patterns reduce ticket volume → 
-                Unresolved queries highlight knowledge gaps for team training
-              </p>
-            </div>
-            
-            <div className="bg-gray-900/50 border border-gray-700 rounded-xl p-6 text-center">
-              <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Search className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-semibold mb-3">Enterprise Search</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Engineers search knowledge base → Search patterns reveal documentation gaps → 
-                Frequency of searches per ticket type informs skills matching
-              </p>
-            </div>
-          </div>
-          
-          <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-500/30 rounded-xl p-8">
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold mb-3">The Result: Predictive Management</h3>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Instead of managing by looking backward at what happened, Manager App uses real-time AI intelligence 
-                to predict and prevent problems before they impact your clients or team.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-6 mt-8">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-400 mb-2">Proactive Assignment</div>
-                <p className="text-gray-400 text-sm">AI matches tickets to engineers before problems escalate</p>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-green-400 mb-2">Early Escalation Detection</div>
-                <p className="text-gray-400 text-sm">Identify at-risk tickets from communication patterns</p>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-purple-400 mb-2">Team Development</div>
-                <p className="text-gray-400 text-sm">Data-driven coaching based on real interaction patterns</p>
+
+              <div className={`bg-gradient-to-r ${activePSAData.gradientFrom}/20 ${activePSAData.gradientTo}/20 border ${activePSAData.accentColor.replace('text-', 'border-').replace('-400', '-500/30')} rounded-xl p-6 text-center`}>
+                <h3 className="text-xl font-semibold mb-3">Complete {activePSAData.name} Integration</h3>
+                <p className="text-gray-300">
+                  All AI-generated insights automatically sync with {activePSAData.name} - no workflow changes required.
+                  Manager App works as an intelligent overlay that enhances your existing processes with predictive analytics.
+                </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
+        </>
+      )}
 
       {/* ROI Section */}
-      <section className="px-6 py-16">
+      <section className="px-6 py-16 bg-gray-900/50">
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-500/30 rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold mb-4">Transform Your Service Desk Operations</h2>
             <p className="text-xl text-gray-300 mb-8">
-              By consolidating intelligence from Voice AI, Email Agents, Teams Chatbots, and Enterprise Search, 
+              By consolidating intelligence from Voice AI, Email Agents, Teams Chatbots, and Enterprise Search,
               Manager App provides unprecedented visibility into service desk operations and team performance
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-black/30 rounded-lg p-6">
                 <div className="text-3xl font-bold text-blue-400 mb-2">40%</div>
@@ -538,7 +591,7 @@ export default function ManagerAppPage() {
                 <div className="text-sm text-gray-400">Improvement in Client Satisfaction</div>
               </div>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="https://xop.im/partner"
