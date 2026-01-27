@@ -130,15 +130,6 @@ export default function Home() {
       iconAnimation: 'animate-float',
       slug: 'integrated-stack'
     },
-    {
-      icon: '🎯',
-      title: 'AURA Insights',
-      description: 'AI-powered ticket health monitoring',
-      details: 'Monitor ticket health in real-time with our AI assistant. AURA identifies bottlenecks, predicts escalations, and suggests optimal routing to keep your service desk running smoothly.',
-      colorClass: 'from-green-500 to-green-400',
-      iconAnimation: 'animate-pulse-slow',
-      slug: 'aura-insights'
-    }
   ]
 
   const toggleService = (index: number) => {

@@ -11,7 +11,6 @@ export default function Footer() {
     { name: 'Voice Agents', href: '/solutions/voice-agents' },
     { name: 'Email Agents', href: '/solutions/email-agents' },
     { name: 'Integrations', href: '/solutions/integrated-stack' },
-    { name: 'AURA Insights', href: '/solutions/aura-insights' },
   ]
 
   const apps = [

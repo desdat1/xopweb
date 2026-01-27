@@ -22,7 +22,6 @@ export default function Navigation() {
     { name: 'Voice Agents', href: '/solutions/voice-agents', icon: '📞' },
     { name: 'Email Agents', href: '/solutions/email-agents', icon: '📧' },
     { name: 'Integrations', href: '/solutions/integrated-stack', icon: '🔗' },
-    { name: 'AURA Insights', href: '/solutions/aura-insights', icon: '🎯' },
     { name: 'Future / Roadmap', href: '/solutions/roadmap', icon: '🚀' },
   ]
 
