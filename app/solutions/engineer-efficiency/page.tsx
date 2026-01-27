@@ -92,6 +92,34 @@ export default function EngineerEfficiencyPage() {
         </div>
       </section>
 
+      {/* Second Screen Demo Video */}
+      <section className="px-6 py-12">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4">The Tools That Save Engineers Hours Every Day</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See the second screen view in action - featuring the three most-used AI tools by our MSP partners:
+              <span className="text-yellow-400 font-semibold"> Ask AI Enterprise Search</span>,
+              <span className="text-yellow-400 font-semibold"> AI-generated ticket insights</span>, and the
+              <span className="text-yellow-400 font-semibold"> client environment modal</span>.
+            </p>
+          </div>
+          <div className="relative rounded-xl overflow-hidden shadow-2xl shadow-yellow-500/20 border border-gray-700">
+            <video
+              className="w-full h-auto"
+              controls
+              preload="metadata"
+            >
+              <source src="/second-screen-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p className="text-center text-gray-400 mt-4 text-sm">
+            Together, these tools deliver on the promise of real engineer time savings and faster resolution times.
+          </p>
+        </div>
+      </section>
+
       {/* Time-Saving Features Section */}
       <section className="px-6 py-16 bg-gray-900/50">
         <div className="max-w-6xl mx-auto">

@@ -105,6 +105,34 @@ export default function EngineerAppV4Page() {
         </div>
       </section>
 
+      {/* Second Screen Demo Video */}
+      <section className="px-6 py-12 bg-gray-900/30">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4">See the Second Screen in Action</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Watch how our most popular AI tools work together to deliver real engineer time savings.
+              The second screen view brings <span className="text-green-400 font-semibold">Ask AI Enterprise Search</span>,
+              <span className="text-blue-400 font-semibold"> AI-generated ticket insights</span>, and the
+              <span className="text-purple-400 font-semibold"> client environment modal</span> right to your fingertips.
+            </p>
+          </div>
+          <div className="relative rounded-xl overflow-hidden shadow-2xl shadow-green-500/20 border border-gray-700">
+            <video
+              className="w-full h-auto"
+              controls
+              preload="metadata"
+            >
+              <source src="/second-screen-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p className="text-center text-gray-400 mt-4 text-sm">
+            These three tools combined deliver significant time-to-resolution savings for MSP engineers.
+          </p>
+        </div>
+      </section>
+
       {/* Core Capabilities */}
       <section className="px-6 py-16">
         <div className="max-w-6xl mx-auto">

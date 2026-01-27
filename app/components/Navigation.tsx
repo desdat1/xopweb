@@ -27,10 +27,12 @@ export default function Navigation() {
   ]
 
   const apps = [
-    { name: 'Engineer App v4', href: '/apps/engineer-app-v4', icon: '⚡' },
-    { name: 'Manager App (Pre-Release)', href: '/apps/manager-app', icon: '👨‍💼' },
-    { name: 'Enterprise Search for MSPs', href: '/apps/enterprise-search-msps', icon: '🔍' },
-    { name: 'Enterprise Search for End Users', href: '/apps/enterprise-search-end-users', icon: '🔎' },
+    { name: 'Engineer Assist for ConnectWise Manage PSA', href: '/apps/engineer-assist-connectwise', icon: '⚡' },
+    { name: 'Engineer Assist for Halo PSA', href: '/apps/engineer-assist-halo', icon: '⚡' },
+    { name: 'Engineer Assist for ServiceNow ITSM', href: '/apps/engineer-assist-servicenow', icon: '⚡' },
+    { name: 'Engineer & Manager App for ConnectWise Manage', href: '/apps/engineer-app-v4', icon: '👨‍💼' },
+    { name: 'Engineer & Manager App for Halo PSA', href: '/apps/engineer-manager-halo', icon: '👨‍💼' },
+    { name: 'Engineer & Manager App for ServiceNow', href: '/apps/engineer-manager-servicenow', icon: '👨‍💼' },
     { name: 'End User Teams Chatbot', href: '/apps/msp-branded-client-chatbot', icon: '💬' },
   ]
 
