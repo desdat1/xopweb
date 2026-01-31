@@ -21,6 +21,7 @@ export default function Navigation() {
     { name: 'Branded Chatbot for Clients', href: '/solutions/branded-chatbot', icon: '🤖' },
     { name: 'Voice Agents', href: '/solutions/voice-agents', icon: '📞' },
     { name: 'Email Agents', href: '/solutions/email-agents', icon: '📧' },
+    { name: 'Contract Management', href: '/solutions/contract-management', icon: '📋' },
     { name: 'Integrations', href: '/solutions/integrated-stack', icon: '🔗' },
     { name: 'Future / Roadmap', href: '/solutions/roadmap', icon: '🚀' },
   ]

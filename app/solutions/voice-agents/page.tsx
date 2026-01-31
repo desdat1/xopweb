@@ -66,11 +66,10 @@ export default function VoiceAgentsPage() {
               </ul>
             </div>
 
-            {/* Conversation Monitor - Coming Soon */}
+            {/* Conversation Monitor */}
             <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-purple-500/30 rounded-2xl p-8 hover:border-purple-500/50 transition-all">
               <div className="flex items-center gap-3 mb-4">
-                <div className="text-5xl">🚀</div>
-                <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm font-semibold">Coming Soon</span>
+                <div className="text-5xl">🎧</div>
               </div>
               <h3 className="text-2xl font-bold mb-4 text-purple-400">Conversation Monitor</h3>
               <p className="text-gray-300 mb-6">
@@ -181,7 +180,7 @@ export default function VoiceAgentsPage() {
           <div className="max-w-4xl mx-auto">
             {/* Tab Navigation */}
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {['overflow-handling', 'after-hours', 'peak-times', 'future-capabilities'].map((tab) => (
+              {['overflow-handling', 'after-hours', 'peak-times', 'conversation-monitor'].map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
@@ -260,11 +259,11 @@ export default function VoiceAgentsPage() {
                 </div>
               )}
 
-              {activeTab === 'future-capabilities' && (
+              {activeTab === 'conversation-monitor' && (
                 <div className="animate-fadeIn">
-                  <h3 className="text-2xl font-semibold mb-4">Coming Soon: Conversation Monitor</h3>
+                  <h3 className="text-2xl font-semibold mb-4">Conversation Monitor</h3>
                   <p className="text-gray-300 mb-4">
-                    The next evolution in voice AI will revolutionize how engineers document their calls:
+                    The Conversation Monitor revolutionizes how engineers document their calls:
                   </p>
                   <div className="bg-gradient-to-br from-purple-900/20 to-purple-800/20 border border-purple-500/30 rounded-xl p-6">
                     <h4 className="text-xl font-semibold mb-3 text-purple-400">Automatic Call Documentation</h4>

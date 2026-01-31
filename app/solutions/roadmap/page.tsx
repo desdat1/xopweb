@@ -3,23 +3,18 @@
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import { useState } from 'react'
-import { 
-  Rocket, FileText, Shield, AlertTriangle, Bot, 
+import {
+  Rocket, FileText, Shield, AlertTriangle, Bot,
   CheckCircle, Clock, Eye, Settings, Zap,
   TrendingUp, Users, Building2, Star
 } from 'lucide-react'
 
+// FileText kept in imports for CTA section
+
 export default function RoadmapPage() {
-  const [activeArea, setActiveArea] = useState('contracts')
+  const [activeArea, setActiveArea] = useState('noc-soc')
 
   const roadmapAreas = [
-    {
-      id: 'contracts',
-      title: 'Contract Management',
-      icon: <FileText className="w-8 h-8" />,
-      color: 'from-blue-600 to-cyan-500',
-      description: 'Intelligent contract lifecycle management and entitlement verification'
-    },
     {
       id: 'noc-soc',
       title: 'NOC/SOC Alert Analysis',
@@ -38,23 +33,6 @@ export default function RoadmapPage() {
 
   const getAreaDetails = (areaId: string) => {
     switch (areaId) {
-      case 'contracts':
-        return {
-          vision: "Transform contract management from reactive oversight to proactive optimization",
-          capabilities: [
-            "Automated contract ingestion and parsing from multiple sources",
-            "AI-powered entitlement verification against actual usage",
-            "Proactive renewal notifications with usage analytics",
-            "Contract term extraction and compliance monitoring",
-            "Revenue optimization through entitlement analysis"
-          ],
-          benefits: [
-            "Eliminate revenue leakage from underutilized contracts",
-            "Reduce contract management overhead by 60%+",
-            "Ensure compliance with service level agreements",
-            "Optimize client contract structures based on usage patterns"
-          ]
-        }
       case 'noc-soc':
         return {
           vision: "Revolutionize alert management with intelligent correlation and automated response",
