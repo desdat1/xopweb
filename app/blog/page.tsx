@@ -13,7 +13,7 @@ export default function BlogPage() {
       title: 'Introducing the ConnectWise Manage Pod: AI That Lives Where Your Engineers Already Work',
       excerpt: 'Zero friction. Maximum impact. We\'re thrilled to announce the general availability of our integrated Engineer Assist solution as a native pod inside ConnectWise Manage - AI that works inside your PSA, not alongside it.',
       author: 'Matt Ruck',
-      date: 'January 28, 2026',
+      date: 'January 13, 2026',
       category: 'Product Launch',
       readTime: '10 min read',
       trending: true,

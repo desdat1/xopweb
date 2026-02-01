@@ -44,7 +44,7 @@ export default function ConnectWisePodLaunchPost() {
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                <span>January 28, 2026</span>
+                <span>January 13, 2026</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
@@ -53,14 +53,21 @@ export default function ConnectWisePodLaunchPost() {
             </div>
           </header>
 
-          {/* Featured Image/Banner */}
-          <div className="bg-gradient-to-r from-green-900/30 via-blue-900/30 to-purple-900/30 border border-green-500/30 rounded-2xl p-8 mb-12">
-            <div className="text-center">
-              <div className="text-6xl mb-4">🚀</div>
-              <p className="text-xl text-gray-300">
-                Zero friction. Maximum impact. AI that works inside your PSA.
-              </p>
+          {/* Video Section */}
+          <div className="mb-12">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-green-500/20 border border-gray-700">
+              <video
+                className="w-full h-auto"
+                controls
+                preload="metadata"
+              >
+                <source src="/rezolve-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
+            <p className="text-center text-gray-400 mt-4 text-sm">
+              See the ConnectWise Manage Pod in action
+            </p>
           </div>
 
           {/* Article Content */}
