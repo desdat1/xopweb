@@ -6,8 +6,20 @@ import Link from 'next/link'
 import { ChevronRight, Calendar, User, Clock, TrendingUp } from 'lucide-react'
 
 export default function BlogPage() {
-  // Blog posts array with new strategic posts - 2024 posts first, then chronological 2025 posts
+  // Blog posts array - newest first, then 2024 posts, then chronological 2025 posts
   const blogPosts = [
+    {
+      slug: 'connectwise-pod-launch',
+      title: 'Introducing the ConnectWise Manage Pod: AI That Lives Where Your Engineers Already Work',
+      excerpt: 'Zero friction. Maximum impact. We\'re thrilled to announce the general availability of our integrated Engineer Assist solution as a native pod inside ConnectWise Manage - AI that works inside your PSA, not alongside it.',
+      author: 'Matt Ruck',
+      date: 'January 28, 2026',
+      category: 'Product Launch',
+      readTime: '10 min read',
+      trending: true,
+      gradient: 'from-green-500/10 to-blue-500/10',
+      borderColor: 'border-green-500/30'
+    },
     {
       slug: 'reactive-to-predictive',
       title: 'From Reactive to Predictive: How AI is Transforming MSP Operations from Firefighting to Strategic Leadership',
