@@ -16,13 +16,29 @@ export default function ComparePage() {
       title: "Complete Platform Solution",
       description: "The industry's only comprehensive AI platform addressing every aspect of MSP operations - from engineer efficiency to revenue generation.",
       features: [
-        "Engineer App v4 with AI-powered efficiency tools",
-        "Manager App with 4 integrated management modules", 
+        "Pod-integrated solutions embedded directly inside ConnectWise, Halo & ServiceNow",
+        "Full Resolve Engineer App with advanced capabilities",
+        "Manager App with 5 integrated management modules",
         "Revenue-generating client solutions",
         "Voice, email, and communication automation",
-        "250+ platform integrations in one deployment"
+        "Contract management and entitlement verification"
       ],
-      metrics: { primary: "9", secondary: "Solutions", tertiary: "100%", quaternary: "Coverage" }
+      metrics: { primary: "10", secondary: "Solutions", tertiary: "100%", quaternary: "Coverage" }
+    },
+    {
+      badge: "Zero Friction",
+      icon: "⚡",
+      title: "Pod-Integrated PSA Solutions",
+      description: "AI that lives inside your PSA, not alongside it. Engineers don't learn a new system - they get AI capabilities directly in ConnectWise, Halo, or ServiceNow where they already work.",
+      features: [
+        "Native add-ins for ConnectWise Manage, Halo PSA & ServiceNow ITSM",
+        "Deploys in under a week with zero workflow disruption",
+        "Ticket analysis, sentiment detection & priority assessment",
+        "Enterprise Search across IT Glue, SharePoint & historical tickets",
+        "AI-generated responses with tone adjustment for audience",
+        "Automatic time entry capture and categorization"
+      ],
+      metrics: { primary: "<1 week", secondary: "Deployment", tertiary: "Zero", quaternary: "Training Needed" }
     },
     {
       badge: "Exclusive Technology", 
@@ -40,15 +56,16 @@ export default function ComparePage() {
     },
     {
       badge: "Market First",
-      icon: "📞", 
+      icon: "📞",
       title: "Voice AI Pioneer",
-      description: "First and only platform with comprehensive voice AI capabilities - from phone intake to call documentation. Market solutions have zero voice automation.",
+      description: "First and only platform with comprehensive voice AI capabilities - two distinct solutions for different use cases. Market solutions have zero voice automation.",
       features: [
-        "Phone Intake Agent handles calls and creates tickets",
-        "Conversation Monitor for auto-documentation",
-        "24/7 after-hours support with voice agents",
-        "Overflow handling during peak periods", 
-        "Perfect ticket creation with zero data loss"
+        "Phone Intake Agent for overflow and after-hours support",
+        "Full PSA integration with ConnectWise, Halo & ServiceNow",
+        "SMS multi-factor authentication for caller verification",
+        "Conversation Monitor joins live engineer calls for auto-documentation",
+        "AI generates ticket notes, summary, resolution, categorization & time entry",
+        "Complete call transcripts that enrich future Ask AI responses"
       ],
       metrics: { primary: "100%", secondary: "Call Capture", tertiary: "24/7", quaternary: "Availability" }
     },
@@ -97,14 +114,14 @@ export default function ComparePage() {
     {
       badge: "Manager App Exclusive",
       icon: "🎯",
-      title: "AI Ticket Assignment",
-      description: "Intelligent ticket routing considering engineer skills, workload, and performance. No other solution offers this assignment intelligence within a dedicated manager application.",
+      title: "AI Triage Module",
+      description: "Intelligent ticket routing considering engineer skills, workload, client familiarity, and performance. No other solution offers this assignment intelligence within a dedicated manager application.",
       features: [
         "Skills-based routing with expertise matching",
         "Real-time workload balancing across team members",
+        "Client familiarity scoring for relationship continuity",
         "Historical performance analysis for optimal assignment",
-        "Complexity assessment for appropriate resource allocation",
-        "Automated escalation pathways based on ticket characteristics"
+        "Complexity assessment for appropriate resource allocation"
       ],
       metrics: { primary: "40%", secondary: "Faster Assignment", tertiary: "85%", quaternary: "First-Match Accuracy" }
     },
@@ -125,7 +142,7 @@ export default function ComparePage() {
     {
       badge: "Manager App Exclusive",
       icon: "👥",
-      title: "Team Health Board",
+      title: "Engineer Health Board",
       description: "Comprehensive team performance tracking that goes beyond basic metrics to analyze engineer empathy, technical effectiveness, and growth opportunities.",
       features: [
         "Engineer empathy scoring from customer interactions",
@@ -135,16 +152,54 @@ export default function ComparePage() {
         "Performance trend analysis for career development planning"
       ],
       metrics: { primary: "25%", secondary: "Team Efficiency", tertiary: "40%", quaternary: "Skill Development" }
+    },
+    {
+      badge: "Manager App Exclusive",
+      icon: "📅",
+      title: "Group Scheduling",
+      description: "Intelligent scheduling capabilities for coordinating team resources, client meetings, and project work across your engineering team.",
+      features: [
+        "AI-assisted scheduling based on engineer availability",
+        "Client preference and timezone awareness",
+        "Project and maintenance window coordination",
+        "Resource allocation optimization",
+        "Integration with PSA calendars and scheduling"
+      ],
+      metrics: { primary: "30%", secondary: "Less Scheduling Time", tertiary: "95%", quaternary: "Booking Accuracy" }
+    },
+    {
+      badge: "New Solution",
+      icon: "📋",
+      title: "Contract Management & Entitlement Verification",
+      description: "AI-powered contract lifecycle management that ensures you capture all billable services and never miss a renewal. No competitor offers automated entitlement verification.",
+      features: [
+        "Automated contract ingestion and term extraction",
+        "Real-time entitlement verification against actual usage",
+        "Proactive renewal notifications with usage analytics",
+        "Revenue leakage detection from unbilled services",
+        "Compliance monitoring for SLA obligations"
+      ],
+      metrics: { primary: "5-15%", secondary: "Revenue Recovery", tertiary: "60%+", quaternary: "Time Savings" }
     }
   ]
 
   const comparisonData = {
     categories: [
       {
+        name: "PSA Integration",
+        icon: <Zap className="w-5 h-5" />,
+        features: [
+          { name: "Pod-Integrated PSA Add-ins", rezolve: "full", description: "AI embedded directly inside ConnectWise, Halo & ServiceNow" },
+          { name: "ConnectWise Manage Integration", rezolve: "full", description: "Full integration with on-premises and cloud versions" },
+          { name: "Halo PSA Integration", rezolve: "full", description: "Native pod integration with Halo PSA" },
+          { name: "ServiceNow ITSM Integration", rezolve: "full", description: "Enterprise-grade ServiceNow integration" }
+        ]
+      },
+      {
         name: "Engineer Assistance",
         icon: <Zap className="w-5 h-5" />,
         features: [
-          { name: "Ticket Response Generation", rezolve: "full", description: "AI-powered contextual responses with historical data integration" },
+          { name: "Ticket Response Generation", rezolve: "full", description: "AI-powered contextual responses with tone adjustment" },
           { name: "Ticket Summarization", rezolve: "full", description: "Advanced multi-dimensional summaries with context" },
           { name: "Automatic Time Entry", rezolve: "full", description: "Intelligent time tracking with activity categorization" },
           { name: "Solution Recommendations", rezolve: "full", description: "AI-powered solutions from historical tickets & documentation" }
@@ -164,9 +219,10 @@ export default function ComparePage() {
         name: "Voice & Communication",
         icon: <Phone className="w-5 h-5" />,
         features: [
-          { name: "Voice Agent Phone Intake", rezolve: "full", description: "AI agents handle calls, create tickets automatically" },
-          { name: "Call Documentation Automation", rezolve: "full", description: "Conversation Monitor joins calls, auto-documents" },
-          { name: "24/7 After-Hours Support", rezolve: "full", description: "Voice agents provide round-the-clock ticket creation" }
+          { name: "Phone Intake Agent", rezolve: "full", description: "Overflow & after-hours support with SMS MFA authentication" },
+          { name: "Conversation Monitor", rezolve: "full", description: "Joins live calls, auto-generates notes, summary & time entries" },
+          { name: "24/7 After-Hours Support", rezolve: "full", description: "Voice agents provide round-the-clock ticket creation" },
+          { name: "Full Call Transcripts", rezolve: "full", description: "Complete transcripts enrich knowledge base for Ask AI" }
         ]
       },
       {
@@ -191,10 +247,22 @@ export default function ComparePage() {
         name: "Management Platform",
         icon: <Target className="w-5 h-5" />,
         features: [
-          { name: "Dedicated Manager Application", rezolve: "full", description: "Complete Manager App with 4 integrated modules" },
-          { name: "AI Ticket Assignment", rezolve: "full", description: "Intelligent routing based on skills & workload" },
-          { name: "AURA Ticket Health Scoring", rezolve: "full", description: "6-point AI scoring for predictive management" },
-          { name: "Client Health Monitoring", rezolve: "full", description: "Comprehensive relationship tracking with churn prediction" }
+          { name: "Dedicated Manager Application", rezolve: "full", description: "Complete Manager App with 5 integrated modules" },
+          { name: "AI Triage Module", rezolve: "full", description: "Intelligent routing based on skills, workload & client familiarity" },
+          { name: "Escalations Board", rezolve: "full", description: "AURA-powered predictive escalation tracking" },
+          { name: "Client Health Board", rezolve: "full", description: "AI-driven satisfaction analysis and churn prediction" },
+          { name: "Engineer Health Board", rezolve: "full", description: "Productivity, workload and skill set tracking" },
+          { name: "Group Scheduling", rezolve: "full", description: "AI-assisted team scheduling and resource coordination" }
+        ]
+      },
+      {
+        name: "Contract Management",
+        icon: <DollarSign className="w-5 h-5" />,
+        features: [
+          { name: "Contract Ingestion & Parsing", rezolve: "full", description: "Automated extraction of terms, dates and obligations" },
+          { name: "Entitlement Verification", rezolve: "full", description: "Real-time comparison of contracts vs actual usage" },
+          { name: "Renewal Management", rezolve: "full", description: "Proactive notifications with usage analytics" },
+          { name: "Revenue Leakage Detection", rezolve: "full", description: "Identify unbilled services automatically" }
         ]
       }
     ]
@@ -205,25 +273,43 @@ export default function ComparePage() {
       category: "MSP Internal Efficiency",
       color: "from-green-600 to-emerald-600",
       apps: [
-        { name: "Engineer App v4", description: "AI-powered efficiency tools that work as an intelligent overlay to ConnectWise Manage", impact: "40% faster resolution" },
-        { name: "Manager App", description: "Four integrated modules: AI ticket assignment, escalations board, client health monitoring, team analytics", impact: "30% reduction in escalations" },
-        { name: "Enterprise Search for MSPs", description: "Unified AI search across ConnectWise, IT Glue, SharePoint, and vendor portals", impact: "50% faster resolution" }
+        { name: "Pod-Integrated Engineer Assist", description: "AI embedded directly inside ConnectWise, Halo & ServiceNow - zero friction, no new system to learn", impact: "Deploy in <1 week" },
+        { name: "Full Resolve Engineer App", description: "Advanced capabilities: Conversation Monitor, group scheduling, client environment analysis, Teams chatbot", impact: "40% faster resolution" },
+        { name: "Manager App", description: "Five integrated modules: AI Triage, Escalations Board, Client Health, Engineer Health, Group Scheduling", impact: "30% reduction in escalations" },
+        { name: "Enterprise Search for MSPs", description: "Unified AI search across ConnectWise, IT Glue, SharePoint, and historical tickets", impact: "50% faster resolution" },
+        { name: "Contract Management", description: "Entitlement verification, renewal tracking, and revenue leakage detection", impact: "5-15% revenue recovery" }
       ]
     },
     {
-      category: "End-User Revenue Solutions", 
+      category: "End-User Revenue Solutions",
       color: "from-purple-600 to-pink-600",
       apps: [
-        { name: "End User Teams Chatbot", description: "White-labeled AI chatbot for ticket deflection with seamless escalation to ConnectWise Manage", impact: "20% ticket deflection" },
+        { name: "End User Teams Chatbot", description: "White-labeled AI chatbot for ticket deflection with seamless escalation to your PSA", impact: "20% ticket deflection" },
         { name: "Enterprise Search for End Users", description: "Revenue-generating standalone product - white-labeled enterprise search for client organizations", impact: "$250+ monthly MRR" }
       ]
     }
   ]
 
   const competitors = ["The Competition"]
-  
+
+  // Updated for new categories: PSA Integration (4), Engineer Assistance (4), Enterprise Search (4), Voice (4), Email (3), Revenue (3), Management (6), Contract (4) = 32 features
   const competitorResponses = [
-    'partial', 'partial', 'full', 'none', 'partial', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'partial', 'none', 'none'
+    // PSA Integration
+    'none', 'partial', 'none', 'none',
+    // Engineer Assistance
+    'partial', 'partial', 'full', 'none',
+    // Enterprise Search
+    'partial', 'none', 'none', 'none',
+    // Voice & Communication
+    'none', 'none', 'none', 'none',
+    // Email Intelligence
+    'partial', 'partial', 'partial',
+    // Revenue Generation
+    'none', 'none', 'none',
+    // Management Platform
+    'none', 'none', 'none', 'none', 'none', 'none',
+    // Contract Management
+    'none', 'none', 'none', 'none'
   ]
 
   const getFeatureIcon = (type: string) => {
@@ -315,9 +401,9 @@ export default function ComparePage() {
       <section className="py-16 bg-gray-900/50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Review our 5 MSP use cases - internal & client solutions</h2>
+            <h2 className="text-4xl font-bold mb-4">Review Our MSP Solutions - Internal & Client</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Five specialized applications designed for MSP efficiency and end-user empowerment
+              Comprehensive applications designed for MSP efficiency, management, and end-user revenue generation
             </p>
           </div>
 
@@ -485,11 +571,11 @@ export default function ComparePage() {
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3 text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    Complete integrated platform
+                    Pod-integrated solutions inside ConnectWise, Halo & ServiceNow
                   </li>
                   <li className="flex items-center gap-3 text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    Industry's only voice AI solution
+                    Industry's only voice AI (Phone Intake + Conversation Monitor)
                   </li>
                   <li className="flex items-center gap-3 text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -501,11 +587,11 @@ export default function ComparePage() {
                   </li>
                   <li className="flex items-center gap-3 text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    Dedicated Manager App with 4 modules
+                    Dedicated Manager App with 5 modules
                   </li>
                   <li className="flex items-center gap-3 text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    Revolutionary AURA insights technology
+                    Contract management & entitlement verification
                   </li>
                 </ul>
               </div>
