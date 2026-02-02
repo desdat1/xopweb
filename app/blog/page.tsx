@@ -54,6 +54,17 @@ export default function BlogPage() {
       borderColor: 'border-blue-500/30'
     },
     {
+      slug: 'connectwise-pod-launch',
+      title: 'Introducing the ConnectWise Manage Pod: AI That Lives Where Your Engineers Already Work',
+      excerpt: 'No more context switching. No more separate applications. Our Engineer Assist solution now runs as a native pod directly inside ConnectWise Manage.',
+      author: 'Matt Ruck',
+      date: 'January 13, 2026',
+      category: 'Product Launch',
+      readTime: '10 min read',
+      gradient: 'from-green-500/10 to-emerald-500/10',
+      borderColor: 'border-green-500/30'
+    },
+    {
       slug: 'reactive-to-predictive',
       title: 'From Reactive to Predictive: How AI is Transforming MSP Operations from Firefighting to Strategic Leadership',
       excerpt: 'The most successful MSPs are moving beyond reactive support to predictive operations. Here\'s how AI is enabling this transformation and why it\'s becoming essential for competitive MSPs.',
