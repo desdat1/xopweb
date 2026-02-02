@@ -16,12 +16,6 @@ const solutionData: Record<string, any> = {
     description: 'Seamless integration with your existing tools',
     content: 'Content coming soon for Integrated Stack solution...'
   },
-  'aura-insights': {
-    title: 'AURA Insights',
-    icon: '👁️',
-    description: 'AI-powered ticket health monitoring',
-    content: 'Content coming soon for AURA Insights solution...'
-  },
   'engineer-efficiency': {
     title: 'Engineer Efficiency',
     icon: '👷',

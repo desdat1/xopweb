@@ -11,7 +11,15 @@
       "Bash(git commit:*)",
       "WebFetch(domain:gethread.com)",
       "WebFetch(domain:www.getthread.com)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Bash(claude mcp add:*)",
+      "Bash(timeout:*)",
+      "Bash(ren:*)",
+      "Bash(move \"connectwise logo.png\" \"connectwise-logo.png\")",
+      "Bash(move \"halo psa logo.png\" \"halo-logo.png\")",
+      "Bash(move \"servicenow logo.png\" \"servicenow-logo.png\")",
+      "Bash(npm update:*)",
+      "Bash(npm ls:*)"
     ],
     "defaultMode": "acceptEdits"
   }

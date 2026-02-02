@@ -213,11 +213,6 @@ export default function ResourcesPage() {
                   <Video className="w-8 h-8 text-blue-400 mb-4" />
                   <h3 className="text-xl font-semibold mb-3">{webinar.title}</h3>
                   <p className="text-gray-400 mb-6">{webinar.description}</p>
-                  <div className="mb-6">
-                    <span className="inline-block bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">
-                      Available Now
-                    </span>
-                  </div>
                   <Link
                     href={webinar.link}
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity"

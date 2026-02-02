@@ -312,11 +312,11 @@ export default function The30PercentRulePage() {
               Calculate Your ROI
             </Link>
             <Link
-              href="/apps/msp-branded-client-chatbot"
+              href="/apps/end-user-chatbot"
               className="inline-flex items-center gap-2 bg-transparent border-2 border-green-500 text-green-400 px-8 py-4 rounded-full font-semibold hover:bg-green-500 hover:text-black transition-all"
             >
               <Shield className="w-5 h-5" />
-              Learn About Teams Chatbot
+              Learn About AI End User Chatbot
             </Link>
           </div>
         </section>

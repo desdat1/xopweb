@@ -568,16 +568,6 @@ export default function IntegrationsPage() {
               </span>
             </Link>
 
-            <Link 
-              href="/solutions/aura-insights" 
-              className="group relative bg-gradient-to-r from-red-600 to-orange-500 p-4 rounded-xl font-semibold text-center hover:shadow-lg hover:shadow-red-500/50 transform hover:scale-105 transition-all overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <span className="relative z-10 flex items-center justify-center gap-2">
-                <span className="text-2xl">🎯</span>
-                AURA Insights
-              </span>
-            </Link>
           </div>
         </div>
       </section>

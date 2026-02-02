@@ -11,15 +11,12 @@ export default function Footer() {
     { name: 'Voice Agents', href: '/solutions/voice-agents' },
     { name: 'Email Agents', href: '/solutions/email-agents' },
     { name: 'Integrations', href: '/solutions/integrated-stack' },
-    { name: 'AURA Insights', href: '/solutions/aura-insights' },
   ]
 
   const apps = [
-    { name: 'Engineer App v4', href: '/apps/engineer-app-v4' },
-    { name: 'Manager App', href: '/apps/manager-app' },
-    { name: 'Enterprise Search for MSPs', href: '/apps/enterprise-search-msps' },
-    { name: 'Enterprise Search for End Users', href: '/apps/enterprise-search-end-users' },
-    { name: 'Teams Chatbot', href: '/apps/msp-branded-client-chatbot' },
+    { name: 'AI Engineer Assist', href: '/apps/engineer-assist' },
+    { name: 'AI Manager Application', href: '/apps/manager-app' },
+    { name: 'AI End User Chatbot', href: '/apps/end-user-chatbot' },
   ]
 
   const company = [

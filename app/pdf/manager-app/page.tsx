@@ -247,18 +247,6 @@ export default function ManagerAppPDFPage() {
           </div>
         </section>
 
-        {/* Coming Soon */}
-        <section className="mb-8 print:mb-6">
-          <div className="bg-blue-900/10 border border-blue-500/30 rounded-xl p-6 text-center print:p-4">
-            <h2 className="text-2xl font-bold mb-3 text-blue-600 print:text-xl">🚀 Coming December 2025</h2>
-            <p className="text-gray-600 mb-4 print:text-sm">
-              Join the waitlist for early access to the Manager App and help shape the future of MSP management.
-            </p>
-            <div className="text-lg font-semibold text-blue-600 print:text-base">
-              Early Access Program: 50% off first year
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
         <section className="bg-black text-white rounded-xl p-6 text-center print:p-4 print:bg-gray-900">

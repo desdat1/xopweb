@@ -107,11 +107,6 @@ export default function EnterpriseSearchEndUsersPage() {
               Perfect for organizations that need powerful search without ticketing integration
             </p>
             
-            {/* Available Now Badge */}
-            <div className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-400 px-6 py-3 rounded-full font-semibold">
-              <span className="text-xl">✅</span>
-              <span>Available Now</span>
-            </div>
           </div>
         </div>
       </section>

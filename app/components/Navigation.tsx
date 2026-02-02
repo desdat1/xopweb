@@ -22,21 +22,17 @@ export default function Navigation() {
     { name: 'Voice Agents', href: '/solutions/voice-agents', icon: '📞' },
     { name: 'Email Agents', href: '/solutions/email-agents', icon: '📧' },
     { name: 'Integrations', href: '/solutions/integrated-stack', icon: '🔗' },
-    { name: 'AURA Insights', href: '/solutions/aura-insights', icon: '🎯' },
     { name: 'Future / Roadmap', href: '/solutions/roadmap', icon: '🚀' },
   ]
 
   const apps = [
-    { name: 'Engineer App v4', href: '/apps/engineer-app-v4', icon: '⚡' },
-    { name: 'Manager App (Pre-Release)', href: '/apps/manager-app', icon: '👨‍💼' },
-    { name: 'Enterprise Search for MSPs', href: '/apps/enterprise-search-msps', icon: '🔍' },
-    { name: 'Enterprise Search for End Users', href: '/apps/enterprise-search-end-users', icon: '🔎' },
-    { name: 'End User Teams Chatbot', href: '/apps/msp-branded-client-chatbot', icon: '💬' },
+    { name: 'AI Engineer Assist', href: '/apps/engineer-assist', icon: '⚡' },
+    { name: 'AI Manager Application', href: '/apps/manager-app', icon: '👨‍💼' },
+    { name: 'AI End User Chatbot', href: '/apps/end-user-chatbot', icon: '💬' },
   ]
 
   const resources = [
     { name: 'FAQ\'s', href: '/resources/faq', icon: '❓' },
-    { name: 'Certified AI Professional', href: '/resources/certified-ai-professional', icon: '🏆' },
     { name: 'MSP e-book "Generating AI Revenue"', href: '/ebook', icon: '📖' },
     { name: 'Blogs / News', href: '/blog', icon: '📝' },
     { name: 'Matt & Manish AI podcast', href: '/resources/podcast', icon: '🎙️' },

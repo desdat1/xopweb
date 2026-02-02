@@ -130,15 +130,6 @@ export default function Home() {
       iconAnimation: 'animate-float',
       slug: 'integrated-stack'
     },
-    {
-      icon: '🎯',
-      title: 'AURA Insights',
-      description: 'AI-powered ticket health monitoring',
-      details: 'Monitor ticket health in real-time with our AI assistant. AURA identifies bottlenecks, predicts escalations, and suggests optimal routing to keep your service desk running smoothly.',
-      colorClass: 'from-green-500 to-green-400',
-      iconAnimation: 'animate-pulse-slow',
-      slug: 'aura-insights'
-    }
   ]
 
   const toggleService = (index: number) => {
@@ -221,6 +212,23 @@ export default function Home() {
           AI Solutions Designed by MSPs,<br />
           <span className="text-gradient">Built for MSPs</span>
         </h1>
+      </section>
+
+      {/* Video Section */}
+      <section className="px-6 py-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="relative rounded-xl overflow-hidden shadow-2xl shadow-purple-500/20 border border-gray-800">
+            <video
+              className="w-full h-auto"
+              controls
+              preload="metadata"
+              poster=""
+            >
+              <source src="/rezolve-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
       </section>
 
       {/* Services Section */}
