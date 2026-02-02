@@ -6,8 +6,53 @@ import Link from 'next/link'
 import { ChevronRight, Calendar, User, Clock, TrendingUp } from 'lucide-react'
 
 export default function BlogPage() {
-  // Blog posts array with new strategic posts - 2024 posts first, then chronological 2025 posts
+  // Blog posts array with new strategic posts - newest first
   const blogPosts = [
+    {
+      slug: 'ai-voice-engineer-assist-agent',
+      title: 'Introducing AI Voice Engineer Assist Agent: Your Silent Partner on Every Call',
+      excerpt: 'AI that listens to engineer-client conversations and automatically documents everything—eliminating post-call data entry forever.',
+      author: 'Matt Ruck',
+      date: 'February 24, 2026',
+      category: 'Voice AI',
+      readTime: '8 min read',
+      trending: true,
+      gradient: 'from-purple-500/10 to-pink-500/10',
+      borderColor: 'border-purple-500/30'
+    },
+    {
+      slug: 'ai-voice-overflow-agent',
+      title: 'Introducing AI Voice Overflow Agent: Never Miss Another Call',
+      excerpt: 'Intelligent call handling that activates when your team is at capacity, ensuring every caller gets immediate attention and every issue is documented.',
+      author: 'Matt Ruck',
+      date: 'February 17, 2026',
+      category: 'Voice AI',
+      readTime: '7 min read',
+      gradient: 'from-green-500/10 to-emerald-500/10',
+      borderColor: 'border-green-500/30'
+    },
+    {
+      slug: 'halo-psa-product-launch',
+      title: 'xop.ai Now Integrates with Halo PSA: AI-Powered Efficiency for Growing MSPs',
+      excerpt: 'The platform trusted by thousands of MSPs worldwide now has access to purpose-built AI that transforms service delivery.',
+      author: 'Matt Ruck',
+      date: 'February 10, 2026',
+      category: 'Product Launch',
+      readTime: '7 min read',
+      gradient: 'from-purple-500/10 to-pink-500/10',
+      borderColor: 'border-purple-500/30'
+    },
+    {
+      slug: 'servicenow-product-launch',
+      title: 'xop.ai Launches Full ServiceNow Integration: Enterprise-Grade AI for ITSM',
+      excerpt: 'Bringing the same powerful AI capabilities that transformed ConnectWise operations to the enterprise ServiceNow ecosystem.',
+      author: 'Matt Ruck',
+      date: 'February 3, 2026',
+      category: 'Product Launch',
+      readTime: '8 min read',
+      gradient: 'from-blue-500/10 to-cyan-500/10',
+      borderColor: 'border-blue-500/30'
+    },
     {
       slug: 'reactive-to-predictive',
       title: 'From Reactive to Predictive: How AI is Transforming MSP Operations from Firefighting to Strategic Leadership',
