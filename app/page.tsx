@@ -291,7 +291,7 @@ export default function Home() {
       <section className="px-6 py-16 bg-gradient-to-r from-gray-900 to-black">
         <div className="max-w-5xl mx-auto text-center">
           <p className="text-xl md:text-2xl mb-8 animate-fadeIn">
-            <span className="text-yellow-400 italic">30 years of MSP experience + cutting-edge Rezolve.ai technology =</span><br />
+            <span className="text-yellow-400 italic">30 years of MSP experience + cutting-edge XOP.ai technology =</span><br />
             <span className="font-bold text-white text-2xl md:text-3xl">Solutions that deliver ROI to your business</span>
           </p>
           
