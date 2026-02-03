@@ -82,7 +82,7 @@ export default function EvolveFlyer() {
               />
               <div className="text-purple-300">|</div>
               <Image
-                src="/connectwise-logo.png"
+                src="https://www.connectwise.com/contentassets/46e6af166a92407eac66d8a7c79d3c8d/logo.svg"
                 alt="ConnectWise"
                 width={140}
                 height={32}
@@ -461,7 +461,7 @@ export default function EvolveFlyer() {
               />
               <span className="text-gray-400">|</span>
               <Image
-                src="/connectwise-logo.png"
+                src="https://www.connectwise.com/contentassets/46e6af166a92407eac66d8a7c79d3c8d/logo.svg"
                 alt="ConnectWise"
                 width={100}
                 height={24}
