@@ -2,13 +2,10 @@
 
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
-import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function IntegrationsPage() {
-  const [activeTab, setActiveTab] = useState('msp-tools')
-
   return (
     <div className="min-h-screen bg-black text-white">
       <Navigation />
@@ -42,7 +39,9 @@ export default function IntegrationsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* ConnectWise Manage */}
             <div className="bg-black/50 border border-indigo-500/30 rounded-2xl p-8 hover:border-indigo-500/50 transition-all">
-              <div className="text-4xl mb-4">🎫</div>
+              <div className="h-16 mb-4 flex items-center">
+                <Image src="/connectwise-logo.png" alt="ConnectWise" width={180} height={40} className="object-contain" />
+              </div>
               <h3 className="text-2xl font-bold mb-4 text-indigo-400">ConnectWise Manage</h3>
               <p className="text-gray-300 mb-6">
                 The deepest integration available - full bi-directional sync with your PSA
@@ -59,10 +58,54 @@ export default function IntegrationsPage() {
               </ul>
             </div>
 
-            {/* IT Glue */}
+            {/* ServiceNow */}
+            <div className="bg-black/50 border border-green-500/30 rounded-2xl p-8 hover:border-green-500/50 transition-all">
+              <div className="h-16 mb-4 flex items-center">
+                <Image src="/servicenow-logo.png" alt="ServiceNow" width={180} height={40} className="object-contain" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-green-400">ServiceNow</h3>
+              <p className="text-gray-300 mb-6">
+                Enterprise-grade ITSM integration for large MSPs and IT teams
+              </p>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li>• Full incident management integration</li>
+                <li>• Service catalog automation</li>
+                <li>• Knowledge base sync</li>
+                <li>• CMDB asset linking</li>
+                <li>• Change management workflows</li>
+                <li>• SLA tracking and escalation</li>
+                <li>• User and group management</li>
+                <li>• Custom field mapping</li>
+              </ul>
+            </div>
+
+            {/* Halo PSA */}
             <div className="bg-black/50 border border-purple-500/30 rounded-2xl p-8 hover:border-purple-500/50 transition-all">
-              <div className="text-4xl mb-4">📚</div>
-              <h3 className="text-2xl font-bold mb-4 text-purple-400">IT Glue</h3>
+              <div className="h-16 mb-4 flex items-center">
+                <Image src="/halo-logo.png" alt="Halo PSA" width={120} height={40} className="object-contain" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-purple-400">Halo PSA</h3>
+              <p className="text-gray-300 mb-6">
+                Modern PSA platform integration for growing MSPs
+              </p>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li>• Create and manage tickets</li>
+                <li>• Update ticket status and priority</li>
+                <li>• Time entry automation</li>
+                <li>• Client and contact sync</li>
+                <li>• Asset management integration</li>
+                <li>• Knowledge base access</li>
+                <li>• SLA and workflow automation</li>
+                <li>• Bi-directional data sync</li>
+              </ul>
+            </div>
+
+            {/* IT Glue */}
+            <div className="bg-black/50 border border-orange-500/30 rounded-2xl p-8 hover:border-orange-500/50 transition-all">
+              <div className="h-16 mb-4 flex items-center">
+                <Image src="/logo_itglue.png" alt="IT Glue" width={120} height={40} className="object-contain" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-orange-400">IT Glue</h3>
               <p className="text-gray-300 mb-6">
                 Complete documentation platform integration for instant knowledge access
               </p>
@@ -80,7 +123,9 @@ export default function IntegrationsPage() {
 
             {/* SharePoint */}
             <div className="bg-black/50 border border-blue-500/30 rounded-2xl p-8 hover:border-blue-500/50 transition-all">
-              <div className="text-4xl mb-4">📁</div>
+              <div className="h-16 mb-4 flex items-center">
+                <div className="text-5xl">📁</div>
+              </div>
               <h3 className="text-2xl font-bold mb-4 text-blue-400">SharePoint</h3>
               <p className="text-gray-300 mb-6">
                 Unified access to all your internal knowledge and client documentation
@@ -97,10 +142,33 @@ export default function IntegrationsPage() {
               </ul>
             </div>
 
+            {/* Confluence */}
+            <div className="bg-black/50 border border-blue-400/30 rounded-2xl p-8 hover:border-blue-400/50 transition-all">
+              <div className="h-16 mb-4 flex items-center">
+                <div className="text-5xl">📘</div>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-blue-300">Confluence</h3>
+              <p className="text-gray-300 mb-6">
+                Team collaboration and documentation platform sync
+              </p>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li>• Search across all spaces</li>
+                <li>• Retrieve page content</li>
+                <li>• Access team documentation</li>
+                <li>• Link to relevant pages</li>
+                <li>• Knowledge base integration</li>
+                <li>• Comment and annotation sync</li>
+                <li>• Space-based organization</li>
+                <li>• Version history access</li>
+              </ul>
+            </div>
+
             {/* ITBoost */}
             <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-500/50 transition-all">
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="text-2xl font-bold mb-4 text-cyan-400">ITBoost</h3>
+              <div className="h-16 mb-4 flex items-center">
+                <div className="text-5xl">🚀</div>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-cyan-400">IT Boost</h3>
               <p className="text-gray-300 mb-6">
                 Streamlined documentation management and knowledge sharing
               </p>
@@ -117,9 +185,11 @@ export default function IntegrationsPage() {
             </div>
 
             {/* Hudu */}
-            <div className="bg-black/50 border border-green-500/30 rounded-2xl p-8 hover:border-green-500/50 transition-all">
-              <div className="text-4xl mb-4">🔐</div>
-              <h3 className="text-2xl font-bold mb-4 text-green-400">Hudu</h3>
+            <div className="bg-black/50 border border-teal-500/30 rounded-2xl p-8 hover:border-teal-500/50 transition-all">
+              <div className="h-16 mb-4 flex items-center">
+                <div className="text-5xl">🔐</div>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-teal-400">Hudu</h3>
               <p className="text-gray-300 mb-6">
                 Modern IT documentation platform with asset management
               </p>
@@ -133,321 +203,6 @@ export default function IntegrationsPage() {
                 <li>• Search across all assets</li>
                 <li>• Asset tagging and categorization</li>
               </ul>
-            </div>
-
-            {/* Enterprise Options */}
-            <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-600/30 rounded-2xl p-8">
-              <div className="text-4xl mb-4">🏢</div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-300">Enterprise MSP Tools</h3>
-              <p className="text-gray-400 mb-6">
-                For larger MSPs, we also integrate with:
-              </p>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-yellow-400 mb-1">ServiceNow</h4>
-                  <p className="text-sm text-gray-400">Full ITSM integration with catalog and workflow automation</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-orange-400 mb-1">Jira Service Management</h4>
-                  <p className="text-sm text-gray-400">Complete ticket lifecycle and knowledge base integration</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-blue-400 mb-1">Confluence</h4>
-                  <p className="text-sm text-gray-400">Team collaboration and documentation platform sync</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Integration Categories Tabs */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Complete Integration Ecosystem</h2>
-          
-          <div className="max-w-6xl mx-auto">
-            {/* Tab Navigation */}
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {['msp-tools', 'productivity', 'hr-systems', 'security', 'rmm-tools'].map((tab) => (
-                <button
-                  key={tab}
-                  onClick={() => setActiveTab(tab)}
-                  className={`px-6 py-2 rounded-full transition-all ${
-                    activeTab === tab
-                      ? 'bg-gradient-to-r from-indigo-600 to-purple-600'
-                      : 'bg-gray-800 hover:bg-gray-700'
-                  }`}
-                >
-                  {tab.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
-                </button>
-              ))}
-            </div>
-
-            {/* Tab Content */}
-            <div className="bg-black/50 border border-gray-800 rounded-2xl p-8">
-              {activeTab === 'msp-tools' && (
-                <div className="animate-fadeIn">
-                  <h3 className="text-2xl font-semibold mb-6">MSP & Ticketing Systems</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">🎫</span>
-                      </div>
-                      <p className="text-sm">ConnectWise</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">📘</span>
-                      </div>
-                      <p className="text-sm">ServiceNow</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">🎯</span>
-                      </div>
-                      <p className="text-sm">Zendesk</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">🌿</span>
-                      </div>
-                      <p className="text-sm">Freshdesk</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">⚙️</span>
-                      </div>
-                      <p className="text-sm">ManageEngine</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">🍒</span>
-                      </div>
-                      <p className="text-sm">Cherwell</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">🔵</span>
-                      </div>
-                      <p className="text-sm">Jira</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">💫</span>
-                      </div>
-                      <p className="text-sm">HaloPSA</p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {activeTab === 'productivity' && (
-                <div className="animate-fadeIn">
-                  <h3 className="text-2xl font-semibold mb-6">Productivity & Collaboration</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">📧</span>
-                      </div>
-                      <p className="text-sm">Office 365</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">🔵</span>
-                      </div>
-                      <p className="text-sm">Google Workspace</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">💬</span>
-                      </div>
-                      <p className="text-sm">MS Teams</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">💼</span>
-                      </div>
-                      <p className="text-sm">Slack</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">📹</span>
-                      </div>
-                      <p className="text-sm">Zoom</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">🎥</span>
-                      </div>
-                      <p className="text-sm">Webex</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">📦</span>
-                      </div>
-                      <p className="text-sm">Dropbox</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">📂</span>
-                      </div>
-                      <p className="text-sm">Box</p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {activeTab === 'hr-systems' && (
-                <div className="animate-fadeIn">
-                  <h3 className="text-2xl font-semibold mb-6">HR & Business Systems</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">👥</span>
-                      </div>
-                      <p className="text-sm">Workday</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">🎋</span>
-                      </div>
-                      <p className="text-sm">BambooHR</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">💰</span>
-                      </div>
-                      <p className="text-sm">Gusto</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">🏢</span>
-                      </div>
-                      <p className="text-sm">SAP SuccessFactors</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">⏰</span>
-                      </div>
-                      <p className="text-sm">UKG</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">👤</span>
-                      </div>
-                      <p className="text-sm">PeopleSoft</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">☁️</span>
-                      </div>
-                      <p className="text-sm">Salesforce</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">📊</span>
-                      </div>
-                      <p className="text-sm">HubSpot</p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {activeTab === 'security' && (
-                <div className="animate-fadeIn">
-                  <h3 className="text-2xl font-semibold mb-6">Security & Identity Management</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">🔐</span>
-                      </div>
-                      <p className="text-sm">Active Directory</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">🔑</span>
-                      </div>
-                      <p className="text-sm">Okta</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">🛡️</span>
-                      </div>
-                      <p className="text-sm">OneLogin</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">🎯</span>
-                      </div>
-                      <p className="text-sm">MS Endpoint Manager</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">📝</span>
-                      </div>
-                      <p className="text-sm">DocuSign</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">✍️</span>
-                      </div>
-                      <p className="text-sm">HelloSign</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">🔄</span>
-                      </div>
-                      <p className="text-sm">MS Dynamics</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">📋</span>
-                      </div>
-                      <p className="text-sm">SAP Concur</p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {activeTab === 'rmm-tools' && (
-                <div className="animate-fadeIn">
-                  <h3 className="text-2xl font-semibold mb-6">RMM & Automation Tools</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">🛠️</span>
-                      </div>
-                      <p className="text-sm">Atera</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">🥷</span>
-                      </div>
-                      <p className="text-sm">NinjaOne</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">🎯</span>
-                      </div>
-                      <p className="text-sm">N-able</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-gray-900 rounded-lg p-4 mb-2">
-                        <span className="text-2xl">⚔️</span>
-                      </div>
-                      <p className="text-sm">Tactical RMM</p>
-                    </div>
-                  </div>
-                  <div className="mt-6 p-4 bg-gray-900/50 rounded-lg">
-                    <p className="text-sm text-gray-400">
-                      RMM integrations enable: Software installation, network printer setup, OneDrive troubleshooting, 
-                      USB drive management, cache clearing, device configuration, new laptop setup assistance, 
-                      filesystem fixes, and proactive monitoring with automatic ticket creation.
-                    </p>
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         </div>
