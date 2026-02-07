@@ -39,10 +39,11 @@ export default function IntegrationsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* ConnectWise Manage */}
             <div className="bg-black/50 border border-indigo-500/30 rounded-2xl p-8 hover:border-indigo-500/50 transition-all">
-              <div className="h-16 mb-4 flex items-center">
-                <Image src="/connectwise-logo.png" alt="ConnectWise" width={180} height={40} className="object-contain" />
+              <div className="h-16 mb-6 flex items-center justify-center">
+                <div className="bg-white rounded-lg px-4 py-2">
+                  <Image src="/connectwise2.png" alt="ConnectWise" width={160} height={40} className="object-contain" />
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-indigo-400">ConnectWise Manage</h3>
               <p className="text-gray-300 mb-6">
                 The deepest integration available - full bi-directional sync with your PSA
               </p>
@@ -60,10 +61,11 @@ export default function IntegrationsPage() {
 
             {/* ServiceNow */}
             <div className="bg-black/50 border border-green-500/30 rounded-2xl p-8 hover:border-green-500/50 transition-all">
-              <div className="h-16 mb-4 flex items-center">
-                <Image src="/servicenow-logo.png" alt="ServiceNow" width={180} height={40} className="object-contain" />
+              <div className="h-16 mb-6 flex items-center justify-center">
+                <div className="bg-white rounded-lg px-4 py-2">
+                  <Image src="/serivcenow2.png" alt="ServiceNow" width={160} height={40} className="object-contain" />
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-green-400">ServiceNow</h3>
               <p className="text-gray-300 mb-6">
                 Enterprise-grade ITSM integration for large MSPs and IT teams
               </p>
@@ -81,10 +83,11 @@ export default function IntegrationsPage() {
 
             {/* Halo PSA */}
             <div className="bg-black/50 border border-purple-500/30 rounded-2xl p-8 hover:border-purple-500/50 transition-all">
-              <div className="h-16 mb-4 flex items-center">
-                <Image src="/halo-logo.png" alt="Halo PSA" width={120} height={40} className="object-contain" />
+              <div className="h-16 mb-6 flex items-center justify-center">
+                <div className="bg-white rounded-lg px-4 py-2">
+                  <Image src="/halo-logo.png" alt="Halo PSA" width={120} height={40} className="object-contain" />
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-purple-400">Halo PSA</h3>
               <p className="text-gray-300 mb-6">
                 Modern PSA platform integration for growing MSPs
               </p>
@@ -102,10 +105,11 @@ export default function IntegrationsPage() {
 
             {/* IT Glue */}
             <div className="bg-black/50 border border-orange-500/30 rounded-2xl p-8 hover:border-orange-500/50 transition-all">
-              <div className="h-16 mb-4 flex items-center">
-                <Image src="/logo_itglue.png" alt="IT Glue" width={120} height={40} className="object-contain" />
+              <div className="h-16 mb-6 flex items-center justify-center">
+                <div className="bg-white rounded-lg px-4 py-2">
+                  <Image src="/itglue2.png" alt="IT Glue" width={120} height={40} className="object-contain" />
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-orange-400">IT Glue</h3>
               <p className="text-gray-300 mb-6">
                 Complete documentation platform integration for instant knowledge access
               </p>
@@ -123,10 +127,11 @@ export default function IntegrationsPage() {
 
             {/* SharePoint */}
             <div className="bg-black/50 border border-blue-500/30 rounded-2xl p-8 hover:border-blue-500/50 transition-all">
-              <div className="h-16 mb-4 flex items-center">
-                <div className="text-5xl">📁</div>
+              <div className="h-16 mb-6 flex items-center justify-center">
+                <div className="bg-white rounded-lg px-4 py-2">
+                  <Image src="/sharepoint2.png" alt="SharePoint" width={140} height={36} className="object-contain" />
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-blue-400">SharePoint</h3>
               <p className="text-gray-300 mb-6">
                 Unified access to all your internal knowledge and client documentation
               </p>
@@ -144,10 +149,11 @@ export default function IntegrationsPage() {
 
             {/* Confluence */}
             <div className="bg-black/50 border border-blue-400/30 rounded-2xl p-8 hover:border-blue-400/50 transition-all">
-              <div className="h-16 mb-4 flex items-center">
-                <div className="text-5xl">📘</div>
+              <div className="h-16 mb-6 flex items-center justify-center">
+                <div className="bg-white rounded-lg px-4 py-2">
+                  <Image src="/confluence2.png" alt="Confluence" width={160} height={40} className="object-contain" />
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-blue-300">Confluence</h3>
               <p className="text-gray-300 mb-6">
                 Team collaboration and documentation platform sync
               </p>
@@ -165,10 +171,11 @@ export default function IntegrationsPage() {
 
             {/* ITBoost */}
             <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-500/50 transition-all">
-              <div className="h-16 mb-4 flex items-center">
-                <div className="text-5xl">🚀</div>
+              <div className="h-16 mb-6 flex items-center justify-center">
+                <div className="bg-white rounded-lg px-4 py-2">
+                  <Image src="/itboost2.png" alt="IT Boost" width={140} height={40} className="object-contain" />
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-cyan-400">IT Boost</h3>
               <p className="text-gray-300 mb-6">
                 Streamlined documentation management and knowledge sharing
               </p>
@@ -186,10 +193,11 @@ export default function IntegrationsPage() {
 
             {/* Hudu */}
             <div className="bg-black/50 border border-teal-500/30 rounded-2xl p-8 hover:border-teal-500/50 transition-all">
-              <div className="h-16 mb-4 flex items-center">
-                <div className="text-5xl">🔐</div>
+              <div className="h-16 mb-6 flex items-center justify-center">
+                <div className="bg-white rounded-lg px-4 py-2">
+                  <Image src="/hudu2.png" alt="Hudu" width={120} height={40} className="object-contain" />
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-teal-400">Hudu</h3>
               <p className="text-gray-300 mb-6">
                 Modern IT documentation platform with asset management
               </p>
