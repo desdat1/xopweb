@@ -52,13 +52,11 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* Company Info */}
             <div className="lg:col-span-2">
-              <div className="flex items-center gap-4 mb-4">
+              <div className="mb-4">
                 <img src="/xop-logo.png" alt="xop.ai" className="h-16" />
-                <img src="/rezolve-logo.png" alt="Rezolve.ai" className="h-10 opacity-70" />
               </div>
               <p className="text-gray-400 mb-6">
-                AI Solutions Designed by MSPs, For MSPs. Powered by 30+ years of MSP experience 
-                and cutting-edge Rezolve.ai technology.
+                AI Solutions Designed by MSPs, For MSPs. Powered by 30+ years of MSP experience.
               </p>
               
               {/* Contact Info */}
@@ -74,8 +72,8 @@ export default function Footer() {
                 <div className="flex items-start gap-3 text-gray-400">
                   <MapPin className="w-5 h-5 mt-0.5" />
                   <div>
-                    <p>PO Box 261</p>
-                    <p>Brookeville, MD 20833</p>
+                    <p>PO Box 14114</p>
+                    <p>Myrtle Beach, SC 29587</p>
                   </div>
                 </div>
               </div>
@@ -127,10 +125,7 @@ export default function Footer() {
           {/* Bottom Bar */}
           <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm">
-              &copy; 2025 xop.ai. All rights reserved.
-            </p>
-            <p className="text-gray-500 text-sm mt-4 md:mt-0">
-              Powered by <span className="text-green-400">Rezolve.ai</span> Technology
+              &copy; 2026 xop.ai. All rights reserved.
             </p>
           </div>
         </div>

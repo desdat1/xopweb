@@ -45,9 +45,8 @@ export default function Navigation() {
     <nav className="border-b border-gray-800">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-4">
+          <Link href="/" className="flex items-center">
             <img src="/xop-logo.png" alt="xop.ai" className="h-[88px]" />
-            <img src="/rezolve-logo.png" alt="Rezolve.ai" className="h-12" />
           </Link>
           
           <div className="hidden md:flex items-center justify-between flex-1">
