@@ -10,26 +10,8 @@ export default function IntegrationsPage() {
     <div className="min-h-screen bg-black text-white">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-black to-purple-900/20"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="mb-8 inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 animate-pulse-slow">
-              <span className="text-5xl animate-float">🔗</span>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fadeIn">
-              Integrations
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-slideIn">
-              Seamlessly connect with the tools that power your MSP and your clients' businesses
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* MSP-Critical Integrations */}
-      <section className="py-16 bg-gray-900/50">
+      <section className="pt-24 pb-16 bg-gray-900/50">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-4 text-gradient">MSP-Critical Integrations</h2>
           <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
@@ -100,6 +82,31 @@ export default function IntegrationsPage() {
                 <li>• Knowledge base access</li>
                 <li>• SLA and workflow automation</li>
                 <li>• Bi-directional data sync</li>
+              </ul>
+            </div>
+
+            {/* Autotask */}
+            <div className="bg-black/50 border border-yellow-500/30 rounded-2xl p-8 hover:border-yellow-500/50 transition-all relative">
+              <div className="absolute top-4 right-4">
+                <span className="bg-yellow-500 text-black text-xs font-bold px-3 py-1 rounded-full">Coming Soon</span>
+              </div>
+              <div className="h-16 mb-6 flex items-center justify-center">
+                <div className="bg-white rounded-lg px-4 py-2">
+                  <Image src="/autotask.png" alt="Autotask" width={140} height={40} className="object-contain" />
+                </div>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Full PSA integration for Autotask users coming in 2026
+              </p>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li>• Ticket creation and management</li>
+                <li>• Time entry automation</li>
+                <li>• Contact and company sync</li>
+                <li>• Service desk integration</li>
+                <li>• Knowledge base access</li>
+                <li>• SLA tracking</li>
+                <li>• Bi-directional data sync</li>
+                <li>• Full API integration</li>
               </ul>
             </div>
 
