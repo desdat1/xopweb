@@ -14,11 +14,11 @@ export default function FAQPage() {
       faqs: [
         {
           question: "How do we get started with AI without disrupting our current operations?",
-          answer: "Our platform is designed for seamless integration with zero disruption to your existing workflows. We start with our Enterprise Search solution, which works as an overlay to your current systems - your engineers continue using ConnectWise Manage exactly as before, but now have AI-powered search across IT Glue, SharePoint, and historical tickets. The implementation takes just hours, not weeks, and your team sees immediate value. From there, we gradually introduce additional capabilities like the Engineer App v4 and voice agents, all while maintaining your current processes."
+          answer: "Our platform is designed for seamless integration with zero disruption to your existing workflows. We start with our Enterprise Search solution, which works as an overlay to your current systems - your engineers continue using ConnectWise, ServiceNow, or Halo PSA exactly as before, but now have AI-powered search across IT Glue, SharePoint, and historical tickets. The implementation takes just hours, not weeks, and your team sees immediate value. From there, we gradually introduce additional capabilities like the Engineer App and voice agents, all while maintaining your current processes."
         },
         {
           question: "Do you offer demo or trial environments?",
-          answer: "Currently we do not. Demand is extremely high and we currently do not have the capacity to spin up demo environments. To be useful, demo environments would require substantial integration work into your PSA and ingestion of IT Glue, SharePoint, Confluence, and other systems - which is a significant project for each prospect. However, in Q1 2026 we will offer a proof of concept demo environment with limited ConnectWise basic integration for qualified customers. Until then, we're happy to provide detailed demonstrations of existing client environments and comprehensive onboarding once you're ready to move forward."
+          answer: "Currently we do not. Demand is extremely high and we currently do not have the capacity to spin up demo environments. To be useful, demo environments would require substantial integration work into your PSA and ingestion of IT Glue, SharePoint, Confluence, and other systems - which is a significant project for each prospect. However, in Q1 2026 we will offer a proof of concept demo environment with limited PSA integration for qualified customers. Until then, we're happy to provide detailed demonstrations of existing client environments and comprehensive onboarding once you're ready to move forward."
         },
         {
           question: "What if our client documentation is not up to date? How do you handle poor data quality?",
@@ -31,11 +31,11 @@ export default function FAQPage() {
       faqs: [
         {
           question: "How does voice AI work for MSPs? Can AI actually handle phone calls?",
-          answer: "Yes - we're the only MSP AI platform with comprehensive voice capabilities. Our Phone Intake Agent answers calls 24/7, gathers detailed information from clients, and creates complete tickets in ConnectWise automatically. Our Conversation Monitor (coming soon) will join existing calls to auto-document everything discussed. This isn't just call forwarding - it's intelligent conversation handling that captures context, understands technical issues, and ensures zero information loss. MSPs using voice AI report 100% call capture and can provide true 24/7 support without adding staff."
+          answer: "Yes - we're the only MSP AI platform with comprehensive voice capabilities. Our Phone Intake Agent answers calls 24/7, gathers detailed information from clients, and creates complete tickets in ConnectWise, ServiceNow, or Halo PSA automatically. Our Conversation Monitor (coming soon) will join existing calls to auto-document everything discussed. This isn't just call forwarding - it's intelligent conversation handling that captures context, understands technical issues, and ensures zero information loss. MSPs using voice AI report 100% call capture and can provide true 24/7 support without adding staff."
         },
         {
           question: "What does the Teams end user bot do? How is it different than Enterprise Search for end users?",
-          answer: "Our Teams bot creates a direct communication channel between your end users and engineers through Microsoft Teams. It's trained on common end user issues to deflect simple tickets, but when escalation is needed, it seamlessly creates tickets in ConnectWise Manage with full context. Updates flow bidirectionally - engineers can update tickets and end users see responses in Teams. Enterprise Search for end users is different - it's a standalone revenue-generating product you sell to clients for $250+ monthly, allowing them to search their own documentation and systems independently. The Teams bot is about communication and ticket management; Enterprise Search is about client self-service and recurring revenue."
+          answer: "Our Teams bot creates a direct communication channel between your end users and engineers through Microsoft Teams. It's trained on common end user issues to deflect simple tickets, but when escalation is needed, it seamlessly creates tickets in your PSA (ConnectWise, ServiceNow, or Halo PSA) with full context. Updates flow bidirectionally - engineers can update tickets and end users see responses in Teams. Enterprise Search for end users is different - it's a standalone revenue-generating product you sell to clients for $250+ monthly, allowing them to search their own documentation and systems independently. The Teams bot is about communication and ticket management; Enterprise Search is about client self-service and recurring revenue."
         },
         {
           question: "What underlying AI engine do you use?",
@@ -47,16 +47,16 @@ export default function FAQPage() {
       title: "Integrations & Technical",
       faqs: [
         {
-          question: "How does AI integration work with our existing ConnectWise/PSA tools?",
-          answer: "Our platform integrates natively with ConnectWise Manage through deep API connections, not just surface-level plugins. Tickets created by our voice agents appear instantly in your PSA with full context. Our Enterprise Search pulls data directly from ConnectWise, IT Glue, and your other tools to provide contextual results. The Engineer App v4 works as an intelligent overlay - your technicians see AI-generated responses, time entries, and solutions right within their familiar ConnectWise interface. Everything syncs bidirectionally, so your existing workflows, reporting, and processes remain unchanged."
+          question: "How does AI integration work with our existing PSA tools?",
+          answer: "Our platform integrates natively with ConnectWise, ServiceNow, and Halo PSA through deep API connections, not just surface-level plugins. Tickets created by our voice agents appear instantly in your PSA with full context. Our Enterprise Search pulls data directly from your PSA, IT Glue, and your other tools to provide contextual results. The Engineer App works as an intelligent overlay - your technicians see AI-generated responses, time entries, and solutions right within their familiar interface. Everything syncs bidirectionally, so your existing workflows, reporting, and processes remain unchanged."
         },
         {
-          question: "What other MSP PSAs do you integrate with besides ConnectWise?",
-          answer: "Currently, we integrate with ConnectWise Manage (both on-premises and cloud-hosted versions) and ServiceNow. We have confirmed integration with Halo PSA coming in 2026. Additionally, subject to customer interest and demand, we're looking to integrate with Autotask and Rev.IO in 2026. If you're using a different PSA and would like to see integration support, we'd love to hear from you - customer demand directly influences our integration roadmap."
+          question: "What PSA platforms do you integrate with?",
+          answer: "We fully integrate with ConnectWise Manage (both on-premises and cloud-hosted versions), ServiceNow, and Halo PSA. All three platforms have complete integration with our Engineer App, Enterprise Search, Voice AI Agents, and branded chatbots. Additionally, subject to customer interest and demand, we're looking to integrate with Autotask and Rev.IO later in 2026. If you're using a different PSA and would like to see integration support, we'd love to hear from you - customer demand directly influences our integration roadmap."
         },
         {
-          question: "Can your AI run inside ConnectWise Manage?",
-          answer: "No, not currently. It's easier for us to innovate rapidly by building our solutions inside our dedicated applications - the Engineer App, Manager App, and Enterprise Search for MSPs. This approach allows us to move fast with new features, updates, and improvements without being constrained by third-party platform limitations. While our apps integrate seamlessly with ConnectWise through APIs for ticket creation, updates, and data sync, the AI functionality runs in our purpose-built environment where we can deliver the best possible experience."
+          question: "Can your AI run inside my PSA?",
+          answer: "No, not currently. It's easier for us to innovate rapidly by building our solutions inside our dedicated applications - the Engineer App, Manager App, and Enterprise Search for MSPs. This approach allows us to move fast with new features, updates, and improvements without being constrained by third-party platform limitations. While our apps integrate seamlessly with ConnectWise, ServiceNow, and Halo PSA through APIs for ticket creation, updates, and data sync, the AI functionality runs in our purpose-built environment where we can deliver the best possible experience."
         }
       ]
     },
