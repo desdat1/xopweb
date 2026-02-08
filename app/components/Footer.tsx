@@ -4,24 +4,23 @@ import { Mail, Phone, MapPin, ExternalLink } from 'lucide-react'
 export default function Footer() {
   const solutions = [
     { name: 'Engineer Efficiency', href: '/solutions/engineer-efficiency' },
-    { name: 'Service Desk Management', href: '/solutions/service-desk-management' },
-    { name: 'Executive Insights', href: '/solutions/executive-insights' },
-    { name: 'Generate Revenue', href: '/solutions/recurring-revenue' },
-    { name: 'Branded Chatbot', href: '/solutions/branded-chatbot' },
-    { name: 'Voice Agents', href: '/solutions/voice-agents' },
-    { name: 'Email Agents', href: '/solutions/email-agents' },
-    { name: 'Integrations', href: '/solutions/integrated-stack' },
+    { name: 'Service Desk Visibility', href: '/solutions/service-desk-visibility' },
+    { name: 'Client Health & Retention', href: '/solutions/client-retention' },
+    { name: 'Team Development', href: '/solutions/team-development' },
+    { name: 'Client-Facing AI', href: '/solutions/client-facing-ai' },
   ]
 
   const apps = [
     { name: 'AI Engineer Assist', href: '/apps/engineer-assist' },
-    { name: 'AI Manager Application', href: '/apps/manager-app' },
-    { name: 'AI End User Chatbot', href: '/apps/end-user-chatbot' },
+    { name: 'TECHS Command Centre', href: '/apps/manager-app' },
+    { name: 'End User AI', href: '/apps/end-user-chatbot' },
   ]
 
-  const company = [
+  const resources = [
+    { name: 'FAQs', href: '/resources/faq' },
+    { name: 'News / Blog', href: '/blog' },
+    { name: 'Integrations', href: '/integrations' },
     { name: 'About Us', href: '/about' },
-    { name: 'Resources', href: '/resources' },
     { name: 'Contact', href: '/contact' },
   ]
 
@@ -107,11 +106,11 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Company */}
+            {/* Resources & Company */}
             <div>
-              <h4 className="font-bold mb-4">Company</h4>
+              <h4 className="font-bold mb-4 text-purple-400">Resources</h4>
               <ul className="space-y-2">
-                {company.map((item) => (
+                {resources.map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} className="text-gray-400 hover:text-white transition-colors text-sm">
                       {item.name}

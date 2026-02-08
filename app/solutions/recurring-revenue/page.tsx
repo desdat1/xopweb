@@ -83,7 +83,7 @@ export default function GenerateRecurringRevenuePage() {
               <div className="text-5xl mb-6">🤖</div>
               <h3 className="text-2xl font-bold mb-4 text-pink-400">MSP Branded Chatbot + Search</h3>
               <p className="text-gray-300 mb-6">
-                Complete solution with ConnectWise integration for ticket deflection and self-service
+                Complete solution with PSA integration for ticket deflection and self-service
               </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-3">
@@ -92,7 +92,7 @@ export default function GenerateRecurringRevenuePage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-400 mt-1 text-lg">✓</span>
-                  <span>ConnectWise Manage integration</span>
+                  <span>Full PSA integration</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-400 mt-1 text-lg">✓</span>

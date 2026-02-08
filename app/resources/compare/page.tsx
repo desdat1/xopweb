@@ -144,57 +144,57 @@ export default function ComparePage() {
         name: "Engineer Assistance",
         icon: <Zap className="w-5 h-5" />,
         features: [
-          { name: "Ticket Response Generation", rezolve: "full", description: "AI-powered contextual responses with historical data integration" },
-          { name: "Ticket Summarization", rezolve: "full", description: "Advanced multi-dimensional summaries with context" },
-          { name: "Automatic Time Entry", rezolve: "full", description: "Intelligent time tracking with activity categorization" },
-          { name: "Solution Recommendations", rezolve: "full", description: "AI-powered solutions from historical tickets & documentation" }
+          { name: "Ticket Response Generation", xop: "full", description: "AI-powered contextual responses with historical data integration" },
+          { name: "Ticket Summarization", xop: "full", description: "Advanced multi-dimensional summaries with context" },
+          { name: "Automatic Time Entry", xop: "full", description: "Intelligent time tracking with activity categorization" },
+          { name: "Solution Recommendations", xop: "full", description: "AI-powered solutions from historical tickets & documentation" }
         ]
       },
       {
         name: "Enterprise Search",
         icon: <Search className="w-5 h-5" />,
         features: [
-          { name: "IT Glue Search Integration", rezolve: "full", description: "Deep AI-powered search with contextual results" },
-          { name: "Historical Ticket Search", rezolve: "full", description: "AI-powered semantic search across all historical tickets" },
-          { name: "SharePoint Integration", rezolve: "full", description: "Full SharePoint search with AI-powered content discovery" },
-          { name: "Multi-Platform Documentation", rezolve: "full", description: "250+ integrations including Hudu, ITBoost, Confluence" }
+          { name: "IT Glue Search Integration", xop: "full", description: "Deep AI-powered search with contextual results" },
+          { name: "Historical Ticket Search", xop: "full", description: "AI-powered semantic search across all historical tickets" },
+          { name: "SharePoint Integration", xop: "full", description: "Full SharePoint search with AI-powered content discovery" },
+          { name: "Multi-Platform Documentation", xop: "full", description: "250+ integrations including Hudu, ITBoost, Confluence" }
         ]
       },
       {
         name: "Voice & Communication",
         icon: <Phone className="w-5 h-5" />,
         features: [
-          { name: "Voice Agent Phone Intake", rezolve: "full", description: "AI agents handle calls, create tickets automatically" },
-          { name: "Call Documentation Automation", rezolve: "full", description: "Conversation Monitor joins calls, auto-documents" },
-          { name: "24/7 After-Hours Support", rezolve: "full", description: "Voice agents provide round-the-clock ticket creation" }
+          { name: "Voice Agent Phone Intake", xop: "full", description: "AI agents handle calls, create tickets automatically" },
+          { name: "Call Documentation Automation", xop: "full", description: "Conversation Monitor joins calls, auto-documents" },
+          { name: "24/7 After-Hours Support", xop: "full", description: "Voice agents provide round-the-clock ticket creation" }
         ]
       },
       {
         name: "Email Intelligence",
         icon: <Mail className="w-5 h-5" />,
         features: [
-          { name: "AI Email Categorization", rezolve: "full", description: "Advanced AI categorization with priority assessment" },
-          { name: "Smart Auto-Replies", rezolve: "full", description: "Contextual responses with solution suggestions" },
-          { name: "Email-to-Ticket Intelligence", rezolve: "full", description: "AI extracts context, creates complete tickets" }
+          { name: "AI Email Categorization", xop: "full", description: "Advanced AI categorization with priority assessment" },
+          { name: "Smart Auto-Replies", xop: "full", description: "Contextual responses with solution suggestions" },
+          { name: "Email-to-Ticket Intelligence", xop: "full", description: "AI extracts context, creates complete tickets" }
         ]
       },
       {
         name: "Revenue Generation",
         icon: <DollarSign className="w-5 h-5" />,
         features: [
-          { name: "White-labeled Enterprise Search", rezolve: "full", description: "Complete revenue-generating solution for clients" },
-          { name: "Branded Client Chatbots", rezolve: "full", description: "White-labeled chatbots with ticket integration" },
-          { name: "Recurring Revenue Model", rezolve: "full", description: "$250+ monthly per client with 30-40% margins" }
+          { name: "White-labeled Enterprise Search", xop: "full", description: "Complete revenue-generating solution for clients" },
+          { name: "Branded Client Chatbots", xop: "full", description: "White-labeled chatbots with ticket integration" },
+          { name: "Recurring Revenue Model", xop: "full", description: "$250+ monthly per client with 30-40% margins" }
         ]
       },
       {
         name: "Management Platform",
         icon: <Target className="w-5 h-5" />,
         features: [
-          { name: "Dedicated Manager Application", rezolve: "full", description: "Complete Manager App with 4 integrated modules" },
-          { name: "AI Ticket Assignment", rezolve: "full", description: "Intelligent routing based on skills & workload" },
-          { name: "AURA Ticket Health Scoring", rezolve: "full", description: "6-point AI scoring for predictive management" },
-          { name: "Client Health Monitoring", rezolve: "full", description: "Comprehensive relationship tracking with churn prediction" }
+          { name: "Dedicated Manager Application", xop: "full", description: "Complete Manager App with 4 integrated modules" },
+          { name: "AI Ticket Assignment", xop: "full", description: "Intelligent routing based on skills & workload" },
+          { name: "AURA Ticket Health Scoring", xop: "full", description: "6-point AI scoring for predictive management" },
+          { name: "Client Health Monitoring", xop: "full", description: "Comprehensive relationship tracking with churn prediction" }
         ]
       }
     ]
@@ -244,7 +244,7 @@ export default function ComparePage() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Comprehensive Feature Comparison</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how Rezolve.ai compares across all critical MSP AI capabilities
+              See how xop.ai compares across all critical MSP AI capabilities
             </p>
           </div>
 
@@ -269,7 +269,7 @@ export default function ComparePage() {
                           <th className="p-3 md:p-4 font-semibold text-left text-sm md:text-base w-1/2">Feature</th>
                           <th className="p-3 md:p-4 font-semibold text-center bg-green-600/20 text-sm md:text-base w-1/4">
                             <Crown className="w-4 h-4 md:w-5 md:h-5 mx-auto mb-1" />
-                            <div className="hidden sm:block">Rezolve.ai</div>
+                            <div className="hidden sm:block">xop.ai</div>
                             <div className="sm:hidden">Rezolve</div>
                           </th>
                           <th className="p-3 md:p-4 font-semibold text-center text-sm md:text-base w-1/4">
@@ -440,7 +440,7 @@ export default function ComparePage() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4">Why Rezolve.ai Dominates the Market</h2>
+              <h2 className="text-4xl font-bold mb-4">Why xop.ai Dominates the Market</h2>
               <p className="text-xl text-gray-300">
                 While competitors offer fragmented solutions, we deliver the complete AI platform
               </p>
@@ -480,7 +480,7 @@ export default function ComparePage() {
               <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold mb-6 text-green-400 flex items-center gap-2">
                   <Crown className="w-6 h-6" />
-                  Rezolve.ai Platform
+                  xop.ai Platform
                 </h3>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3 text-gray-300">

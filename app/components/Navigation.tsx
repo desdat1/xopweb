@@ -15,30 +15,25 @@ export default function Navigation() {
 
   const solutions = [
     { name: 'Engineer Efficiency', href: '/solutions/engineer-efficiency', icon: '⚡' },
-    { name: 'Service Desk Management', href: '/solutions/service-desk-management', icon: '📊' },
-    { name: 'Executive Insights', href: '/solutions/executive-insights', icon: '📈' },
-    { name: 'Generate Recurring Revenue', href: '/solutions/recurring-revenue', icon: '💰' },
-    { name: 'Branded Chatbot for Clients', href: '/solutions/branded-chatbot', icon: '🤖' },
-    { name: 'Voice Agents', href: '/solutions/voice-agents', icon: '📞' },
-    { name: 'Email Agents', href: '/solutions/email-agents', icon: '📧' },
-    { name: 'Integrations', href: '/solutions/integrated-stack', icon: '🔗' },
-    { name: 'Future / Roadmap', href: '/solutions/roadmap', icon: '🚀' },
+    { name: 'Service Desk Visibility', href: '/solutions/service-desk-visibility', icon: '👁️' },
+    { name: 'Client Health & Retention', href: '/solutions/client-retention', icon: '🤝' },
+    { name: 'Team Development', href: '/solutions/team-development', icon: '📈' },
+    { name: 'Client-Facing AI', href: '/solutions/client-facing-ai', icon: '🤖' },
   ]
 
   const apps = [
     { name: 'AI Engineer Assist', href: '/apps/engineer-assist', icon: '⚡' },
-    { name: 'AI Manager Application', href: '/apps/manager-app', icon: '👨‍💼' },
-    { name: 'AI End User Chatbot', href: '/apps/end-user-chatbot', icon: '💬' },
+    { name: 'TECHS Command Centre', href: '/apps/manager-app', icon: '🎯' },
+    { name: 'End User AI', href: '/apps/end-user-chatbot', icon: '💬' },
   ]
 
   const resources = [
-    { name: 'FAQ\'s', href: '/resources/faq', icon: '❓' },
-    { name: 'MSP e-book "Generating AI Revenue"', href: '/ebook', icon: '📖' },
-    { name: 'Blogs / News', href: '/blog', icon: '📝' },
-    { name: 'Matt & Manish AI podcast', href: '/resources/podcast', icon: '🎙️' },
+    { name: 'News / Blog', href: '/blog', icon: '📝' },
+    { name: 'xop.ai vs. Competition', href: '/resources/compare', icon: '⚖️' },
+    { name: 'AI Podcast', href: '/resources/podcast', icon: '🎙️' },
     { name: 'On Demand Webinars', href: '/resources/webinars', icon: '🎥' },
-    { name: 'Rezolve.ai vs. Competition', href: '/resources/compare', icon: '⚖️' },
-    { name: 'Request custom ROI', href: '/resources/roi', icon: '📊' },
+    { name: 'MSP e-book "Generating AI Revenue"', href: '/ebook', icon: '📖' },
+    { name: 'Request Custom ROI', href: '/resources/roi', icon: '📊' },
   ]
 
   return (

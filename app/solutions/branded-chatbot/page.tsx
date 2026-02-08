@@ -100,9 +100,10 @@ export default function BrandedChatbotPage() {
           <h2 className="text-3xl font-bold text-center mb-12">Powerful Features Built for MSPs</h2>
           
           <div className="max-w-5xl mx-auto">
-            {/* ConnectWise Integration */}
+            {/* PSA Integration */}
             <div className="mb-12 bg-black/50 border border-gray-800 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-6 text-gradient">Full ConnectWise Manage Integration</h3>
+              <h3 className="text-2xl font-bold mb-6 text-gradient">Full PSA Integration</h3>
+              <p className="text-gray-400 text-sm mb-4">Works with ConnectWise, Halo PSA, ServiceNow, and Autotask (coming soon)</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
@@ -202,7 +203,7 @@ export default function BrandedChatbotPage() {
                     Available 24/7, it understands their specific environment and can resolve common issues instantly.
                   </p>
                   <p className="text-gray-300">
-                    The chatbot seamlessly integrates with ConnectWise Manage, creating tickets when needed with full 
+                    The chatbot seamlessly integrates with your PSA (ConnectWise, Halo PSA, ServiceNow, or Autotask), creating tickets when needed with full
                     context, proper categorization, and intelligent prioritization - all while maintaining your MSP's branding.
                   </p>
                 </div>

@@ -46,7 +46,7 @@ export default function AboutPage() {
                 Having spent years testing and implementing various AI technologies within his own MSP, Matt discovered that most AI solutions were either too complex, too expensive, or simply didn't deliver on their promises. This firsthand experience drove him to create xop.ai — a company that bridges the gap between cutting-edge AI technology and real-world MSP operations.
               </p>
               <p>
-                Today, xop.ai leverages exclusive access to Rezolve.ai's enterprise AI platform to deliver solutions specifically tailored for MSPs. Every tool we offer has been battle-tested in real MSP environments, ensuring they solve actual problems and deliver measurable results.
+                Today, xop.ai delivers a complete AI platform built specifically for MSPs. Our Engineer Assist tools capture intelligence from every helpdesk interaction, while our Manager Application transforms that data into actionable insights. Every solution we offer has been battle-tested in real MSP environments, ensuring they solve actual problems and deliver measurable results.
               </p>
             </div>
           </div>
@@ -62,13 +62,6 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Partnership Section */}
-          <div className="mb-16 animate-fadeIn delay-500">
-            <h2 className="text-3xl font-semibold mb-6 text-green-400">Our Partnership with Rezolve.ai</h2>
-            <p className="text-gray-300 leading-relaxed">
-              xop.ai has secured exclusive MSP distribution rights for Rezolve.ai's powerful AI platform. This partnership gives our clients access to enterprise-grade AI technology that would typically be reserved for Fortune 500 companies. By combining Rezolve.ai's technical excellence with our deep MSP expertise, we deliver solutions that are both powerful and practical — designed by MSPs, for MSPs.
-            </p>
-          </div>
         </div>
       </section>
 

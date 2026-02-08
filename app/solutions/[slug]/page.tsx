@@ -95,7 +95,7 @@ export default function SolutionPage() {
             <Link href="/">
               <Image 
                 src="/xop-logo.png" 
-                alt="XOP.ai" 
+                alt="xop.ai" 
                 width={132} 
                 height={88} 
                 className="h-[88px] w-auto cursor-pointer"

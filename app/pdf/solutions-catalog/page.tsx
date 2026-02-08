@@ -19,7 +19,7 @@ export default function SolutionsCatalogPDF() {
           <div className="flex items-center justify-center gap-8 mb-12">
             <Image 
               src="/xop-logo.png" 
-              alt="XOP.ai Logo" 
+              alt="xop.ai Logo" 
               width={120} 
               height={60}
               className="h-16 w-auto"

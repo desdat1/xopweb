@@ -97,7 +97,7 @@ export default function BeyondCostSavingsPage() {
             </div>
             <div className="flex items-center gap-2">
               <User className="w-4 h-4" />
-              <span>Matt Ruck, XOP.ai</span>
+              <span>Matt Ruck, xop.ai</span>
             </div>
           </div>
         </header>

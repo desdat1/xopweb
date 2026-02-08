@@ -1,355 +1,245 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
-import { useState } from 'react'
 import Link from 'next/link'
-import { ChevronRight, Zap, Brain, Clock, TrendingUp, Users, BarChart, CheckCircle } from 'lucide-react'
+import {
+  Zap, Brain, Clock, TrendingUp, Search, CheckCircle,
+  ArrowRight, Users, MessageCircle, Phone, Mail, FileText,
+  Target, Shield, Award, X, Check
+} from 'lucide-react'
 
 export default function EngineerEfficiencyPage() {
-  const [activeTab, setActiveTab] = useState('overview')
+  const [mounted, setMounted] = useState(false)
 
-  const benefits = [
-    {
-      icon: <Clock className="w-8 h-8" />,
-      title: '30% Time Savings',
-      description: 'Reduce time spent searching for solutions and documentation'
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: 'Faster Resolution',
-      description: 'AI-powered insights accelerate ticket resolution by 40%'
-    },
-    {
-      icon: <Brain className="w-8 h-8" />,
-      title: 'Knowledge at Scale',
-      description: 'Instantly access tribal knowledge across your entire organization'
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Consistent Quality',
-      description: 'Ensure every engineer delivers expert-level service'
-    }
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  const dataCapture = [
+    { label: 'Search Patterns', description: 'What engineers look for reveals knowledge gaps', icon: <Search className="w-5 h-5" /> },
+    { label: 'Resolution Success', description: 'Which solutions work builds expertise mapping', icon: <CheckCircle className="w-5 h-5" /> },
+    { label: 'Response Time', description: 'Speed of engagement tracked automatically', icon: <Clock className="w-5 h-5" /> },
+    { label: 'Communication Quality', description: 'Clarity and follow-up patterns analyzed', icon: <MessageCircle className="w-5 h-5" /> },
   ]
 
-  const timeSavingFeatures = [
-    {
-      title: 'AI Workspace with Customer Overview',
-      description: 'Engineers get immediate context about customer environments including user count, primary contacts, application stack, and common issues - all integrated within ConnectWise Manage.'
-    },
-    {
-      title: 'Intelligent Ticket Summarization',
-      description: 'Get instant, concise summaries of lengthy ticket threads. Our AI extracts the key issues, actions taken, and current status - perfect for handoffs or catching up on escalated tickets.'
-    },
-    {
-      title: 'Enterprise Search Across All Systems',
-      description: 'Find similar tickets, proven solutions, and relevant documentation instantly. Search across ConnectWise historical data, IT Glue, SharePoint, and other data sources from one unified interface.'
-    },
-    {
-      title: 'Resolution Suggestions',
-      description: 'AI analyzes similar historical tickets and provides suggested resolution steps based on what worked before, reducing problem-solving time and improving consistency.'
-    },
-    {
-      title: 'Automatic Time Entry Capture',
-      description: 'Auto-capture time entries as engineers work on tickets. The system tracks activities and creates accurate time entries, reducing administrative overhead.'
-    },
-    {
-      title: 'Escalation Communication Tools',
-      description: 'Built-in tools for communicating escalations to management and executive leadership, with all escalation activity tracked in the manager dashboard.'
-    }
+  const transformations = [
+    { before: 'Searching across 5 systems to find an answer', after: 'One search, instant results from all sources' },
+    { before: 'Starting every ticket from scratch', after: 'AI-generated context and resolution suggestions' },
+    { before: 'Manually writing time entries at end of day', after: 'Automatic time capture as you work' },
+    { before: 'Tribal knowledge locked in senior engineers', after: 'Expertise accessible to your entire team' },
   ]
+
+  const capabilities = [
+    {
+      title: 'Enterprise Search',
+      description: 'Search across tickets, documentation, IT Glue, SharePoint—everything in one place',
+      icon: <Search className="w-6 h-6" />
+    },
+    {
+      title: 'AI Ticket Insights',
+      description: 'Instant summaries, resolution suggestions, and similar ticket analysis',
+      icon: <Brain className="w-6 h-6" />
+    },
+    {
+      title: 'Client Environment Context',
+      description: 'User count, contacts, application stack, common issues—all at a glance',
+      icon: <Users className="w-6 h-6" />
+    },
+    {
+      title: 'Automatic Time Capture',
+      description: 'Time entries created as engineers work, not reconstructed later',
+      icon: <Clock className="w-6 h-6" />
+    },
+  ]
+
+  if (!mounted) return null
 
   return (
     <div className="min-h-screen bg-black text-white">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="px-6 py-16 text-center">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex justify-center mb-6 animate-pulse-slow">
-            <Zap className="w-16 h-16 text-yellow-400" />
+      {/* Hero */}
+      <section className="px-6 py-12 md:py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-black to-orange-900/20"></div>
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <div className="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/20 px-4 py-2 rounded-full mb-6">
+            <Zap className="w-4 h-4 text-yellow-400" />
+            <span className="text-sm font-medium text-yellow-400">Engineer Efficiency</span>
           </div>
-          <h1 className="text-5xl font-bold mb-6 animate-fadeIn">
-            Engineer Efficiency
+
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">
+            <span className="text-gray-400">Tools That Eliminate Friction.</span><br />
+            <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Data That Powers Insights.</span>
           </h1>
-          <p className="text-2xl text-gray-300 mb-8 animate-fadeIn delay-200">
-            The Perfect AI Overlay for ConnectWise Manage
+
+          <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
+            Give engineers the tools they need to work faster—while automatically capturing the data that powers your management insights.
           </p>
-          <div className="flex justify-center animate-fadeIn delay-400">
-            <Link
-              href="https://xop.im/partner"
-              className="relative bg-gradient-to-r from-green-600 to-emerald-500 px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-green-500/50 transform hover:scale-105 transition-all overflow-hidden group flex items-center justify-center gap-3"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-green-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center relative z-10">
-                <svg className="w-3 h-3 text-green-600 ml-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                </svg>
-              </div>
-              <span className="relative z-10">See in Action</span>
+
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-600 to-orange-600 px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all transform hover:scale-105">
+              See It In Action <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link href="/apps/engineer-assist" className="inline-flex items-center gap-2 bg-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition-all">
+              Explore Engineer Assist
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Second Screen Demo Video */}
-      <section className="px-6 py-12">
+      {/* The Transformation */}
+      <section className="px-6 py-10 bg-gray-900/50">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">The Tools That Save Engineers Hours Every Day</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See the second screen view in action - featuring the three most-used AI tools by our MSP partners:
-              <span className="text-yellow-400 font-semibold"> Ask AI Enterprise Search</span>,
-              <span className="text-yellow-400 font-semibold"> AI-generated ticket insights</span>, and the
-              <span className="text-yellow-400 font-semibold"> client environment modal</span>.
-            </p>
+          <h2 className="text-2xl font-bold text-center mb-8">This Changes How Engineers Work</h2>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            {transformations.map((item, index) => (
+              <div key={index} className="bg-gray-900/50 border border-gray-800 rounded-xl p-4 hover:border-yellow-500/30 transition-all">
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-8 h-8 rounded-lg bg-red-500/20 flex items-center justify-center flex-shrink-0">
+                    <X className="w-4 h-4 text-red-400" />
+                  </div>
+                  <p className="text-sm text-gray-400">{item.before}</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-green-400" />
+                  </div>
+                  <p className="text-sm text-white font-medium">{item.after}</p>
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="relative rounded-xl overflow-hidden shadow-2xl shadow-yellow-500/20 border border-gray-700">
-            <video
-              className="w-full h-auto"
-              controls
-              preload="metadata"
-            >
-              <source src="/second-screen-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <p className="text-center text-gray-400 mt-4 text-sm">
-            Together, these tools deliver on the promise of real engineer time savings and faster resolution times.
-          </p>
         </div>
       </section>
 
-      {/* Time-Saving Features Section */}
-      <section className="px-6 py-16 bg-gray-900/50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">Transform How Your Engineers Work</h2>
-          <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-            Every feature is designed to save time and reduce cognitive load, letting your engineers focus on solving problems instead of managing processes.
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {timeSavingFeatures.map((feature, index) => (
-              <div 
-                key={index}
-                className="bg-black/50 border border-gray-800 rounded-lg p-6 hover:border-yellow-500/50 transition-all animate-fadeIn"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+      {/* Core Capabilities */}
+      <section className="px-6 py-10">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-8">Core Capabilities</h2>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {capabilities.map((cap, index) => (
+              <div key={index} className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:border-yellow-500/30 transition-all">
                 <div className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" />
+                  <div className="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center text-yellow-400 flex-shrink-0">
+                    {cap.icon}
+                  </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-3 text-yellow-400">{feature.title}</h3>
-                    <p className="text-gray-300">{feature.description}</p>
+                    <h3 className="font-bold mb-2">{cap.title}</h3>
+                    <p className="text-sm text-gray-400">{cap.description}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="mt-12 text-center">
-            <div className="inline-block bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-lg p-6">
-              <p className="text-lg text-yellow-400 font-semibold">
-                All features work seamlessly within ConnectWise Manage - no switching between systems
-              </p>
+      {/* Data Capture - The Platform Connection */}
+      <section className="px-6 py-10 bg-gray-900/30">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 px-4 py-2 rounded-full mb-4">
+              <Brain className="w-4 h-4 text-purple-400" />
+              <span className="text-sm font-medium text-purple-400">Platform Intelligence</span>
+            </div>
+            <h2 className="text-2xl font-bold mb-2">Every Interaction Captures Data</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              While engineers work faster, the AI Scoring module captures intelligence that powers your management insights
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {dataCapture.map((item, index) => (
+              <div key={index} className="bg-gray-900/50 border border-gray-800 rounded-xl p-4 text-center hover:border-purple-500/30 transition-all">
+                <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center text-purple-400 mx-auto mb-3">
+                  {item.icon}
+                </div>
+                <h4 className="font-semibold text-sm mb-1">{item.label}</h4>
+                <p className="text-xs text-gray-500">{item.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 bg-gradient-to-r from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-xl p-6">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              <div>
+                <h3 className="font-bold mb-1">This Data Powers TECHS Command Centre</h3>
+                <p className="text-sm text-gray-400">AI Triage, Escalation Detection, Client Health, and Team Performance—all fueled by engineer data</p>
+              </div>
+              <Link href="/apps/manager-app" className="inline-flex items-center gap-2 bg-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-purple-500 transition-all whitespace-nowrap">
+                See Command Centre <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Benefits Grid */}
-      <section className="px-6 py-16">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Measurable Impact</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div 
-                key={index}
-                className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-green-500 transition-all animate-fadeIn"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="text-green-400 mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                <p className="text-gray-400">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Tabs */}
-      <section className="px-6 py-16 bg-gray-900/30">
+      {/* Impact Stats */}
+      <section className="px-6 py-10">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">How It Works</h2>
-          
-          {/* Tab Navigation */}
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {['overview', 'integration', 'ai-engine', 'results'].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-6 py-2 rounded-full transition-all ${
-                  activeTab === tab
-                    ? 'bg-gradient-to-r from-yellow-600 to-orange-600'
-                    : 'bg-gray-800 hover:bg-gray-700'
-                }`}
-              >
-                {tab.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
-              </button>
-            ))}
-          </div>
+          <h2 className="text-2xl font-bold text-center mb-8">Measurable Impact</h2>
 
-          {/* Tab Content */}
-          <div className="bg-black/50 border border-gray-800 rounded-2xl p-8">
-            {activeTab === 'overview' && (
-              <div className="animate-fadeIn">
-                <h3 className="text-2xl font-semibold mb-4">Your AI-Powered ConnectWise Companion</h3>
-                <p className="text-gray-300 mb-4">
-                  Engineer Efficiency seamlessly integrates with ConnectWise Manage to provide an intelligent overlay 
-                  that enhances every aspect of ticket management. From the moment a ticket arrives to final resolution, 
-                  our AI works alongside your engineers to eliminate repetitive tasks and surface critical information.
-                </p>
-                <p className="text-gray-300">
-                  Think of it as having a senior engineer looking over your shoulder, instantly providing answers, 
-                  automating routine tasks, and ensuring nothing falls through the cracks.
-                </p>
-              </div>
-            )}
-
-            {activeTab === 'integration' && (
-              <div className="animate-fadeIn">
-                <h3 className="text-2xl font-semibold mb-4">Native ConnectWise Integration</h3>
-                <p className="text-gray-300 mb-4">
-                  Works directly within your ConnectWise environment:
-                </p>
-                <ul className="list-disc list-inside text-gray-300 space-y-2">
-                  <li>Appears as an overlay within ConnectWise Manage</li>
-                  <li>No data synchronization delays - real-time updates</li>
-                  <li>Respects your existing security and permissions</li>
-                  <li>Works with your custom fields and workflows</li>
-                  <li>Integrates with IT Glue, SharePoint, and other documentation systems</li>
-                </ul>
-              </div>
-            )}
-
-            {activeTab === 'ai-engine' && (
-              <div className="animate-fadeIn">
-                <h3 className="text-2xl font-semibold mb-4">Powered by Advanced AI</h3>
-                <p className="text-gray-300 mb-4">
-                  Our AI engine continuously learns from your MSP's unique patterns:
-                </p>
-                <ul className="list-disc list-inside text-gray-300 space-y-2">
-                  <li>Understands your specific client environments and configurations</li>
-                  <li>Learns from successful ticket resolutions to improve recommendations</li>
-                  <li>Adapts to your team's communication style for better auto-drafts</li>
-                  <li>Identifies emerging issues before they become widespread</li>
-                  <li>Gets smarter with every ticket your team resolves</li>
-                </ul>
-              </div>
-            )}
-
-            {activeTab === 'results' && (
-              <div className="animate-fadeIn">
-                <h3 className="text-2xl font-semibold mb-4">Real MSP Results</h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="text-xl font-semibold mb-2 text-yellow-400">Time Savings</h4>
-                    <ul className="text-gray-300 space-y-1">
-                      <li>• 15 minutes saved per ticket on average</li>
-                      <li>• 2+ hours saved daily per engineer</li>
-                      <li>• 90% reduction in time spent searching</li>
-                      <li>• 100% accurate time tracking</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold mb-2 text-yellow-400">Quality Improvements</h4>
-                    <ul className="text-gray-300 space-y-1">
-                      <li>• 50% fewer escalations needed</li>
-                      <li>• 35% faster ticket resolution</li>
-                      <li>• Zero missed SLAs due to prioritization</li>
-                      <li>• 95%+ client satisfaction scores</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            )}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-4">
+              <div className="text-3xl font-bold text-yellow-400 mb-1">30%</div>
+              <div className="text-xs text-gray-500">Time Saved Per Ticket</div>
+            </div>
+            <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-4">
+              <div className="text-3xl font-bold text-green-400 mb-1">2hrs</div>
+              <div className="text-xs text-gray-500">Saved Daily Per Engineer</div>
+            </div>
+            <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-4">
+              <div className="text-3xl font-bold text-blue-400 mb-1">40%</div>
+              <div className="text-xs text-gray-500">Faster Resolution</div>
+            </div>
+            <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-4">
+              <div className="text-3xl font-bold text-purple-400 mb-1">$15K</div>
+              <div className="text-xs text-gray-500">Annual Savings/Engineer</div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Learn More About Section */}
-      <section className="px-6 py-16">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Learn More About</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Link 
-              href="/solutions/service-desk-management" 
-              className="group relative bg-gradient-to-r from-blue-600 to-cyan-500 p-4 rounded-xl font-semibold text-center hover:shadow-lg hover:shadow-blue-500/50 transform hover:scale-105 transition-all overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <span className="relative z-10 flex items-center justify-center gap-2">
-                <span className="text-2xl">📊</span>
-                Service Desk
-              </span>
+      {/* Related Solutions */}
+      <section className="px-6 py-10 bg-gray-900/30">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-xl font-bold text-center mb-6">Related Solutions</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <Link href="/solutions/service-desk-visibility" className="bg-gray-900/50 border border-gray-800 rounded-xl p-4 text-center hover:border-blue-500/30 transition-all group">
+              <span className="text-2xl mb-2 block">👁️</span>
+              <span className="text-sm font-medium group-hover:text-blue-400 transition-colors">Service Desk Visibility</span>
             </Link>
-            <Link 
-              href="/solutions/executive-insights" 
-              className="group relative bg-gradient-to-r from-purple-600 to-pink-600 p-4 rounded-xl font-semibold text-center hover:shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 transition-all overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <span className="relative z-10 flex items-center justify-center gap-2">
-                <span className="text-2xl">📈</span>
-                Executive Insights
-              </span>
+            <Link href="/solutions/team-development" className="bg-gray-900/50 border border-gray-800 rounded-xl p-4 text-center hover:border-purple-500/30 transition-all group">
+              <span className="text-2xl mb-2 block">📈</span>
+              <span className="text-sm font-medium group-hover:text-purple-400 transition-colors">Team Development</span>
             </Link>
-            <Link 
-              href="/solutions/recurring-revenue" 
-              className="group relative bg-gradient-to-r from-purple-600 to-pink-600 p-4 rounded-xl font-semibold text-center hover:shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 transition-all overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <span className="relative z-10 flex items-center justify-center gap-2">
-                <span className="text-2xl">💰</span>
-                Generate Revenue
-              </span>
+            <Link href="/solutions/client-retention" className="bg-gray-900/50 border border-gray-800 rounded-xl p-4 text-center hover:border-green-500/30 transition-all group">
+              <span className="text-2xl mb-2 block">🤝</span>
+              <span className="text-sm font-medium group-hover:text-green-400 transition-colors">Client Retention</span>
             </Link>
-            <Link 
-              href="/solutions/branded-chatbot" 
-              className="group relative bg-gradient-to-r from-blue-600 to-cyan-500 p-4 rounded-xl font-semibold text-center hover:shadow-lg hover:shadow-blue-500/50 transform hover:scale-105 transition-all overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <span className="relative z-10 flex items-center justify-center gap-2">
-                <span className="text-2xl">🤖</span>
-                Branded Chatbot
-              </span>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="px-6 py-12 bg-gradient-to-r from-yellow-900/20 via-black to-orange-900/20">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            Ready to Transform Engineer Productivity?
+          </h2>
+          <p className="text-gray-400 mb-6">
+            Tools that save time. Data that drives insights. Results that compound.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-600 to-orange-600 px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all">
+              Schedule a Demo <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link 
-              href="/solutions/voice-agents" 
-              className="group relative bg-gradient-to-r from-green-600 to-emerald-500 p-4 rounded-xl font-semibold text-center hover:shadow-lg hover:shadow-green-500/50 transform hover:scale-105 transition-all overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-green-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <span className="relative z-10 flex items-center justify-center gap-2">
-                <span className="text-2xl">📞</span>
-                Voice AI Agents
-              </span>
-            </Link>
-            <Link 
-              href="/solutions/email-agents" 
-              className="group relative bg-gradient-to-r from-yellow-600 to-orange-500 p-4 rounded-xl font-semibold text-center hover:shadow-lg hover:shadow-yellow-500/50 transform hover:scale-105 transition-all overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <span className="relative z-10 flex items-center justify-center gap-2">
-                <span className="text-2xl">📧</span>
-                Email Agents
-              </span>
-            </Link>
-            <Link 
-              href="/solutions/integrated-stack" 
-              className="group relative bg-gradient-to-r from-indigo-600 to-purple-600 p-4 rounded-xl font-semibold text-center hover:shadow-lg hover:shadow-indigo-500/50 transform hover:scale-105 transition-all overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <span className="relative z-10 flex items-center justify-center gap-2">
-                <span className="text-2xl">🔗</span>
-                Integrations
-              </span>
+            <Link href="/resources/roi" className="inline-flex items-center gap-2 bg-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition-all">
+              Calculate ROI
             </Link>
           </div>
         </div>

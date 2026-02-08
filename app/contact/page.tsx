@@ -68,7 +68,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold text-center mb-6">Contact Us</h1>
           <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-            Ready to transform your MSP with AI? Let's discuss how XOP.ai can help you achieve your goals.
+            Ready to transform your MSP with AI? Let's discuss how xop.ai can help you achieve your goals.
           </p>
 
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -193,8 +193,8 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold mb-1">Address</h3>
                       <p className="text-gray-400">
-                        PO Box 261<br />
-                        Brookeville, MD 20833
+                        PO Box 14114<br />
+                        Myrtle Beach, SC 29587
                       </p>
                     </div>
                   </div>

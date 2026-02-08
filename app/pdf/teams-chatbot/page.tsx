@@ -274,7 +274,7 @@ export default function TeamsChatbotPDFPage() {
       {/* Footer */}
       <footer className="bg-gray-50 p-4 text-center text-sm text-gray-600 mt-8 print:mt-6 print:text-xs">
         <div className="max-w-4xl mx-auto flex justify-between items-center print:flex-col print:gap-2">
-          <div>© 2024 XOP.ai - AI Solutions for Managed Service Providers</div>
+          <div>© 2024 xop.ai - AI Solutions for Managed Service Providers</div>
           <div className="flex gap-4 print:gap-2">
             <span>xop.ai</span>
             <span>•</span>

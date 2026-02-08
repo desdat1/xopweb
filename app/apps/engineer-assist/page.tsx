@@ -6,7 +6,7 @@ import Footer from '@/app/components/Footer'
 import Link from 'next/link'
 import {
   Search, Phone, Users, Star,
-  BarChart3, ArrowRight, Zap, CheckCircle, Clock
+  BarChart3, ArrowRight, Zap, CheckCircle, Clock, Brain, TrendingUp, Mail, MessageSquare
 } from 'lucide-react'
 
 export default function EngineerAssistPage() {
@@ -116,10 +116,14 @@ export default function EngineerAssistPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-black to-blue-900/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-2 mb-6">
+            <div className="flex items-center justify-center gap-2 mb-6 flex-wrap">
               <div className="flex items-center gap-2 bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full">
                 <Zap className="w-4 h-4" />
-                <span className="font-medium">PSA Embedded</span>
+                <span className="font-medium">PSA Embedded or Standalone</span>
+              </div>
+              <div className="flex items-center gap-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full">
+                <TrendingUp className="w-4 h-4" />
+                <span className="font-medium">Powers Manager Insights</span>
               </div>
             </div>
 
@@ -127,9 +131,12 @@ export default function EngineerAssistPage() {
               AI Engineer Assist
             </h1>
 
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Empower your engineers with AI-powered tools that integrate directly into their PSA workflow.
-              Search knowledge bases, get intelligent ticket insights, and resolve issues faster.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
+              Empower your engineers with AI-powered tools. Available embedded directly in your PSA
+              or as a standalone application.
+            </p>
+            <p className="text-gray-400 max-w-2xl mx-auto mb-8">
+              Integrates with ConnectWise, Halo PSA, ServiceNow, and Autotask (coming soon)
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -353,8 +360,75 @@ export default function EngineerAssistPage() {
         </div>
       </section>
 
-      {/* ROI Metrics */}
+      {/* Every Interaction Builds Intelligence */}
       <section className="px-6 py-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 px-4 py-2 rounded-full mb-6">
+              <Brain className="w-4 h-4 text-green-400" />
+              <span className="text-sm font-medium text-green-400">AI Scoring</span>
+            </div>
+            <h2 className="text-3xl font-bold mb-4">Every Interaction Builds Intelligence</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              As you work, the AI Scoring module captures patterns that power Manager App insights.
+              The system learns from your success.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 text-center hover:border-green-500/30 transition-all">
+              <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center text-green-400 mx-auto mb-4">
+                <Search className="w-6 h-6" />
+              </div>
+              <h4 className="font-semibold mb-2">Search Queries</h4>
+              <p className="text-sm text-gray-400">Reveal knowledge gaps and documentation needs</p>
+            </div>
+            <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 text-center hover:border-green-500/30 transition-all">
+              <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-blue-400 mx-auto mb-4">
+                <CheckCircle className="w-6 h-6" />
+              </div>
+              <h4 className="font-semibold mb-2">Resolutions</h4>
+              <p className="text-sm text-gray-400">Map expertise and success patterns</p>
+            </div>
+            <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 text-center hover:border-green-500/30 transition-all">
+              <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center text-purple-400 mx-auto mb-4">
+                <Phone className="w-6 h-6" />
+              </div>
+              <h4 className="font-semibold mb-2">Voice Calls</h4>
+              <p className="text-sm text-gray-400">Capture sentiment and escalation signals</p>
+            </div>
+            <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 text-center hover:border-green-500/30 transition-all">
+              <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center text-orange-400 mx-auto mb-4">
+                <Mail className="w-6 h-6" />
+              </div>
+              <h4 className="font-semibold mb-2">Email & Teams</h4>
+              <p className="text-sm text-gray-400">Track response cadence and engagement</p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border border-green-500/30 rounded-2xl p-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="text-center md:text-left">
+                <h3 className="text-xl font-bold mb-2">This Data Powers Manager App</h3>
+                <p className="text-gray-300">
+                  AI Triage, Escalation Detection, Client Health, and Team Performance modules
+                  all depend on data captured from your daily work.
+                </p>
+              </div>
+              <Link
+                href="/apps/manager-app"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all whitespace-nowrap"
+              >
+                See Manager Insights
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ROI Metrics */}
+      <section className="px-6 py-16 bg-gray-900/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Proven Results Across All PSAs</h2>

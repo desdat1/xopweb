@@ -2,17 +2,94 @@
 
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   ChevronRight, BarChart3, Users, AlertCircle, TrendingUp, Clock, Shield,
   Target, Zap, Brain, CheckCircle, Award, MessageCircle, Settings,
-  AlertTriangle, Star, DollarSign, Mail, Search, Calendar, FileText
+  AlertTriangle, Star, DollarSign, Mail, Search, Calendar, FileText, ArrowRight, Phone
 } from 'lucide-react'
+
+const rotatingMessages = [
+  {
+    headline: 'Reactive',
+    highlightedWord: 'Proactive',
+    subtext: 'See problems before they escalate. Act before clients complain.',
+    image: '/illustrations/triage (2).png',
+    moduleLabel: 'AI Triage',
+    valueProps: [
+      'Right engineer matched to every ticket instantly',
+      'Skills, workload, and client history analyzed',
+      'Confidence scores guide assignment decisions',
+      'Auto-assign when AI certainty exceeds your threshold'
+    ]
+  },
+  {
+    headline: 'Guesswork',
+    highlightedWord: 'Certainty',
+    subtext: 'Data-driven decisions replace gut feelings.',
+    image: '/illustrations/escalate2.png',
+    moduleLabel: 'Escalations Board',
+    valueProps: [
+      'AI detects at-risk tickets before they escalate',
+      'Human escalation requests in one unified view',
+      'SLA violations surfaced before breach',
+      'Intervene early, not after the damage is done'
+    ]
+  },
+  {
+    headline: 'Blind Spots',
+    highlightedWord: '360° Visibility',
+    subtext: 'Every ticket, every engineer, every client — one dashboard.',
+    image: '/illustrations/clienthealth.png',
+    moduleLabel: 'Client Health',
+    valueProps: [
+      'Every client relationship scored at a glance',
+      'CSAT, profitability, and escalation trends unified',
+      'Identify at-risk accounts before churn',
+      'Data-driven QBR conversations that build trust'
+    ]
+  },
+  {
+    headline: 'Firefighting',
+    highlightedWord: 'Strategic Leadership',
+    subtext: 'Stop chasing problems. Start preventing them.',
+    image: '/illustrations/teamdash.png',
+    moduleLabel: 'Team Development',
+    valueProps: [
+      'Individual performance scorecards for every engineer',
+      'AI-generated recognition recommendations',
+      'Coaching opportunities identified automatically',
+      'Weekly insights that make 1:1s actionable'
+    ]
+  },
+  {
+    headline: 'Scattered Data',
+    highlightedWord: 'Actionable Intelligence',
+    subtext: 'AI transforms raw tickets into management insights.',
+    image: '/illustrations/scheduler.png',
+    moduleLabel: 'Group Scheduler',
+    valueProps: [
+      'Visual drag-and-drop scheduling for your entire team',
+      'Skills and availability matched automatically',
+      'Eliminate double-bookings and scheduling conflicts',
+      'One calendar view for 10+ engineers'
+    ]
+  }
+]
 
 export default function ManagerAppPage() {
   const [activePSA, setActivePSA] = useState('connectwise')
   const [activeModule, setActiveModule] = useState('triage')
+  const [currentMessageIndex, setCurrentMessageIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentMessageIndex((prev) => (prev + 1) % rotatingMessages.length)
+    }, 11000)
+    return () => clearInterval(interval)
+  }, [])
 
   const psaOptions = [
     {
@@ -303,42 +380,143 @@ export default function ManagerAppPage() {
     <div className="min-h-screen bg-black text-white">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="px-6 py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-purple-900/10"></div>
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-4 py-2 rounded-full mb-6">
-            <BarChart3 className="w-4 h-4 text-blue-400" />
-            <span className="text-sm font-medium text-blue-400">AI Manager Application</span>
+      {/* Prerequisite Banner */}
+      <section className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 border-b border-purple-500/20">
+        <div className="max-w-5xl mx-auto px-6 py-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                <Zap className="w-5 h-5 text-purple-400" />
+              </div>
+              <div>
+                <p className="font-semibold text-purple-300">Powered by Engineer App Data</p>
+                <p className="text-sm text-gray-400">Manager insights are fueled by data captured from Engineer Assist</p>
+              </div>
+            </div>
+            <Link
+              href="/apps/engineer-assist"
+              className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm hover:bg-purple-500/30 transition-all"
+            >
+              Learn about Engineer Assist
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-            Service Desk Management
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-6 max-w-4xl mx-auto leading-relaxed">
-            Unified AI Platform for Service Desk Management - Intelligence from Voice Calls, Email Processing,
-            Enterprise Search, and Teams Interactions Automatically Feed Manager Insights
-          </p>
-          <p className="text-gray-400 max-w-3xl mx-auto mb-8">
-            Your engineers use Voice AI, Email Agents, Teams Chatbots, and Enterprise Search daily.
-            Manager App consolidates all this intelligence into actionable insights for ticket assignment,
-            escalation prevention, client health monitoring, and team performance optimization.
-          </p>
+        </div>
+      </section>
 
-          <div className="flex items-center justify-center gap-6 mb-8">
+      {/* Hero Section */}
+      <section className="px-6 py-12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-cyan-900/10"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          {/* Header */}
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-4 py-2 rounded-full mb-6">
+              <BarChart3 className="w-4 h-4 text-blue-400" />
+              <span className="text-sm font-medium text-blue-400">AI-Powered Operations Hub</span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+              TECHS Command Centre
+            </h1>
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+              Transform your service desk operations with AI-powered insights
+            </p>
+          </div>
+
+          {/* Image + Text Side by Side */}
+          <div className="grid lg:grid-cols-3 gap-8 items-center mb-10">
+            {/* Image - 2/3 width */}
+            <div className="lg:col-span-2">
+              <div className="relative rounded-2xl overflow-hidden border border-gray-700">
+                {rotatingMessages[currentMessageIndex].image ? (
+                  <div key={currentMessageIndex} className="animate-fadeIn">
+                    <Image
+                      src={rotatingMessages[currentMessageIndex].image!}
+                      alt={rotatingMessages[currentMessageIndex].moduleLabel}
+                      width={1200}
+                      height={600}
+                      className="w-full h-auto"
+                      priority
+                    />
+                  </div>
+                ) : (
+                  <div className="bg-gradient-to-br from-gray-900 to-gray-800 aspect-[2/1] flex items-center justify-center">
+                    <div className="text-center p-8">
+                      <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <BarChart3 className="w-8 h-8 text-blue-400" />
+                      </div>
+                      <p className="text-gray-400 text-sm font-medium">{rotatingMessages[currentMessageIndex].moduleLabel}</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+              {/* Message Indicators */}
+              <div className="flex justify-center gap-2 mt-4">
+                {rotatingMessages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentMessageIndex(index)}
+                    className={`w-2 h-2 rounded-full transition-all ${
+                      index === currentMessageIndex
+                        ? 'bg-blue-400 w-6'
+                        : 'bg-gray-600 hover:bg-gray-500'
+                    }`}
+                    aria-label={`Go to message ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Text - 1/3 width */}
+            <div className="lg:col-span-1">
+              <div key={currentMessageIndex} className="animate-fadeIn">
+                {/* Module Label */}
+                <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 px-3 py-1 rounded-full mb-4">
+                  <span className="text-sm font-medium text-cyan-400">
+                    {rotatingMessages[currentMessageIndex].moduleLabel}
+                  </span>
+                </div>
+
+                {/* Transformation Headline */}
+                <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                  From {rotatingMessages[currentMessageIndex].headline} to{' '}
+                  <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                    {rotatingMessages[currentMessageIndex].highlightedWord}
+                  </span>
+                </h2>
+
+                {/* Subtext */}
+                <p className="text-gray-400 mb-6">
+                  {rotatingMessages[currentMessageIndex].subtext}
+                </p>
+
+                {/* Value Props */}
+                <div className="space-y-3 mb-6">
+                  {rotatingMessages[currentMessageIndex].valueProps.map((prop, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300 text-sm">{prop}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA */}
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-3 rounded-full font-semibold hover:opacity-90 transform hover:scale-105 transition-all text-sm"
+                >
+                  Learn More
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Pre-Release Badge */}
+          <div className="flex items-center justify-center">
             <div className="flex items-center gap-2 bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full">
               <Award className="w-4 h-4" />
               <span className="font-medium">Pre-Release Access</span>
             </div>
-          </div>
-
-          <div className="flex justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 px-8 py-4 rounded-full font-semibold hover:opacity-90 transform hover:scale-105 transition-all"
-            >
-              Contact Us
-              <ChevronRight className="w-5 h-5" />
-            </Link>
           </div>
         </div>
       </section>
@@ -382,7 +560,7 @@ export default function ManagerAppPage() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Coming {activePSAData.comingSoon}</h3>
               <p className="text-gray-300 mb-8">
-                We're working hard to bring AI Manager Application to {activePSAData.name}.
+                We're working hard to bring TECHS Command Centre to {activePSAData.name}.
                 Join the waitlist to be notified when it's available.
               </p>
               <div className="space-y-4 mb-8">
@@ -553,7 +731,7 @@ export default function ManagerAppPage() {
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-4">Unified AI Intelligence Platform</h2>
               <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-                Manager App consolidates intelligence from all AI touchpoints - Voice calls automatically transcribed,
+                TECHS Command Centre consolidates intelligence from all AI touchpoints - Voice calls automatically transcribed,
                 emails processed by AI agents, Teams chatbot interactions, and Enterprise Search patterns -
                 all feeding into {activePSAData.name} for comprehensive management insights
               </p>
@@ -600,17 +778,171 @@ export default function ManagerAppPage() {
                 </div>
               </div>
 
-              <div className={`bg-gradient-to-r ${activePSAData.gradientFrom}/20 ${activePSAData.gradientTo}/20 border ${activePSAData.accentColor.replace('text-', 'border-').replace('-400', '-500/30')} rounded-xl p-6 text-center`}>
-                <h3 className="text-xl font-semibold mb-3">Complete {activePSAData.name} Integration</h3>
-                <p className="text-gray-300">
-                  All AI-generated insights automatically sync with {activePSAData.name} - no workflow changes required.
-                  Manager App works as an intelligent overlay that enhances your existing processes with predictive analytics.
+              <div className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-xl p-6 text-center">
+                <h3 className="text-xl font-semibold mb-3">Deep PSA Integration</h3>
+                <p className="text-gray-300 mb-4">
+                  All AI-generated insights automatically sync with your PSA - no workflow changes required.
+                  TECHS Command Centre works as an intelligent overlay that enhances your existing processes with predictive analytics.
                 </p>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {psaOptions.map((psa) => (
+                    <div
+                      key={psa.id}
+                      className={`flex items-center gap-2 px-4 py-2 rounded-full ${
+                        psa.available
+                          ? 'bg-gray-800 border border-gray-700'
+                          : 'bg-gray-800/50 border border-gray-700/50'
+                      }`}
+                    >
+                      <div className="bg-white rounded p-1">
+                        <img src={psa.logo} alt={psa.shortName} className="h-5 w-auto" />
+                      </div>
+                      <span className={`text-sm ${psa.available ? 'text-gray-300' : 'text-gray-500'}`}>
+                        {psa.shortName}
+                      </span>
+                      {!psa.available && (
+                        <span className="text-xs text-yellow-500">({psa.comingSoon})</span>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
         </>
       )}
+
+      {/* Where Data Comes From Section */}
+      <section className="px-6 py-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 px-4 py-2 rounded-full mb-6">
+              <Brain className="w-4 h-4 text-purple-400" />
+              <span className="text-sm font-medium text-purple-400">Data Flow</span>
+            </div>
+            <h2 className="text-3xl font-bold mb-4">Where the Data Comes From</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Each TECHS Command Centre module is powered by specific data captured from Engineer Assist workflows
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* AI Triage Data Sources */}
+            <div className="bg-gray-900/50 border border-blue-500/20 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                  <Target className="w-5 h-5 text-blue-400" />
+                </div>
+                <h3 className="text-lg font-bold text-blue-400">AI Triage</h3>
+              </div>
+              <p className="text-sm text-gray-400 mb-4">Powered by:</p>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>Historical resolution patterns from tickets</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>Engineer skill mapping from successful resolutions</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>Current workload data from active tickets</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Escalation Board Data Sources */}
+            <div className="bg-gray-900/50 border border-red-500/20 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center">
+                  <AlertTriangle className="w-5 h-5 text-red-400" />
+                </div>
+                <h3 className="text-lg font-bold text-red-400">Escalation Board</h3>
+              </div>
+              <p className="text-sm text-gray-400 mb-4">Powered by:</p>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>Voice call sentiment analysis</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>Email communication patterns</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>Enterprise Search query patterns (frustration signals)</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Client Health Data Sources */}
+            <div className="bg-gray-900/50 border border-green-500/20 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
+                  <Shield className="w-5 h-5 text-green-400" />
+                </div>
+                <h3 className="text-lg font-bold text-green-400">Client Health</h3>
+              </div>
+              <p className="text-sm text-gray-400 mb-4">Powered by:</p>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>CSAT scores from resolved tickets</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>Response time and resolution metrics</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>Labor hours vs. budgeted hours</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Team Performance Data Sources */}
+            <div className="bg-gray-900/50 border border-purple-500/20 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                  <Award className="w-5 h-5 text-purple-400" />
+                </div>
+                <h3 className="text-lg font-bold text-purple-400">Team Performance</h3>
+              </div>
+              <p className="text-sm text-gray-400 mb-4">Powered by:</p>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>Individual resolution rates and times</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>Per-engineer CSAT tracking</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>Escalation frequency per engineer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 bg-gradient-to-r from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl p-6 text-center">
+            <p className="text-gray-300">
+              <span className="text-purple-400 font-semibold">The foundation that makes insights possible:</span>{' '}
+              Deploy Engineer Assist first to start capturing the data that powers these management modules.
+            </p>
+            <Link
+              href="/platform"
+              className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 mt-4 transition-colors"
+            >
+              View Complete Platform Overview
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* ROI Section */}
       <section className="px-6 py-16 bg-gray-900/50">
@@ -619,7 +951,7 @@ export default function ManagerAppPage() {
             <h2 className="text-3xl font-bold mb-4">Transform Your Service Desk Operations</h2>
             <p className="text-xl text-gray-300 mb-8">
               By consolidating intelligence from Voice AI, Email Agents, Teams Chatbots, and Enterprise Search,
-              Manager App provides unprecedented visibility into service desk operations and team performance
+              TECHS Command Centre provides unprecedented visibility into service desk operations and team performance
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">

@@ -75,7 +75,7 @@ export default function EvolveFlyer() {
             <div className="flex items-center gap-4">
               <Image
                 src="/xop-logo.png"
-                alt="XOP.ai"
+                alt="xop.ai"
                 width={100}
                 height={40}
                 className="brightness-0 invert"
@@ -168,7 +168,7 @@ export default function EvolveFlyer() {
           <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
             Engineers spend too much time searching for information, documenting their work, and navigating between systems.
             Leadership lacks real-time visibility into operations.
-            <strong className="text-gray-900"> XOP.ai brings AI assistance directly into the workflow</strong> -
+            <strong className="text-gray-900"> xop.ai brings AI assistance directly into the workflow</strong> -
             productivity for engineers, actionable intelligence for leadership.
           </p>
         </section>
@@ -248,7 +248,7 @@ export default function EvolveFlyer() {
               <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">1</div>
               <h3 className="font-semibold mb-2">Embeds in Your PSA</h3>
               <p className="text-sm text-gray-600">
-                XOP.ai integrates directly into ConnectWise, Halo, ServiceNow - wherever your engineers work
+                xop.ai integrates directly into ConnectWise, Halo, ServiceNow - wherever your engineers work
               </p>
             </div>
             <div className="text-center">
@@ -270,7 +270,7 @@ export default function EvolveFlyer() {
 
         {/* Key Differentiators */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Why XOP.ai</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Why xop.ai</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center p-4">
               <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -311,7 +311,7 @@ export default function EvolveFlyer() {
                   <Sparkles className="w-5 h-5 text-blue-500" />
                   <span className="text-blue-700 font-semibold text-sm uppercase tracking-wide">New Product Launch</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">XOP.ai Integrated POD for ConnectWise Manage</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">xop.ai Integrated POD for ConnectWise Manage</h3>
                 <p className="text-gray-700 text-lg mb-4">
                   <strong>AI assistance embedded directly in your PSA.</strong> A dedicated panel inside ConnectWise Manage
                   that brings intelligent automation to every ticket - no context switching, no separate apps.
@@ -429,7 +429,7 @@ export default function EvolveFlyer() {
         <section className="bg-gradient-to-r from-purple-900 to-indigo-900 text-white rounded-2xl p-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-3">Ready to See It in Action?</h2>
           <p className="text-purple-200 mb-6 max-w-2xl mx-auto">
-            Let us show you how XOP.ai can transform engineer productivity and deliver actionable insights for your organization.
+            Let us show you how xop.ai can transform engineer productivity and deliver actionable insights for your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -454,7 +454,7 @@ export default function EvolveFlyer() {
             <div className="flex items-center gap-4">
               <Image
                 src="/xop-logo.png"
-                alt="XOP.ai"
+                alt="xop.ai"
                 width={80}
                 height={32}
                 className="opacity-70"
