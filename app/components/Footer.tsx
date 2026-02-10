@@ -19,7 +19,7 @@ export default function Footer() {
   const resources = [
     { name: 'FAQs', href: '/resources/faq' },
     { name: 'News / Blog', href: '/blog' },
-    { name: 'Integrations', href: '/integrations' },
+    { name: 'Integrations', href: '/solutions/integrated-stack' },
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ]
