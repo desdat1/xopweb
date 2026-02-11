@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   Eye, Brain, Target, AlertTriangle, BarChart3, Clock,
   ArrowRight, Users, CheckCircle, Shield, Award, Zap,
@@ -75,29 +76,42 @@ export default function ServiceDeskVisibilityPage() {
       {/* Hero */}
       <section className="px-6 py-12 md:py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black to-cyan-900/20"></div>
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-4 py-2 rounded-full mb-6">
-            <Eye className="w-4 h-4 text-blue-400" />
-            <span className="text-sm font-medium text-blue-400">Service Desk Visibility</span>
-          </div>
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="grid md:grid-cols-5 gap-8 items-center">
+            <div className="md:col-span-3 text-center md:text-left">
+              <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-4 py-2 rounded-full mb-6">
+                <Eye className="w-4 h-4 text-blue-400" />
+                <span className="text-sm font-medium text-blue-400">Service Desk Visibility</span>
+              </div>
 
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">
-            <span className="text-gray-400">Stop Managing Blind.</span><br />
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">See Everything.</span>
-          </h1>
+              <h1 className="text-3xl md:text-5xl font-bold mb-4">
+                <span className="text-gray-400">Stop Managing Blind.</span><br />
+                <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">See Everything.</span>
+              </h1>
 
-          <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
-            Complete visibility into your service desk—every ticket, every engineer, every client interaction.
-            No more surprises. No more guesswork.
-          </p>
+              <p className="text-lg md:text-xl text-gray-300 mb-6">
+                Complete visibility into your service desk—every ticket, every engineer, every client interaction.
+                No more surprises. No more guesswork.
+              </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all transform hover:scale-105">
-              See It In Action <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link href="/apps/manager-app" className="inline-flex items-center gap-2 bg-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition-all">
-              Explore TECHS Command Centre
-            </Link>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+                <Link href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all transform hover:scale-105">
+                  See It In Action <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/apps/manager-app" className="inline-flex items-center gap-2 bg-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition-all">
+                  Explore TECHS Command Centre
+                </Link>
+              </div>
+            </div>
+            <div className="md:col-span-2 flex justify-center">
+              <Image
+                src="/illustrations/bot5.png"
+                alt="AI Team Managing Service Desk"
+                width={400}
+                height={400}
+                className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   Bot, Brain, MessageCircle, Phone, Mail, Clock,
   ArrowRight, Users, CheckCircle, Shield, Sparkles,
@@ -67,29 +68,42 @@ export default function ClientFacingAIPage() {
       {/* Hero */}
       <section className="px-6 py-12 md:py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-black to-purple-900/20"></div>
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 px-4 py-2 rounded-full mb-6">
-            <Bot className="w-4 h-4 text-cyan-400" />
-            <span className="text-sm font-medium text-cyan-400">Client-Facing AI</span>
-          </div>
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="grid md:grid-cols-5 gap-8 items-center">
+            <div className="md:col-span-2 flex justify-center order-2 md:order-1">
+              <Image
+                src="/illustrations/bot4.png"
+                alt="Client-Facing AI Assistant"
+                width={400}
+                height={400}
+                className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain"
+              />
+            </div>
+            <div className="md:col-span-3 text-center md:text-left order-1 md:order-2">
+              <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 px-4 py-2 rounded-full mb-6">
+                <Bot className="w-4 h-4 text-cyan-400" />
+                <span className="text-sm font-medium text-cyan-400">Client-Facing AI</span>
+              </div>
 
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">
-            <span className="text-gray-400">Your Clients Get AI.</span><br />
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Your Brand Gets Credit.</span>
-          </h1>
+              <h1 className="text-3xl md:text-5xl font-bold mb-4">
+                <span className="text-gray-400">Your Clients Get AI.</span><br />
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Your Brand Gets Credit.</span>
+              </h1>
 
-          <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
-            Deploy AI-powered support across chat, voice, and email—branded as your company.
-            Deflect tier 1 tickets while delivering instant, consistent client experiences.
-          </p>
+              <p className="text-lg md:text-xl text-gray-300 mb-6">
+                Deploy AI-powered support across chat, voice, and email—branded as your company.
+                Deflect tier 1 tickets while delivering instant, consistent client experiences.
+              </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all transform hover:scale-105">
-              See It In Action <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link href="/apps/end-user-chatbot" className="inline-flex items-center gap-2 bg-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition-all">
-              Explore End User AI
-            </Link>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+                <Link href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all transform hover:scale-105">
+                  See It In Action <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/apps/end-user-chatbot" className="inline-flex items-center gap-2 bg-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition-all">
+                  Explore End User AI
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

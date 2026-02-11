@@ -4,6 +4,7 @@ import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   MessageCircle, Users, Clock, Shield, Zap,
   FileText, BarChart3, CheckCircle, Brain, Ticket, Phone, Mail,
@@ -12,13 +13,6 @@ import {
 
 export default function EndUserChatbotPage() {
   const [activeTab, setActiveTab] = useState('deflection')
-
-  const impactStats = [
-    { value: '30%+', label: 'Level 1 Ticket Reduction', icon: <Ticket className="w-8 h-8" /> },
-    { value: '75%', label: 'Phone Call Deflection', icon: <Phone className="w-8 h-8" /> },
-    { value: '60%', label: 'Email Volume Reduction', icon: <Mail className="w-8 h-8" /> },
-    { value: '$180K', label: 'Annual Engineering Savings', icon: <DollarSign className="w-8 h-8" /> }
-  ]
 
   const trainingData = [
     {
@@ -54,55 +48,57 @@ export default function EndUserChatbotPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-black to-emerald-900/20"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="mb-8 inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-green-500 to-emerald-500">
-                  <MessageCircle className="w-10 h-10 text-white" />
-                </div>
-                <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            {/* Title row with bot */}
+            <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
+              <Image
+                src="/illustrations/bot4.png"
+                alt="Friendly AI Chatbot"
+                width={400}
+                height={400}
+                className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 object-contain flex-shrink-0"
+              />
+              <div className="text-center md:text-left">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
                   AI End User Chatbot
                 </h1>
-                <p className="text-xl text-gray-300 mb-6">
-                  <span className="text-green-400 font-bold">Eliminate 30%+ of Level 1 tickets</span> with AI-powered
+                <p className="text-xl text-gray-300 mb-4">
+                  <span className="text-green-400 font-bold">Reduce Level 1 tickets by 20%+</span> with AI-powered
                   end user support trained on their specific environment and application stack.
                 </p>
-                <p className="text-lg text-gray-400 mb-8">
+                <p className="text-lg text-gray-400">
                   Dramatically reduce phone calls, email tickets, and helpdesk queue volume while
                   providing instant 24/7 support under your brand.
                 </p>
-
-                {/* Key ROI Point */}
-                <div className="bg-green-900/30 border border-green-500/30 rounded-xl p-6 mb-8">
-                  <div className="flex items-center gap-3 mb-3">
-                    <Calculator className="w-6 h-6 text-green-400" />
-                    <h3 className="text-xl font-bold">ROI Reality Check</h3>
-                  </div>
-                  <p className="text-gray-300">
-                    If your MSP handles 1,000 Level 1 tickets monthly at 45 minutes average resolution time,
-                    deflecting just 30% saves <span className="text-green-400 font-bold">22.5 hours weekly</span> of
-                    engineering time.
-                  </p>
-                </div>
-
               </div>
+            </div>
 
-              {/* Impact Stats */}
-              <div className="bg-gray-900/50 border border-gray-700 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-8 text-center">Measurable Impact</h3>
-                <div className="grid grid-cols-2 gap-6">
-                  {impactStats.map((stat, index) => (
-                    <div key={index} className="text-center">
-                      <div className="text-green-400 mb-3 flex justify-center">
-                        {stat.icon}
-                      </div>
-                      <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                      <div className="text-sm text-gray-400">{stat.label}</div>
-                    </div>
-                  ))}
+            {/* Key ROI Point */}
+            <div className="bg-green-900/30 border border-green-500/30 rounded-xl p-6 max-w-2xl">
+              <div className="flex items-center gap-3 mb-4">
+                <Calculator className="w-6 h-6 text-green-400" />
+                <h3 className="text-xl font-bold">ROI Reality Check</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                If your MSP handles 1,000 Level 1 tickets monthly at 45 minutes average resolution time,
+                deflecting just 20% saves <span className="text-green-400 font-bold">15 hours weekly</span> of
+                engineering time.
+              </p>
+              <div className="grid grid-cols-3 gap-4 pt-4 border-t border-green-500/20">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-400">20%+</div>
+                  <div className="text-xs text-gray-400">Ticket Reduction</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-400">&gt;10%</div>
+                  <div className="text-xs text-gray-400">Phone Call Reduction</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-400">&gt;15%</div>
+                  <div className="text-xs text-gray-400">Email Ticket Reduction</div>
                 </div>
               </div>
             </div>

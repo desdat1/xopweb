@@ -4,7 +4,8 @@ import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import { useState } from 'react'
 import Link from 'next/link'
-import { 
+import Image from 'next/image'
+import {
   ChevronRight, Search, Database, Zap, Clock, Shield, Brain,
   FileText, Users, BarChart3, CheckCircle, TrendingUp, Settings,
   Link as LinkIcon, Archive, Globe, HardDrive

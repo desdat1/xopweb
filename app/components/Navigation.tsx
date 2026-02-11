@@ -19,6 +19,7 @@ export default function Navigation() {
     { name: 'Client Health & Retention', href: '/solutions/client-retention', icon: '🤝' },
     { name: 'Team Development', href: '/solutions/team-development', icon: '📈' },
     { name: 'Client-Facing AI', href: '/solutions/client-facing-ai', icon: '🤖' },
+    { name: 'AI Voice Solutions', href: '/solutions/voice-agents', icon: '📞' },
   ]
 
   const apps = [

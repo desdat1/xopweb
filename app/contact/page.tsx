@@ -3,6 +3,7 @@
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import { useState } from 'react'
+import Image from 'next/image'
 import { Phone, MapPin, Mail } from 'lucide-react'
 
 export default function ContactPage() {

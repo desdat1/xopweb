@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   Search, Phone, Users, Star,
   BarChart3, ArrowRight, Zap, CheckCircle, Clock, Brain, TrendingUp, Mail, MessageSquare
@@ -115,45 +116,58 @@ export default function EngineerAssistPage() {
       <section className="relative py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-black to-blue-900/10"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-2 mb-6 flex-wrap">
-              <div className="flex items-center gap-2 bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full">
-                <Zap className="w-4 h-4" />
-                <span className="font-medium">PSA Embedded or Standalone</span>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-5 gap-8 items-center">
+              <div className="md:col-span-3 text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-2 mb-6 flex-wrap">
+                  <div className="flex items-center gap-2 bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full">
+                    <Zap className="w-4 h-4" />
+                    <span className="font-medium">PSA Embedded or Standalone</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full">
+                    <TrendingUp className="w-4 h-4" />
+                    <span className="font-medium">Powers Manager Insights</span>
+                  </div>
+                </div>
+
+                <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-purple-100 to-white bg-clip-text text-transparent">
+                  AI Engineer Assist
+                </h1>
+
+                <p className="text-xl text-gray-300 mb-4">
+                  Empower your engineers with AI-powered tools. Available embedded directly in your PSA
+                  or as a standalone application.
+                </p>
+                <p className="text-gray-400 mb-8">
+                  Integrates with ConnectWise, Halo PSA, ServiceNow, and Autotask (coming soon)
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all transform hover:scale-105"
+                  >
+                    Request Demo
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                  <Link
+                    href="/resources/roi"
+                    className="inline-flex items-center gap-2 bg-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-gray-700 transition-all"
+                  >
+                    <BarChart3 className="w-5 h-5" />
+                    Calculate ROI
+                  </Link>
+                </div>
               </div>
-              <div className="flex items-center gap-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full">
-                <TrendingUp className="w-4 h-4" />
-                <span className="font-medium">Powers Manager Insights</span>
+              <div className="md:col-span-2 flex justify-center">
+                <Image
+                  src="/illustrations/bot3.png"
+                  alt="AI Engineer Assistant"
+                  width={400}
+                  height={400}
+                  className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain"
+                />
               </div>
-            </div>
-
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-purple-100 to-white bg-clip-text text-transparent">
-              AI Engineer Assist
-            </h1>
-
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
-              Empower your engineers with AI-powered tools. Available embedded directly in your PSA
-              or as a standalone application.
-            </p>
-            <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-              Integrates with ConnectWise, Halo PSA, ServiceNow, and Autotask (coming soon)
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all transform hover:scale-105"
-              >
-                Request Demo
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                href="/resources/roi"
-                className="inline-flex items-center gap-2 bg-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-gray-700 transition-all"
-              >
-                <BarChart3 className="w-5 h-5" />
-                Calculate ROI
-              </Link>
             </div>
           </div>
         </div>

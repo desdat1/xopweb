@@ -8,6 +8,7 @@ export default function Footer() {
     { name: 'Client Health & Retention', href: '/solutions/client-retention' },
     { name: 'Team Development', href: '/solutions/team-development' },
     { name: 'Client-Facing AI', href: '/solutions/client-facing-ai' },
+    { name: 'AI Voice Solutions', href: '/solutions/voice-agents' },
   ]
 
   const apps = [

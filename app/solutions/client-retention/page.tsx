@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   HeartPulse, Brain, Shield, AlertTriangle, TrendingDown,
   ArrowRight, Users, CheckCircle, MessageCircle, Clock,
@@ -49,29 +50,42 @@ export default function ClientRetentionPage() {
       {/* Hero */}
       <section className="px-6 py-12 md:py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-black to-emerald-900/20"></div>
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 px-4 py-2 rounded-full mb-6">
-            <HeartPulse className="w-4 h-4 text-green-400" />
-            <span className="text-sm font-medium text-green-400">Client Health & Retention</span>
-          </div>
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="grid md:grid-cols-5 gap-8 items-center">
+            <div className="md:col-span-2 flex justify-center order-2 md:order-1">
+              <Image
+                src="/illustrations/bot4.png"
+                alt="AI Client Communication Assistant"
+                width={400}
+                height={400}
+                className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain"
+              />
+            </div>
+            <div className="md:col-span-3 text-center md:text-left order-1 md:order-2">
+              <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 px-4 py-2 rounded-full mb-6">
+                <HeartPulse className="w-4 h-4 text-green-400" />
+                <span className="text-sm font-medium text-green-400">Client Health & Retention</span>
+              </div>
 
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">
-            <span className="text-gray-400">Save Relationships</span><br />
-            <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Before They're at Risk</span>
-          </h1>
+              <h1 className="text-3xl md:text-5xl font-bold mb-4">
+                <span className="text-gray-400">Save Relationships</span><br />
+                <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Before They're at Risk</span>
+              </h1>
 
-          <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
-            Client churn doesn't happen suddenly. There are always warning signs—you just couldn't see them before.
-            Now you can.
-          </p>
+              <p className="text-lg md:text-xl text-gray-300 mb-6">
+                Client churn doesn't happen suddenly. There are always warning signs—you just couldn't see them before.
+                Now you can.
+              </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all transform hover:scale-105">
-              See It In Action <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link href="/apps/manager-app" className="inline-flex items-center gap-2 bg-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition-all">
-              Explore Client Health Module
-            </Link>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+                <Link href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all transform hover:scale-105">
+                  See It In Action <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/apps/manager-app" className="inline-flex items-center gap-2 bg-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition-all">
+                  Explore Client Health Module
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -191,8 +205,28 @@ export default function ClientRetentionPage() {
         </div>
       </section>
 
-      {/* Data Source */}
+      {/* Video Demo */}
       <section className="px-6 py-10">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold mb-2">See Client Health in Action</h2>
+            <p className="text-gray-400">Watch how Client Health scoring works in the TECHS Command Centre</p>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden border border-green-500/30 shadow-lg shadow-green-500/10">
+            <video
+              className="w-full"
+              controls
+              playsInline
+            >
+              <source src="/client-health-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      {/* Data Source */}
+      <section className="px-6 py-10 bg-gray-900/30">
         <div className="max-w-5xl mx-auto">
           <div className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-xl p-6">
             <div className="flex flex-col md:flex-row items-center gap-6">
@@ -215,7 +249,7 @@ export default function ClientRetentionPage() {
       </section>
 
       {/* Impact */}
-      <section className="px-6 py-10 bg-gray-900/30">
+      <section className="px-6 py-10">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-8">The Impact of Early Warning</h2>
 

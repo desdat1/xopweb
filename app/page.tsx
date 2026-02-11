@@ -234,8 +234,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Data Flow - How It Works */}
+      {/* Let AI Do The Work */}
       <section className="px-6 py-16 bg-gray-900/30">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Let AI Handle the <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">Heavy Lifting</span>
+              </h2>
+              <p className="text-gray-300 text-lg mb-6">
+                While our AI bots work around the clock answering calls, processing emails,
+                searching knowledge bases, and chatting with users — your team focuses on
+                what matters most.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Voice AI answers and triages calls 24/7</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Email agents process and route tickets automatically</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Knowledge bots find answers in seconds</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Chat assistants deflect 30%+ of L1 tickets</span>
+                </div>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden">
+              <Image
+                src="/illustrations/bot5.png"
+                alt="AI bots working while you relax"
+                width={800}
+                height={500}
+                className="w-full h-auto rounded-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Data Flow - How It Works */}
+      <section className="px-6 py-12">
         <div className="max-w-5xl mx-auto">
           {/* Team Illustration Banner */}
           <div className="relative rounded-2xl overflow-hidden border border-gray-700">

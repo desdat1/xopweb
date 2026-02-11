@@ -3,6 +3,7 @@
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import { useState } from 'react'
+import Image from 'next/image'
 import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react'
 
 export default function FAQPage() {
@@ -185,25 +186,38 @@ export default function FAQPage() {
           </div>
 
           {/* Contact CTA */}
-          <div className="mt-16 text-center">
+          <div className="mt-16">
             <div className="bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8">
-              <h2 className="text-3xl font-bold mb-4">More Questions?</h2>
-              <p className="text-xl text-gray-300 mb-6">
-                Let's meet!
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="https://xop.im/partner"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all transform hover:scale-105"
-                >
-                  Schedule a Meeting
-                </a>
-                <a
-                  href="/contact"
-                  className="inline-flex items-center gap-2 bg-transparent border-2 border-green-500 text-green-400 px-8 py-4 rounded-full font-semibold hover:bg-green-500 hover:text-black transition-all"
-                >
-                  Contact Us
-                </a>
+              <div className="grid md:grid-cols-3 gap-6 items-center">
+                <div className="hidden md:flex justify-center">
+                  <Image
+                    src="/illustrations/bot3.png"
+                    alt="AI Assistant ready to help"
+                    width={280}
+                    height={280}
+                    className="w-48 h-48 lg:w-56 lg:h-56 object-contain"
+                  />
+                </div>
+                <div className="md:col-span-2 text-center md:text-left">
+                  <h2 className="text-3xl font-bold mb-4">More Questions?</h2>
+                  <p className="text-xl text-gray-300 mb-6">
+                    Let's meet!
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a
+                      href="https://xop.im/partner"
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all transform hover:scale-105"
+                    >
+                      Schedule a Meeting
+                    </a>
+                    <a
+                      href="/contact"
+                      className="inline-flex items-center gap-2 bg-transparent border-2 border-green-500 text-green-400 px-8 py-4 rounded-full font-semibold hover:bg-green-500 hover:text-black transition-all"
+                    >
+                      Contact Us
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
