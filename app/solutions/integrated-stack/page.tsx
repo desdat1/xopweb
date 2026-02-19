@@ -86,9 +86,9 @@ export default function IntegrationsPage() {
             </div>
 
             {/* Autotask */}
-            <div className="bg-black/50 border border-yellow-500/30 rounded-2xl p-8 hover:border-yellow-500/50 transition-all relative">
+            <div className="bg-black/50 border border-orange-500/30 rounded-2xl p-8 hover:border-orange-500/50 transition-all relative">
               <div className="absolute top-4 right-4">
-                <span className="bg-yellow-500 text-black text-xs font-bold px-3 py-1 rounded-full">Coming Soon</span>
+                <span className="bg-green-500 text-black text-xs font-bold px-3 py-1 rounded-full">Live</span>
               </div>
               <div className="h-16 mb-6 flex items-center justify-center">
                 <div className="bg-white rounded-lg px-4 py-2">
@@ -96,7 +96,7 @@ export default function IntegrationsPage() {
                 </div>
               </div>
               <p className="text-gray-300 mb-6">
-                Full PSA integration for Autotask users coming in 2026
+                Full PSA integration for Autotask users
               </p>
               <ul className="space-y-2 text-gray-300 text-sm">
                 <li>• Ticket creation and management</li>

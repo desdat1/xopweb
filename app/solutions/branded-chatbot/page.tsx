@@ -103,7 +103,7 @@ export default function BrandedChatbotPage() {
             {/* PSA Integration */}
             <div className="mb-12 bg-black/50 border border-gray-800 rounded-2xl p-8">
               <h3 className="text-2xl font-bold mb-6 text-gradient">Full PSA Integration</h3>
-              <p className="text-gray-400 text-sm mb-4">Works with ConnectWise, Halo PSA, ServiceNow, and Autotask (coming soon)</p>
+              <p className="text-gray-400 text-sm mb-4">Works with ConnectWise, Halo PSA, ServiceNow, and Autotask</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">

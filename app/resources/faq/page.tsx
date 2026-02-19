@@ -49,11 +49,11 @@ export default function FAQPage() {
       faqs: [
         {
           question: "How does AI integration work with our existing PSA tools?",
-          answer: "Our platform integrates natively with ConnectWise, ServiceNow, and Halo PSA through deep API connections, not just surface-level plugins. Tickets created by our voice agents appear instantly in your PSA with full context. Our Enterprise Search pulls data directly from your PSA, IT Glue, and your other tools to provide contextual results. The Engineer App works as an intelligent overlay - your technicians see AI-generated responses, time entries, and solutions right within their familiar interface. Everything syncs bidirectionally, so your existing workflows, reporting, and processes remain unchanged."
+          answer: "Our platform integrates natively with ConnectWise, ServiceNow, Halo PSA, and Autotask through deep API connections, not just surface-level plugins. Tickets created by our voice agents appear instantly in your PSA with full context. Our Enterprise Search pulls data directly from your PSA, IT Glue, and your other tools to provide contextual results. The Engineer App works as an intelligent overlay - your technicians see AI-generated responses, time entries, and solutions right within their familiar interface. Everything syncs bidirectionally, so your existing workflows, reporting, and processes remain unchanged."
         },
         {
           question: "What PSA platforms do you integrate with?",
-          answer: "We fully integrate with ConnectWise Manage (both on-premises and cloud-hosted versions), ServiceNow, and Halo PSA. All three platforms have complete integration with our Engineer App, Enterprise Search, Voice AI Agents, and branded chatbots. Additionally, subject to customer interest and demand, we're looking to integrate with Autotask and Rev.IO later in 2026. If you're using a different PSA and would like to see integration support, we'd love to hear from you - customer demand directly influences our integration roadmap."
+          answer: "We fully integrate with ConnectWise Manage (both on-premises and cloud-hosted versions), ServiceNow, and Halo PSA. All three platforms have complete integration with our Engineer App, Enterprise Search, Voice AI Agents, and branded chatbots. We also now fully support Autotask PSA. If you're using a different PSA and would like to see integration support, we'd love to hear from you - customer demand directly influences our integration roadmap."
         },
         {
           question: "Can your AI run inside my PSA?",

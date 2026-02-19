@@ -133,8 +133,7 @@ export default function ManagerAppPage() {
       accentColor: "text-orange-400",
       gradientFrom: "from-orange-600",
       gradientTo: "to-amber-500",
-      available: false,
-      comingSoon: "March 2026"
+      available: true
     }
   ]
 
@@ -539,68 +538,13 @@ export default function ManagerAppPage() {
                 <div className={`bg-white rounded-lg p-2 ${activePSA === psa.id ? '' : 'opacity-70'}`}>
                   <img src={psa.logo} alt={psa.name} className="h-8 w-auto" />
                 </div>
-                {!psa.available && (
-                  <span className="absolute -top-2 -right-2 bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded-full">
-                    {psa.comingSoon}
-                  </span>
-                )}
               </button>
             ))}
           </div>
         </div>
       </section>
 
-      {/* PSA-specific content or Coming Soon */}
-      {!activePSAData.available ? (
-        <section className="px-6 py-16">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className={`bg-gray-900/50 border border-orange-500/50 rounded-2xl p-12`}>
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-orange-500/20 mb-6">
-                <Clock className="w-10 h-10 text-orange-400" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Coming {activePSAData.comingSoon}</h3>
-              <p className="text-gray-300 mb-8">
-                We're working hard to bring TECHS Command Centre to {activePSAData.name}.
-                Join the waitlist to be notified when it's available.
-              </p>
-              <div className="space-y-4 mb-8">
-                <h4 className="text-lg font-semibold text-orange-400">Planned Features</h4>
-                <div className="grid gap-3 text-left max-w-md mx-auto">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-orange-400" />
-                    <span>AI Triage</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-orange-400" />
-                    <span>Escalations Board</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-orange-400" />
-                    <span>Client Reports</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-orange-400" />
-                    <span>Engineer & Team Performance</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-orange-400" />
-                    <span>Scheduler</span>
-                  </div>
-                </div>
-              </div>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-amber-500 px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all"
-              >
-                Join Waitlist
-                <ChevronRight className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-        </section>
-      ) : (
-        <>
-          {/* Module Selector */}
+      {/* Module Selector */}
           <section className="px-6 py-16 bg-gray-900/50">
             <div className="max-w-6xl mx-auto">
               {/* Module Navigation */}
@@ -800,18 +744,12 @@ export default function ManagerAppPage() {
                       <span className={`text-sm ${psa.available ? 'text-gray-300' : 'text-gray-500'}`}>
                         {psa.shortName}
                       </span>
-                      {!psa.available && (
-                        <span className="text-xs text-yellow-500">({psa.comingSoon})</span>
-                      )}
                     </div>
                   ))}
                 </div>
               </div>
             </div>
           </section>
-        </>
-      )}
-
       {/* Where Data Comes From Section */}
       <section className="px-6 py-16">
         <div className="max-w-6xl mx-auto">

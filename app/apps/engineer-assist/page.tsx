@@ -100,9 +100,8 @@ export default function EngineerAssistPage() {
       gradientFrom: "from-orange-600",
       gradientTo: "to-amber-500",
       shadowColor: "shadow-orange-500/20",
-      available: false,
-      comingSoon: "March 2026",
-      description: "Full Autotask PSA integration coming soon with complete ticket management, time tracking, and client data access."
+      available: true,
+      description: "Full Autotask PSA integration with complete ticket management, time tracking, and client data access."
     }
   ]
 
@@ -139,7 +138,7 @@ export default function EngineerAssistPage() {
                   or as a standalone application.
                 </p>
                 <p className="text-gray-400 mb-8">
-                  Integrates with ConnectWise, Halo PSA, ServiceNow, and Autotask (coming soon)
+                  Integrates with ConnectWise, Halo PSA, ServiceNow, and Autotask
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8">
@@ -263,11 +262,6 @@ export default function EngineerAssistPage() {
                 <div className={`bg-white rounded-lg p-2 ${activePSA === psa.id ? '' : 'opacity-70'}`}>
                   <img src={psa.logo} alt={psa.name} className="h-8 w-auto" />
                 </div>
-                {!psa.available && (
-                  <span className="absolute -top-2 -right-2 bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded-full">
-                    {psa.comingSoon}
-                  </span>
-                )}
               </button>
             ))}
           </div>
@@ -294,7 +288,7 @@ export default function EngineerAssistPage() {
             </p>
           </div>
 
-          {activePSAData.available ? (
+          {/* PSA Content */}
             <>
               {/* Video Section */}
               <div className="mb-12">
@@ -372,49 +366,6 @@ export default function EngineerAssistPage() {
                 </div>
               </div>
             </>
-          ) : (
-            /* Coming Soon Content */
-            <div className="text-center">
-              <div className={`bg-gray-900/50 border ${activePSAData.borderColor} rounded-2xl p-12 max-w-2xl mx-auto`}>
-                <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full ${activePSAData.bgColor} mb-6`}>
-                  <Clock className={`w-10 h-10 ${activePSAData.accentColor}`} />
-                </div>
-                <h3 className="text-2xl font-bold mb-4">Coming {activePSAData.comingSoon}</h3>
-                <p className="text-gray-300 mb-8">
-                  We're working hard to bring AI Engineer Assist to {activePSAData.name}.
-                  Join the waitlist to be notified when it's available.
-                </p>
-                <div className="space-y-4">
-                  <h4 className={`text-lg font-semibold ${activePSAData.accentColor}`}>Planned Features</h4>
-                  <div className="grid gap-3 text-left max-w-md mx-auto">
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className={`w-5 h-5 ${activePSAData.accentColor}`} />
-                      <span>Full PSA ticket integration</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className={`w-5 h-5 ${activePSAData.accentColor}`} />
-                      <span>AI-powered knowledge search</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className={`w-5 h-5 ${activePSAData.accentColor}`} />
-                      <span>Time entry automation</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className={`w-5 h-5 ${activePSAData.accentColor}`} />
-                      <span>Client context and history</span>
-                    </div>
-                  </div>
-                </div>
-                <Link
-                  href="/contact"
-                  className={`inline-flex items-center gap-2 bg-gradient-to-r ${activePSAData.gradientFrom} ${activePSAData.gradientTo} px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all mt-8`}
-                >
-                  Join Waitlist
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </div>
-            </div>
-          )}
         </div>
       </section>
 
