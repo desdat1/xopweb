@@ -8,10 +8,41 @@ import { ChevronRight, Calendar, User, Clock, TrendingUp } from 'lucide-react'
 export default function BlogPage() {
   // Blog posts array - newest first
   // SCHEDULED POSTS (add to array on publish date):
-  // - Feb 10: halo-psa-product-launch
-  // - Feb 17: ai-voice-overflow-agent
   // - Feb 24: ai-voice-engineer-assist-agent
   const blogPosts = [
+    {
+      slug: 'autotask-product-launch',
+      title: 'xop.ai Launches Full Autotask PSA Integration: AI for Every Major MSP Platform',
+      excerpt: 'With Autotask support now live, xop.ai delivers AI-powered efficiency across all four major PSA platforms used by MSPs worldwide.',
+      author: 'Matt Ruck',
+      date: 'February 19, 2026',
+      category: 'Product Launch',
+      readTime: '7 min read',
+      gradient: 'from-orange-500/10 to-amber-500/10',
+      borderColor: 'border-orange-500/30'
+    },
+    {
+      slug: 'ai-voice-overflow-agent',
+      title: 'Introducing the AI Voice Overflow Agent: Never Miss Another After-Hours Call',
+      excerpt: 'Our new Voice Overflow Agent ensures every call is answered, even when your team is unavailable. AI-powered call handling that creates tickets automatically.',
+      author: 'Matt Ruck',
+      date: 'February 17, 2026',
+      category: 'Product Launch',
+      readTime: '6 min read',
+      gradient: 'from-purple-500/10 to-pink-500/10',
+      borderColor: 'border-purple-500/30'
+    },
+    {
+      slug: 'halo-psa-product-launch',
+      title: 'xop.ai Now Integrates with Halo PSA: AI-Powered Efficiency for Growing MSPs',
+      excerpt: 'The platform trusted by thousands of MSPs worldwide now has access to purpose-built AI that transforms service delivery.',
+      author: 'Matt Ruck',
+      date: 'February 10, 2026',
+      category: 'Product Launch',
+      readTime: '7 min read',
+      gradient: 'from-purple-500/10 to-pink-500/10',
+      borderColor: 'border-purple-500/30'
+    },
     {
       slug: 'servicenow-product-launch',
       title: 'xop.ai Launches Full ServiceNow Integration: Enterprise-Grade AI for ITSM',
