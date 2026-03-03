@@ -109,101 +109,46 @@ export default function RezolvePartnerPage() {
     <div className="min-h-screen bg-black text-white">
       <Navigation />
 
-      {/* Hero Section */}
+      {/* Hero Section with Calendly */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-green-900/20" />
         <div className="relative max-w-7xl mx-auto px-6 pt-24 pb-16">
-          {/* Partner Logos */}
-          <div className="flex items-center justify-center gap-6 mb-12 animate-fadeIn">
-            <Image
-              src="/rezolve-logo.png"
-              alt="Rezolve.ai"
-              width={160}
-              height={48}
-            />
-            <span className="text-3xl text-gray-600 font-light">+</span>
-            <Image
-              src="/xop-logo.png"
-              alt="XOP.ai"
-              width={120}
-              height={48}
-            />
-          </div>
-
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fadeIn">
-              Transform MSP Operations with{' '}
-              <span className="bg-gradient-to-r from-green-400 to-purple-400 bg-clip-text text-transparent">
-                Embedded AI
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto animate-fadeIn delay-100">
-              XOP.ai brings Rezolve.ai&apos;s powerful AI platform directly into the PSA and ticketing systems MSP engineers use every day — ConnectWise Manage, HaloPSA, Autotask, and ServiceNow.
-            </p>
-
-            <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/30 rounded-full px-6 py-2.5 mb-8 animate-fadeIn delay-200">
-              <Zap className="w-4 h-4 text-green-400" />
-              <span className="text-green-300 font-semibold">Rapid deployment &amp; ROI inside of 3 months</span>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeIn delay-300">
-              <a
-                href="#get-started"
-                className="cta-button inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 transition-all"
-              >
-                <Calendar className="w-5 h-5" />
-                Get Started
-              </a>
-              <Link
-                href="/resources"
-                className="inline-flex items-center gap-2 text-gray-300 hover:text-green-400 transition-colors"
-              >
-                Explore Resources
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PSA Platforms */}
-      <section className="py-12 border-t border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="text-center text-gray-500 text-sm uppercase tracking-wider mb-8">
-            Embedded solutions for the platforms you already use
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14">
-            {psaPlatforms.map((platform) => (
-              <div
-                key={platform.name}
-                className="bg-white/90 rounded-lg px-5 py-3 flex items-center justify-center"
-              >
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+            {/* Left side — content */}
+            <div className="flex flex-col justify-between">
+              {/* Partner Logos */}
+              <div className="flex items-center gap-6 mb-10 animate-fadeIn">
                 <Image
-                  src={platform.logo}
-                  alt={platform.name}
-                  width={platform.width}
-                  height={36}
-                  className="object-contain h-9"
+                  src="/rezolve-logo.png"
+                  alt="Rezolve.ai"
+                  width={140}
+                  height={42}
+                />
+                <span className="text-2xl text-gray-600 font-light">+</span>
+                <Image
+                  src="/xop-logo.png"
+                  alt="XOP.ai"
+                  width={100}
+                  height={42}
                 />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Book a Call — Embedded Calendly */}
-      <section id="get-started" className="py-20 bg-gray-950">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-5 gap-12 items-start">
-            {/* Left side — messaging */}
-            <div className="md:col-span-2">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Ready to Transform Your MSP with AI?
-              </h2>
-              <p className="text-gray-300 mb-6">
-                Book a 30-minute introductory call to learn how XOP.ai&apos;s embedded AI solutions can:
+              <h1 className="text-3xl md:text-5xl font-bold mb-6 animate-fadeIn">
+                Transform MSP Operations with{' '}
+                <span className="bg-gradient-to-r from-green-400 to-purple-400 bg-clip-text text-transparent">
+                  Embedded AI
+                </span>
+              </h1>
+              <p className="text-lg text-gray-300 mb-6 animate-fadeIn delay-100">
+                XOP.ai delivers a powerful AI platform directly into the PSA and ticketing systems MSP engineers use every day — ConnectWise Manage, HaloPSA, Autotask, and ServiceNow (and your documentation systems too)!
               </p>
-              <ul className="space-y-3">
+
+              <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/30 rounded-full px-5 py-2 mb-8 animate-fadeIn delay-200">
+                <Zap className="w-4 h-4 text-green-400" />
+                <span className="text-green-300 font-semibold text-sm">Rapid deployment &amp; ROI inside of 3 months</span>
+              </div>
+
+              <ul className="space-y-4 mb-8 animate-fadeIn delay-300">
                 {[
                   'Improve engineer productivity inside the PSA',
                   'Deliver real-time operational intelligence',
@@ -216,14 +161,35 @@ export default function RezolvePartnerPage() {
                   </li>
                 ))}
               </ul>
+
+              {/* PSA Platform logos */}
+              <div className="animate-fadeIn delay-400">
+                <p className="text-gray-500 text-xs uppercase tracking-wider mb-3">Embedded in the platforms you use</p>
+                <div className="flex flex-wrap items-center gap-3">
+                  {psaPlatforms.map((platform) => (
+                    <div
+                      key={platform.name}
+                      className="bg-white/90 rounded-md px-3 py-2 flex items-center justify-center"
+                    >
+                      <Image
+                        src={platform.logo}
+                        alt={platform.name}
+                        width={Math.round(platform.width * 0.7)}
+                        height={24}
+                        className="object-contain h-6"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Right side — embedded Calendly */}
-            <div className="md:col-span-3 bg-white rounded-xl overflow-hidden">
+            <div className="bg-white rounded-xl overflow-hidden animate-fadeIn delay-200">
               <div
                 className="calendly-inline-widget w-full"
                 data-url="https://calendly.com/mattruck/msp-discovery-meeting"
-                style={{ minHeight: '700px', height: '700px' }}
+                style={{ minHeight: '900px', height: '900px' }}
               />
             </div>
           </div>
