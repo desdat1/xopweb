@@ -7,9 +7,18 @@ import { ChevronRight, Calendar, User, Clock, TrendingUp } from 'lucide-react'
 
 export default function BlogPage() {
   // Blog posts array - newest first
-  // SCHEDULED POSTS (add to array on publish date):
-  // - Feb 24: ai-voice-engineer-assist-agent
   const blogPosts = [
+    {
+      slug: 'ai-voice-engineer-assist-agent',
+      title: 'Introducing AI Voice Engineer Assist Agent: Your Silent Partner on Every Call',
+      excerpt: 'Real-time AI assistance during live calls — automatic note-taking, resolution suggestions, and ticket updates so engineers can focus on the conversation.',
+      author: 'Matt Ruck',
+      date: 'March 3, 2026',
+      category: 'Product Launch',
+      readTime: '6 min read',
+      gradient: 'from-purple-500/10 to-pink-500/10',
+      borderColor: 'border-purple-500/30'
+    },
     {
       slug: 'autotask-product-launch',
       title: 'xop.ai Launches Full Autotask PSA Integration: AI for Every Major MSP Platform',
