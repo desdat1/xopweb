@@ -137,11 +137,16 @@ export default function RezolvePartnerPage() {
                 Embedded AI
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto animate-fadeIn delay-100">
+            <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto animate-fadeIn delay-100">
               XOP.ai brings Rezolve.ai&apos;s powerful AI platform directly into the PSA and ticketing systems MSP engineers use every day — ConnectWise Manage, HaloPSA, Autotask, and ServiceNow.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeIn delay-200">
+            <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/30 rounded-full px-6 py-2.5 mb-8 animate-fadeIn delay-200">
+              <Zap className="w-4 h-4 text-green-400" />
+              <span className="text-green-300 font-semibold">Rapid deployment &amp; ROI inside of 3 months</span>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeIn delay-300">
               <a
                 href="#get-started"
                 className="cta-button inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 transition-all"
