@@ -217,7 +217,7 @@ export default function RezolvePartnerPage() {
             <div className="md:col-span-3 bg-white rounded-xl overflow-hidden">
               <div
                 className="calendly-inline-widget w-full"
-                data-url="https://calendly.com/mattruck"
+                data-url="https://calendly.com/mattruck/msp-discovery-meeting"
                 style={{ minHeight: '700px', height: '700px' }}
               />
             </div>
