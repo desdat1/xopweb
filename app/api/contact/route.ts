@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY || '')
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { firstName, lastName, companyName, email, message } = body
+    const { firstName, lastName, companyName, email, message, heardAbout, heardAboutOther } = body
 
     // Validate required fields
     if (!firstName || !lastName || !companyName || !email || !message) {
@@ -74,6 +74,13 @@ export async function POST(request: NextRequest) {
                 </ul>
               </div>
               
+              ${heardAbout && heardAbout.length > 0 ? `
+              <div class="contact-details" style="border-color: #f59e0b; margin-top: 15px;">
+                <h3 style="color: #f59e0b;">📣 How They Heard About Us</h3>
+                <p style="color: #d1d5db;">${heardAbout.map((item: string) => item === 'Other' && heardAboutOther ? `Other: ${heardAboutOther}` : item).join(', ')}</p>
+              </div>
+              ` : ''}
+
               <div class="message-section">
                 <h3>💬 Message</h3>
                 <p style="color: #d1d5db; line-height: 1.6; white-space: pre-wrap;">${message}</p>

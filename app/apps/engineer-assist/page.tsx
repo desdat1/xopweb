@@ -7,7 +7,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {
   Search, Phone, Users, Star,
-  BarChart3, ArrowRight, Zap, CheckCircle, Clock, Brain, TrendingUp, Mail, MessageSquare, Rocket, Mic
+  BarChart3, ArrowRight, Zap, CheckCircle, Clock, Brain, TrendingUp, Mail, MessageSquare, Mic
 } from 'lucide-react'
 
 export default function EngineerAssistPage() {
@@ -138,7 +138,7 @@ export default function EngineerAssistPage() {
                   or as a standalone application.
                 </p>
                 <p className="text-gray-400 mb-8">
-                  Integrates with ConnectWise, Halo PSA, ServiceNow, and Autotask
+                  Works with all major PSA platforms — ConnectWise, Halo PSA, ServiceNow, and Autotask
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8">
@@ -176,16 +176,12 @@ export default function EngineerAssistPage() {
       <section className="px-6 py-16 bg-gradient-to-b from-black via-green-950/20 to-black">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 bg-green-500/20 border border-green-500/40 text-green-400 px-5 py-2.5 rounded-full mb-6 animate-pulse">
-              <Rocket className="w-5 h-5" />
-              <span className="font-semibold text-sm uppercase tracking-wide">Now Launching for General Availability</span>
-            </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Handsfree Ticket Entry for Engineers
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-2">
-              Engineers can now create and update tickets using only their voice — completely hands-free,
-              embedded directly inside <span className="text-red-400 font-semibold">ConnectWise Manage PSA</span>.
+              Engineers can create and update tickets using only their voice — completely hands-free,
+              embedded directly inside your PSA.
             </p>
             <p className="text-gray-400 max-w-2xl mx-auto">
               No switching windows. No typing. Just speak naturally and watch tickets populate in real time.
@@ -204,7 +200,7 @@ export default function EngineerAssistPage() {
                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
                   </div>
-                  <span className="ml-3 text-sm text-gray-400 font-medium">Handsfree Ticket Entry — ConnectWise Manage</span>
+                  <span className="ml-3 text-sm text-gray-400 font-medium">Handsfree Ticket Entry — Live Demo</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-400">
                   <Mic className="w-4 h-4" />
@@ -233,12 +229,12 @@ export default function EngineerAssistPage() {
             <div className="bg-gray-900/60 border border-green-500/20 rounded-xl p-5 text-center">
               <Zap className="w-8 h-8 text-green-400 mx-auto mb-3" />
               <h4 className="font-semibold mb-1">PSA Embedded</h4>
-              <p className="text-sm text-gray-400">Lives inside ConnectWise Manage — no extra windows or apps to manage</p>
+              <p className="text-sm text-gray-400">Lives inside your PSA — no extra windows or apps to manage</p>
             </div>
             <div className="bg-gray-900/60 border border-green-500/20 rounded-xl p-5 text-center">
               <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
-              <h4 className="font-semibold mb-1">Generally Available</h4>
-              <p className="text-sm text-gray-400">Production ready and rolling out now for all ConnectWise customers</p>
+              <h4 className="font-semibold mb-1">Production Ready</h4>
+              <p className="text-sm text-gray-400">Available now across all supported PSA platforms</p>
             </div>
           </div>
         </div>

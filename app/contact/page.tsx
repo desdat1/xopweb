@@ -12,7 +12,9 @@ export default function ContactPage() {
     lastName: '',
     companyName: '',
     email: '',
-    message: ''
+    message: '',
+    heardAbout: [] as string[],
+    heardAboutOther: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -44,7 +46,9 @@ export default function ContactPage() {
         lastName: '',
         companyName: '',
         email: '',
-        message: ''
+        message: '',
+        heardAbout: [],
+        heardAboutOther: ''
       })
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
@@ -58,6 +62,25 @@ export default function ContactPage() {
       ...formData,
       [e.target.name]: e.target.value
     })
+  }
+
+  const heardAboutOptions = [
+    'ConnectWise Evolve',
+    'Kaseya Event',
+    'LinkedIn',
+    'Reddit',
+    'Google / AI Search',
+    'Other'
+  ]
+
+  const handleCheckboxChange = (option: string) => {
+    setFormData(prev => ({
+      ...prev,
+      heardAbout: prev.heardAbout.includes(option)
+        ? prev.heardAbout.filter(item => item !== option)
+        : [...prev.heardAbout, option],
+      ...(option === 'Other' && prev.heardAbout.includes('Other') ? { heardAboutOther: '' } : {})
+    }))
   }
 
   return (
@@ -152,6 +175,35 @@ export default function ContactPage() {
                     className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-[#8BC34A] transition-colors resize-none"
                     placeholder="Tell us about your MSP challenges and how we can help..."
                   />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-3">
+                    Where did you hear about us?
+                  </label>
+                  <div className="space-y-2">
+                    {heardAboutOptions.map((option) => (
+                      <label key={option} className="flex items-center gap-3 cursor-pointer group">
+                        <input
+                          type="checkbox"
+                          checked={formData.heardAbout.includes(option)}
+                          onChange={() => handleCheckboxChange(option)}
+                          className="w-4 h-4 rounded border-gray-600 bg-gray-800 text-green-500 focus:ring-green-500 focus:ring-offset-0 cursor-pointer"
+                        />
+                        <span className="text-gray-300 group-hover:text-white transition-colors">{option}</span>
+                      </label>
+                    ))}
+                  </div>
+                  {formData.heardAbout.includes('Other') && (
+                    <input
+                      type="text"
+                      name="heardAboutOther"
+                      value={formData.heardAboutOther}
+                      onChange={handleChange}
+                      placeholder="Please specify..."
+                      className="mt-3 w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-[#8BC34A] transition-colors"
+                    />
+                  )}
                 </div>
 
                 {error && (
