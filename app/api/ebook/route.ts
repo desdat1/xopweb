@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import { trackRedditConversion } from '@/app/lib/reddit-capi'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -187,6 +188,9 @@ export async function POST(request: NextRequest) {
         { status: 500 }
       )
     }
+
+    // Track Reddit conversion (non-blocking)
+    trackRedditConversion({ eventType: 'Lead', email })
 
     // Log successful request
     console.log('E-book email sent successfully:', {

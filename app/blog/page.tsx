@@ -9,6 +9,17 @@ export default function BlogPage() {
   // Blog posts array - newest first
   const blogPosts = [
     {
+      slug: 'choosing-ai-tools-for-msps',
+      title: 'Choosing AI Tools for Your MSP: What Actually Moves the Needle',
+      excerpt: 'A practical framework from 28 years of MSP operations — what separates real ROI from vendor hype, and how to evaluate AI platforms that will actually transform your service desk.',
+      author: 'Matt Ruck',
+      date: 'March 9, 2026',
+      category: 'AI Strategy',
+      readTime: '15 min read',
+      gradient: 'from-green-500/10 to-blue-500/10',
+      borderColor: 'border-green-500/30'
+    },
+    {
       slug: 'ai-voice-engineer-assist-agent',
       title: 'Introducing AI Voice Engineer Assist Agent: Your Silent Partner on Every Call',
       excerpt: 'Real-time AI assistance during live calls — automatic note-taking, resolution suggestions, and ticket updates so engineers can focus on the conversation.',

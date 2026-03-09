@@ -229,6 +229,8 @@ export default function PageName() {
 |----------|----------|-------------|
 | `RESEND_API_KEY` | Yes | Resend API key for sending emails |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | No | Google Analytics measurement ID |
+| `NEXT_PUBLIC_REDDIT_PIXEL_ID` | No | Reddit Ads pixel ID for client-side tracking |
+| `REDDIT_CAPI_TOKEN` | No | Reddit Conversions API token for server-side tracking |
 
 Create `.env.local` for local development (gitignored).
 
