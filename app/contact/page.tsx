@@ -1,5 +1,6 @@
 'use client'
 
+import { useRouter } from 'next/navigation'
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import { useState } from 'react'
@@ -16,8 +17,8 @@ export default function ContactPage() {
     heardAbout: [] as string[],
     heardAboutOther: ''
   })
+  const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
   const [error, setError] = useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -40,16 +41,7 @@ export default function ContactPage() {
         throw new Error(data.error || 'Something went wrong')
       }
 
-      setIsSubmitted(true)
-      setFormData({
-        firstName: '',
-        lastName: '',
-        companyName: '',
-        email: '',
-        message: '',
-        heardAbout: [],
-        heardAboutOther: ''
-      })
+      router.push('/contact/thank-you')
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
     } finally {
@@ -209,12 +201,6 @@ export default function ContactPage() {
                 {error && (
                   <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 text-red-300">
                     {error}
-                  </div>
-                )}
-
-                {isSubmitted && (
-                  <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4 text-green-300">
-                    Thank you for contacting us! We'll get back to you within 24 hours.
                   </div>
                 )}
 
