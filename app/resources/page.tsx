@@ -3,7 +3,7 @@
 import Navigation from '@/app/components/Navigation'
 import Footer from '@/app/components/Footer'
 import Link from 'next/link'
-import { Book, FileText, Video, PlayCircle, ChevronRight, Mic, ExternalLink, Play } from 'lucide-react'
+import { Book, BookOpen, FileText, Video, PlayCircle, ChevronRight, Mic, ExternalLink, Play } from 'lucide-react'
 
 export default function ResourcesPage() {
   const resources = {
@@ -129,6 +129,31 @@ export default function ResourcesPage() {
           <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
             Resources on our AI solutions for MSPs & the organizations they serve
           </p>
+
+          {/* Executive Guide - Featured */}
+          <div className="mb-16">
+            <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-lg p-8 md:p-12 border border-purple-500/30">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="flex-shrink-0">
+                  <BookOpen className="w-24 h-24 text-purple-400" />
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <div className="inline-block bg-purple-500/10 border border-purple-500/30 rounded-full px-3 py-1 text-purple-400 text-xs font-medium mb-3">
+                    NEW - Free Executive Guide
+                  </div>
+                  <h2 className="text-3xl font-bold mb-4">2026: The AI Reckoning for MSP Leadership</h2>
+                  <p className="text-lg text-gray-300 mb-6">How agentic systems will reshape the economics, workforce, and customer expectations of the managed services industry. Written by Matt Ruck &amp; R. Marcus Holloway.</p>
+                  <Link
+                    href="/guides/ai-for-msps-2026"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity"
+                  >
+                    Get the Free Guide
+                    <ChevronRight className="w-5 h-5" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* E-Book Section */}
           <div className="mb-16">
