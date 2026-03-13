@@ -29,6 +29,7 @@ export default function Navigation() {
   ]
 
   const resources = [
+    { name: '2026 The AI Reckoning for MSP e-book', href: '/guides/ai-for-msps-2026', icon: '📕' },
     { name: 'News / Blog', href: '/blog', icon: '📝' },
     { name: 'xop.ai vs. Competition', href: '/resources/compare', icon: '⚖️' },
     { name: 'AI Podcast', href: '/resources/podcast', icon: '🎙️' },
